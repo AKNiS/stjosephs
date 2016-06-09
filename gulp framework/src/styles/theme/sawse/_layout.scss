@@ -1,0 +1,65 @@
+/* Grid and commond widths configuration */
+$gutter-width-mobile: 20px;
+$gutter-width-tablet: 25px;
+$gutter-width-desktop: 30px;
+
+$section-spacing-mobile: 25px;
+$section-spacing-tablet: 30px;
+$section-spacing-desktop: 60px;
+
+$site-content-width: 1180px + ($gutter-width-mobile * 2);
+$site-content-width-extended: 1320px;
+
+$gutter-width-mobile-extended-indented: $gutter-width-mobile + (($site-content-width-extended - $site-content-width) / 2);
+
+/* Mobile first breakpoints */
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1024px;
+
+/* Default layout for site sections */
+html,
+body {
+	overflow-x: hidden;
+	width: 100%;
+}
+
+body {
+	display: flex;
+	min-height: 100%;
+	flex-direction: column;
+}
+
+.page-container {
+	display: flex;
+	flex: 1 0 auto;
+	flex-direction: column;
+	
+ 	> .section:not(.no-section-spacing) {
+		padding-top: $section-spacing-mobile;
+		padding-bottom: $section-spacing-mobile;
+		
+		@include breakpoint($breakpoint-tablet) {
+			padding-top: $section-spacing-tablet;
+			padding-bottom: $section-spacing-tablet;
+		}
+		@include breakpoint($breakpoint-desktop) {
+			padding-top: $section-spacing-desktop;
+			padding-bottom: $section-spacing-desktop;
+		}
+	}
+}
+
+.section,
+.header {
+	.inner {
+		@include container($site-content-width);
+		padding: 0 $gutter-width-mobile;
+
+		@include breakpoint($breakpoint-tablet) {
+			padding: 0 $gutter-width-tablet;
+		}
+		@include breakpoint($breakpoint-desktop) {
+			padding: 0 $gutter-width-desktop;
+		}
+	}
+}

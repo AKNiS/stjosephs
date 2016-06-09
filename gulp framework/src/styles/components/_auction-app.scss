@@ -1,0 +1,108 @@
+.auction-app {
+	
+	.display {
+	}
+
+	.bottle-pin-list {
+		list-style: none;
+		margin: 30px 0;
+		padding: 0;
+		font-size: 0;
+
+		.bottle-pin {
+			display: inline-block;
+			vertical-align: top;
+			width: 10%;
+			padding-top: 10%;
+			transform: rotate(45deg);
+			cursor: pointer;
+
+			.number {
+				@include transition(all 0.5s ease-out);
+				position: absolute;
+				z-index: 2;
+				left: 50%;
+				top: 50%;
+				display: block;
+				width: 100%;
+				height: auto;
+				font-size: 12px;
+				text-align: center;
+				color: #fff;
+				transform: translate(-50%, -50%) rotate(-45deg) scale(0);
+				opacity: 0;
+			}
+
+			&:after {
+				@include transition(all 0.5s ease-out);
+				content: "";
+				position: absolute;
+				z-index: 1;
+				left: 50%;
+				top: 50%;
+				display: block;
+				width: 10px;
+				height: 10px;
+				transform: translate(-50%, -50%);
+				background: #333;
+				border-radius: 0;
+			}
+
+			&:hover {
+				
+				.number {
+					opacity: 1;
+					transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+				}
+
+				&:after {
+					width: 25px;
+					height: 25px;
+					border-radius: 100px;
+				}
+			}
+
+			&.disabled {
+				cursor: default;
+
+				.number {
+					color: #e3e3e3;
+					transform: translate(-50%, -50%) rotate(-45deg);
+				}
+
+				&:after {
+					background: #e3e3e3;
+				}
+
+				&:hover {
+					
+					.number {
+						opacity: 1;
+					}
+
+					&:after {
+						width: 10px;
+						height: 10px;
+						border-radius: 0;
+					}
+				}
+			}
+
+			&.active {
+				.number {
+					opacity: 1;
+					transform: translate(-50%, -50%) rotate(-45deg) scale(1);
+					color: #000;
+				}
+
+				&:after {
+					width: 25px;
+					height: 25px;
+					border-radius: 100px;
+					background: yellow;
+					border: 1px solid #999;
+				}
+			}
+		}
+	}
+}
