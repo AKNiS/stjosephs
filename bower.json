@@ -1,0 +1,13 @@
+{
+  "name": "stjosephs",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "normalize-css": "normalize.css#^4.1.1",
+    "Skeleton-Sass": "skeleton-scss#*"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3"
+  }
+}
