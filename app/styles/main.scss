@@ -1,11 +1,15 @@
-// bower:scss
-@import "bower_components/Skeleton-Sass/scss/skeleton.scss";
-// endbower
+
+@import "skeleton";
+@import "settings";
 
 body {
   background: #fafafa;
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
+}
+
+h1, h2, h3, h4, h5 {
+  color: $colour-sjc-red;
 }
 
 .hero-unit {
