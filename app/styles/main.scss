@@ -1,47 +1,18 @@
-
-@import "skeleton";
 @import "settings";
+@import "skeleton";
+@import "global";
 
 body {
-  background: #fafafa;
-  color: #333;
+  background: linear-gradient(90deg, #6d6e70 0%, #7A7A7A 50%, #6d6e70 100%);
 }
 
 h1, h2, h3, h4, h5 {
   color: $color-sjc-red;
 }
 
-.hero-unit {
-  margin: 50px auto 0 auto;
-  width: 300px;
-  font-size: 18px;
-  font-weight: 200;
-  line-height: 30px;
-  background-color: #eee;
-  border-radius: 6px;
-  padding: 60px;
-  h1 {
-    font-size: 60px;
-    line-height: 1;
-    letter-spacing: -1px;
-  }
+svg {
+  fill: $color-sjc-red;
 }
 
-.browserupgrade {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-.colourtest {
-  width: 300px;
-  height: 300px;
-  float: left;
-}
-
-.otherred { background: $colour-sjc-red; }
-.red { background: $color-sjc-red; }
-.darkred { background: $color-sjc-darkred; }
-.orange { background: $color-sjc-orange; }
-.tan { background: $color-sjc-tan; }
+/* Component Styles */
+@import "header";

@@ -183,3 +183,9 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
 });
+
+// function logNunjucksError(error) {
+//   var message = new gutil.PluginError('gulp-nunjucks', error, {fileName: filePath}).toString();
+//   process.stderr.write(message + '\n');
+//   this.emit('end');
+// };

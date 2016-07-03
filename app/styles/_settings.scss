@@ -2,15 +2,23 @@
  * Colours
  */
 
-$colour-sjc-red: #e9634f;
 $color-sjc-red: #EA634F;
 $color-sjc-darkred: #E0492E;
 $color-sjc-orange: #F26722;
 $color-sjc-tan: #FEC670;
 
+// Skeleton overwrites
+$light-grey: #cccccc;
+$dark-grey: #333 !default;
+$primary-color: $color-sjc-red;
+$secondary-color: $color-sjc-orange;
+$border-color: #bbb !default;
+$link-color: $color-sjc-darkred;
+$font-color: #000000;
+
 /*
  * Typography
- */
+ */ 
 
 @font-face {
 	font-family: 'Founders Grotesk';
@@ -23,6 +31,4 @@ $color-sjc-tan: #FEC670;
 	font-style: normal;
 }
 
-body {
-	font-family: 'Founders Grotesk', Arial, sans-serif;
-}
+$font-family: 'Founders Grotesk', Arial, sans-serif;

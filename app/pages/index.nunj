@@ -1,25 +1,58 @@
 {% extends "layout.nunj" %}
 
 {% block content %}
-<div class="one-half column">
-	<h4>Basic Pages</h4>
-	<p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+<div class="row">
+	<div class="twelve columns">
+		<h1>Welcome to St. Joseph's Cowper</h1>
+	</div>
 </div>
-</div>  
+<div class="row">
+	<div class="six columns">
+		<h4>Basic Pages</h4>
+		<p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+	</div>
 
-<div class="colourtest red"></div>
-<div class="colourtest darkred"></div>
-<div class="colourtest orange"></div>
-<div class="colourtest tan"></div>
+	<div class="six columns">
+		<h1>&rsquo;Allo, &rsquo;allo!</h1>
+		<p>You now have</p>
+		<ul>
+			<li>HTML5 Boilerplate</li>
+			<li>Sass</li>
+			<li>Modernizr</li>
+		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<h4>Basic Pages</h4>
+		<p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+	</div>
 
-<div class="hero-unit">
-	<h1>&rsquo;Allo, &rsquo;allo!</h1>
-	<p>You now have</p>
-	<ul>
-		<li>HTML5 Boilerplate</li>
-		<li>Sass</li>
-		<li>Modernizr</li>
-	</ul>
+	<div class="six columns">
+		<h1>&rsquo;Allo, &rsquo;allo!</h1>
+		<p>You now have</p>
+		<ul>
+			<li>HTML5 Boilerplate</li>
+			<li>Sass</li>
+			<li>Modernizr</li>
+		</ul>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<h4>Basic Pages</h4>
+		<p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+	</div>
+
+	<div class="six columns">
+		<h1>&rsquo;Allo, &rsquo;allo!</h1>
+		<p>You now have</p>
+		<ul>
+			<li>HTML5 Boilerplate</li>
+			<li>Sass</li>
+			<li>Modernizr</li>
+		</ul>
+	</div>
 </div>
 
 {% endblock %}

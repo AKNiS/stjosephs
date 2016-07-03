@@ -1,0 +1,11 @@
+.container {
+	padding: 0 30px;
+	background: #ffffff;
+}
+
+.content .container {
+	border-style: dotted;
+	border-color: $light-grey;
+	border-width: 0px 2px;
+	padding-top: 30px;
+}

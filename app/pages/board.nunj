@@ -1,5 +1,7 @@
 {% extends "layout.nunj" %}
 
+{% set title = "Board of Directors" %}
+
 {% block content %}
 	<h1>Board of Directors</h1>
 {% endblock %}
