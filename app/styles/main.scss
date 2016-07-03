@@ -4,12 +4,11 @@
 
 body {
   background: #fafafa;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
   color: #333;
 }
 
 h1, h2, h3, h4, h5 {
-  color: $colour-sjc-red;
+  color: $color-sjc-red;
 }
 
 .hero-unit {
@@ -34,3 +33,15 @@ h1, h2, h3, h4, h5 {
   color: #000;
   padding: 0.2em 0;
 }
+
+.colourtest {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+.otherred { background: $colour-sjc-red; }
+.red { background: $color-sjc-red; }
+.darkred { background: $color-sjc-darkred; }
+.orange { background: $color-sjc-orange; }
+.tan { background: $color-sjc-tan; }

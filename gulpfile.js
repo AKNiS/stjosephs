@@ -10,7 +10,8 @@ const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
 
 gulp.task('styles', () => {
-  return gulp.src('app/styles/*.scss')
+  console.log("running styles");
+  return gulp.src('app/styles/**/*.scss')
     .pipe($.plumber())
     .pipe($.sourcemaps.init())
     .pipe($.sass.sync({
@@ -72,7 +73,8 @@ gulp.task('nunjucks', () => {
     .pipe(nunjucks({
       path: ['app/templates']
     }))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist'))
+    .pipe(reload({stream: true}));
 });
 
 gulp.task('images', () => {
@@ -110,7 +112,7 @@ gulp.task('serve', ['nunjucks', 'styles', 'scripts', 'fonts'], () => {
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['.tmp', 'dist'],
+      baseDir: ['.tmp', 'dist', 'app'],
       routes: {
         '/bower_components': 'bower_components'
       }
@@ -119,7 +121,6 @@ gulp.task('serve', ['nunjucks', 'styles', 'scripts', 'fonts'], () => {
 
   gulp.watch([
     'app/*.html',
-    'app/**/*.nunj',
     'app/images/**/*',
     '.tmp/fonts/**/*'
   ]).on('change', reload);

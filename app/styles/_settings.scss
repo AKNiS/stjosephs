@@ -1,1 +1,28 @@
+/*
+ * Colours
+ */
+
 $colour-sjc-red: #e9634f;
+$color-sjc-red: #EA634F;
+$color-sjc-darkred: #E0492E;
+$color-sjc-orange: #F26722;
+$color-sjc-tan: #FEC670;
+
+/*
+ * Typography
+ */
+
+@font-face {
+	font-family: 'Founders Grotesk';
+	src: url('../fonts/FoundersGrotesk-Regular.eot');
+	src: url('../fonts/FoundersGrotesk-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FoundersGrotesk-Regular.woff2') format('woff2'),
+		url('../fonts/FoundersGrotesk-Regular.woff') format('woff'),
+		url('../fonts/FoundersGrotesk-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	font-family: 'Founders Grotesk', Arial, sans-serif;
+}

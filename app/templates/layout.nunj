@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>St. Josephs Cowper</title>
+	<title>St. Josephs Cowper{% if page_title %} - {{ page_title }}{% endif %}</title>
 
 	<link rel="apple-touch-icon" href="apple-touch-icon.png">
 	<!-- Place favicon.ico in the root directory -->
@@ -16,7 +16,6 @@
 	<!-- endbuild -->
 
 	<!-- build:css styles/main.css -->
-	<link rel="stylesheet" href="styles/skeleton.css">
 	<link rel="stylesheet" href="styles/main.css">
 	<!-- endbuild -->
 
@@ -60,8 +59,6 @@
 
       <!-- build:js scripts/vendor.js -->
       <!-- bower:js -->
-      <script src="/bower_components/jquery/dist/jquery.js"></script>
-      <script src="/bower_components/bootstrap/dist/js/bootstrap.js"></script>
       <!-- endbower -->
       <!-- endbuild -->
 
