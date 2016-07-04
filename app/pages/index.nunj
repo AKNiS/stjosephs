@@ -8,51 +8,67 @@
 </div>
 <div class="row">
 	<div class="six columns">
-		<h4>Basic Pages</h4>
-		<p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+		<p>Food bloggers rocking out the espy, the australian open formula one grand prix emerald peacock temper trap richmond tigers, ticket inspector the G' collins place citylink world's most liveable city, NGV culture fix the saints naked for satan frankston bogans hipsters, movida warehouse chic don dons.</p>
+		<p>Bill clinton ate two bowls chopper read, naked for satan prahran hipsters footy ticket inspector swanston, rocking out the espy south melb dim sims rooftop cinema spencer st station formula one grand prix, neatly trimmed moustaches shane warne don dons lions bar dandenong, presets bourke st mall melb.</p>
 	</div>
-
 	<div class="six columns">
-		<h1>&rsquo;Allo, &rsquo;allo!</h1>
-		<p>You now have</p>
-		<ul>
-			<li>HTML5 Boilerplate</li>
-			<li>Sass</li>
-			<li>Modernizr</li>
-		</ul>
+		<p>Warehouse chic trams, brunswick st hippy collingwood ferals laksa king don dons running the tan, melb Rod Laver the corner hotel citylink melbourne cricket ground, black is alway in fashion neatly trimmed moustaches cold drip coffee essendon bombers frankston bogans, myki queues footy the G'.</p>
+		<p>East brunswick club formula one grand prix, burlesque purple emerald bill clinton ate two bowls chopper read fed square, north of the river moomba shane warne etihad stadium myki queues, avalon is so not melb laksa king the emerald peacock temper trap chapel street, the G' melbourne cricket ground collingwood ferals.</p>
 	</div>
 </div>
 <div class="row">
-	<div class="six columns">
-		<h4>Basic Pages</h4>
-		<p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
-	</div>
-
-	<div class="six columns">
-		<h1>&rsquo;Allo, &rsquo;allo!</h1>
-		<p>You now have</p>
-		<ul>
-			<li>HTML5 Boilerplate</li>
-			<li>Sass</li>
-			<li>Modernizr</li>
-		</ul>
+	<div class="twelve columns">
+		<h2>What we do</h2>
 	</div>
 </div>
 <div class="row">
-	<div class="six columns">
-		<h4>Basic Pages</h4>
-		<p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+	<div class="four columns card--product">
+		<div class="card--icon">
+			{% include 'partials/svg/email.nunj' %}
+		</div>
+		<span class="card--text">Foster Care</span>
 	</div>
-
-	<div class="six columns">
-		<h1>&rsquo;Allo, &rsquo;allo!</h1>
-		<p>You now have</p>
-		<ul>
-			<li>HTML5 Boilerplate</li>
-			<li>Sass</li>
-			<li>Modernizr</li>
-		</ul>
+	<div class="four columns card--product">
+		<div class="card--icon">
+			{% include 'partials/svg/email.nunj' %}
+		</div>
+		<span class="card--text">Resi Care</span>
+	</div>
+	<div class="four columns card--product">
+		<div class="card--icon">
+			{% include 'partials/svg/email.nunj' %}
+		</div>
+		<span class="card--text">Tutoring/ Mentoring</span>
 	</div>
 </div>
+<div class="row">
+	<div class="twelve columns">
+		<h2>Contact details</h2>
+	</div>
+</div>
+<div class="row">
+	<div class="four columns">
+		<dl>
+			<dt>Telephone</dt>
+			<dd>(01) 234 5678</dd>
+			<dt>Address</dt>
+			<dd><address>
+				123 Main St.
+				Cowper, NSW 1234
+			</address></dd>
+			<dt>Opening Hours</dt>
+			<dd>8am - 5pm, Mon - Fri</dd>
+		</dl>
+	</div>
+	<div class="eight columns map">
+		<img src="http://placehold.it/600x300?text=Map" />
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns contact--link">
+		<a href="#contactModal"><h3>Contact Us</h3></a>
+	</div>
+</div>
+
 
 {% endblock %}

@@ -19,11 +19,31 @@
 }
 
 .modal--content {
-	width: 400px;
 	position: relative;
+	width: 90%;
 	margin: 10% auto;
-	padding: 5px 20px 13px 20px;
+	padding: 20px;
 	border-radius: 10px;
 	background: #fff;
 	background: linear-gradient(from top, #fff, #999);
+	@media (#{$bp-larger-than-phablet}) {
+		width: 400px;
+	}
+}
+
+.modal--close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	display: block;
+	width: 20px;
+	height: 20px;
+	line-height: 25px;
+	text-align: center;
+	text-decoration: none;
+
+}
+
+.contact--link h3 {
+	text-align: center;
 }
