@@ -34,9 +34,8 @@
 				{% block content %}{% endblock %}
 			</div>
 		</section>
-		{#{% include 'partials/footer.nunj' %}
-		{% include 'partials/nav.nunj' %}
-		{% include 'partials/nav.nunj' %}#}
+		{% include 'partials/contact.nunj' %}
+		{# {% include 'partials/nav.nunj' %} #}
 
 
 
