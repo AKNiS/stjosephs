@@ -25,113 +25,50 @@
 	</div>
 </div>
 <div class="row">
-	<div class="twelve columns contact--link">
-		<a href="#contactModal"><h3>Contact Us</h3></a>
+	<div class="twelve columns">
+		<h3>Contact Us</h3>
 	</div>
 </div>
-<div id="fosterModal" class="modal">
-	<div class="modal--content">
-		<h3>Contact Form</h3>
-		<a href="#close" title="Close" class="modal--close">X</a>
-		<form action="process_form.php" class="" method="post" novalidate="">
-			<div id="field1-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__firstName">
-					First Name
-				</label>
-				<input type="text" name="firstName" id="contact--field__firstName" required="required">
-			</div>
-
-
-			<div id="field2-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__lastName">
-					Last Name
-				</label>
-				<input type="text" name="lastName" id="contact--field__lastName" required="required">
-			</div>
-
-
-			<div id="field8-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__email">
-					Email Address
-				</label>
-				<input type="email" name="email" id="contact--field__email" required="required">
-			</div>
-
-
-			<div id="field9-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__telephone">
-					Telephone
-				</label>
-				<input type="text" name="telephone" id="contact--field__telephone" required="required">
-			</div>
-
-
-			{# <div id="field3-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__dob">
-					Date of Birth
-				</label>
-				<input class="ttw-date date" type="date" name="dob" id="contact--field__dob">
-			</div>
-
-
-			<div id="field4-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__address">
-					Address
-				</label>
-				<input type="text" name="address" id="contact--field__address">
-			</div>
-
-
-			<div id="field5-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__town">
-					Suburb/Town
-				</label>
-				<input type="text" name="town" id="contact--field__town">
-			</div>
-
-
-			<div id="field7-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__postCode">
-					Post Code
-				</label>
-				<input type="number" name="postCode" id="contact--field__postCode" required="required">
-			</div>
-
-
-			<div id="field10-container" class="field f_100 ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__dept">
-					Which department are you most interested in?
-				</label>
-				<select name="dept" id="contact--field__dept">
-					<option id="field10-1" value="Option 1">
-						Option 1
-					</option>
-					<option id="field10-2" value="Option 2">
-						Option 2
-					</option>
-				</select>
-			</div>
-
-
-			<div id="field11-container" class="field f_100 checkbox-group ui-resizable-disabled ui-state-disabled">
-				<label for="contact--field__mailingList">
-					Would you like to join the SJC mailing list?
-				</label>
-
-
-				<div class="option clearfix">
-					<input type="checkbox" name="mailingList" id="contact--field__mailingList" value="Yes">
-					<span class="option-title">
-						Yes
-					</span>
-					<br>
-				</div>
-			</div> #}
-
-
-			<div id="form-submit" class="field f_100 clearfix submit">
-				<input type="submit" value="Submit">
-			</div>
-		</form>
+<div class="row">
+	<form action="process_form.php" method="post" class="contact-form">
+	<div class="six columns">
+		<div id="" class="contact--field">
+			<label for="contact--field__firstName">
+				First Name
+			</label>
+			<input type="text" name="firstName" id="contact--field__firstName" required="required">
+		</div>
+		<div id="" class="contact--field">
+			<label for="contact--field__lastName">
+				Last Name
+			</label>
+			<input type="text" name="lastName" id="contact--field__lastName" required="required">
+		</div>
+		<div id="" class="contact--field">
+			<label for="contact--field__email">
+				Email Address
+			</label>
+			<input type="email" name="email" id="contact--field__email" required="required">
+		</div>
+		<div id="" class="contact--field">
+			<label for="contact--field__telephone">
+				Telephone
+			</label>
+			<input type="text" name="telephone" id="contact--field__telephone" required="required">
+		</div>
 	</div>
+	<div class="six columns">
+		<div id="" class="contact--field">
+			<label for="contact--field__message">
+				How can we help you?
+			</label>
+			<textarea name="message" id="contact--field__message" required="required"></textarea>
+		</div>
+
+
+		<div id="" class="contact--field">
+			<input type="submit" value="Send">
+		</div>
+	</div>
+	</form>
 </div>

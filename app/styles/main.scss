@@ -1,20 +1,12 @@
 @import "settings";
 @import "skeleton";
 @import "global";
-
-body {
-  background: linear-gradient(90deg, #6d6e70 0%, #7A7A7A 50%, #6d6e70 100%);
-}
-
-h1, h2, h3, h4, h5 {
-  color: $color-sjc-red;
-}
-
-svg {
-  fill: $color-sjc-red;
-}
+@import "header";
+@import "nav";
+@import "footer";
 
 /* Component Styles */
-@import "header";
-@import "footer";
-@import "modal";
+@import "components/modal";
+@import "components/card";
+@import "components/table";
+@import "components/form";

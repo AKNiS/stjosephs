@@ -1,0 +1,49 @@
+
+label {
+	font-size: 1.9rem;
+	font-weight: normal;
+	margin-bottom: 0;
+}
+input, textarea {
+	width: 100%;
+	margin-bottom: 2rem;
+}
+
+input[type="submit"] {
+	background: $color-sjc-red;
+	color: $color-white;
+	font-size: 1.4em;
+	padding-top: 5px;
+	border: 0;
+	transition: 200ms all ease-in;
+}
+
+input[type="submit"]:hover {
+	padding-top: 3px;
+	background: $color-white;
+	color: $color-sjc-red;
+	border: 2px solid $color-sjc-red;
+}
+
+// input[type="email"]:focus, 
+// input[type="number"]:focus, 
+// input[type="search"]:focus, 
+// input[type="text"]:focus,
+// input[type="tel"]:focus, 
+// input[type="url"]:focus, 
+// input[type="password"]:focus {
+// 	border-color: $color-sjc-orange;
+// }
+
+button, input, optgroup, select, textarea {
+	font-size: 1.8rem;
+}
+
+// Contact form-specific styles
+#contact--field__message {
+	height: 232px;
+}
+
+// Newsletter form-specific styles
+ 
+// Foster Care form-specific styles

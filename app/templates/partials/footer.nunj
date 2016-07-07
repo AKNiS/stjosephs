@@ -2,8 +2,114 @@
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
-				<a href="contactModal">Become a Foster Carer</a>
+				<a href="#fosterModal">Become a Foster Carer</a>
 			</div>
 		</div>
 	</div>
 </footer>
+<div id="fosterModal" class="modal">
+	<div class="modal--content">
+		<h3>Contact Form</h3>
+		<a href="#close" title="Close" class="modal--close">X</a>
+		<form action="process_form.php" class="" method="post" novalidate="">
+			<div id="field1-container" class="">
+				<label for="foster--field__firstName">
+					First Name
+				</label>
+				<input type="text" name="firstName" id="foster--field__firstName" required="required">
+			</div>
+
+
+			<div id="field2-container" class="">
+				<label for="foster--field__lastName">
+					Last Name
+				</label>
+				<input type="text" name="lastName" id="foster--field__lastName" required="required">
+			</div>
+
+
+			<div id="field8-container" class="">
+				<label for="foster--field__email">
+					Email Address
+				</label>
+				<input type="email" name="email" id="foster--field__email" required="required">
+			</div>
+
+
+			<div id="field9-container" class="">
+				<label for="foster--field__telephone">
+					Telephone
+				</label>
+				<input type="text" name="telephone" id="foster--field__telephone" required="required">
+			</div>
+
+
+			{# <div id="field3-container" class="">
+				<label for="foster--field__dob">
+					Date of Birth
+				</label>
+				<input class="ttw-date date" type="date" name="dob" id="foster--field__dob">
+			</div>
+
+
+			<div id="field4-container" class="">
+				<label for="foster--field__address">
+					Address
+				</label>
+				<input type="text" name="address" id="foster--field__address">
+			</div>
+
+
+			<div id="field5-container" class="">
+				<label for="foster--field__town">
+					Suburb/Town
+				</label>
+				<input type="text" name="town" id="foster--field__town">
+			</div>
+
+
+			<div id="field7-container" class="">
+				<label for="foster--field__postCode">
+					Post Code
+				</label>
+				<input type="number" name="postCode" id="foster--field__postCode" required="required">
+			</div>
+
+
+			<div id="field10-container" class="">
+				<label for="foster--field__dept">
+					Which department are you most interested in?
+				</label>
+				<select name="dept" id="foster--field__dept">
+					<option id="field10-1" value="Option 1">
+						Option 1
+					</option>
+					<option id="field10-2" value="Option 2">
+						Option 2
+					</option>
+				</select>
+			</div>
+
+
+			<div id="field11-container" class="">
+				<label for="foster--field__mailingList">
+					Would you like to join the SJC mailing list?
+				</label>
+
+
+				<div class="option clearfix">
+					<input type="checkbox" name="mailingList" id="foster--field__mailingList" value="Yes">
+					<span class="option-title">
+						Yes
+					</span>
+					<br>
+				</div>
+			</div> #}
+
+
+			<div id="form-submit" class="field f_100 clearfix submit">
+				<input type="submit" value="Submit">
+			</div>
+		</form>
+	</div>
+</div>

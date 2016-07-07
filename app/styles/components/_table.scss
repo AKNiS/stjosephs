@@ -1,0 +1,38 @@
+
+
+/******************/
+/* Table component */
+/******************/
+table {
+	border-collapse: collapse;
+}
+th {
+	background: $color-sjc-darkred;
+	color: $color-white;
+}
+
+th, td {
+	border: none;
+	height: 20px;
+	padding: 15px;
+}
+
+th:first-child,
+td:first-child {
+	padding-left: 15px;
+}
+
+td.table--avatar {
+	width: 100px;
+	padding: 0;
+}
+
+tr:nth-child(even) td {
+	background: rgba($color-sjc-lightorange, 0.3);
+}
+
+tr td:hover {
+	background: $color-sjc-red;
+	color: $color-white;
+}
+/* /Table component */

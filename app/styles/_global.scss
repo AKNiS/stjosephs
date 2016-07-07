@@ -1,3 +1,18 @@
+body {
+  background: linear-gradient(90deg, 
+  	#6d6e70 0%, 
+  	#7A7A7A 50%, 
+  	#6d6e70 100%);
+}
+
+h1, h2, h3, h4, h5 {
+  color: $color-sjc-red;
+}
+
+svg {
+  fill: $color-sjc-red;
+}
+
 .container {
 	padding: 0 30px;
 	background: #ffffff;
@@ -7,7 +22,7 @@
 	border-style: dotted;
 	border-color: $light-grey;
 	border-width: 0px 2px;
-	padding-top: 30px;
+	padding-top: 60px;
 	padding-bottom: 40px;
 }
 
@@ -27,99 +42,3 @@
 	width: 100%;
 	height: 300px;
 }
-
-/******************/
-/* Card component */
-/******************/
-.card {
-	margin-bottom: 2rem;
-}
-
-.card--product {
-	height: 100px;
-	font-size: 2.5rem;
-	line-height: 1em;
-}
-
-.card--icon {
-	display: block;
-	width: 60px;
-	height: 49px;
-	padding-right: 20px;
-	svg {
-		width: 60px;
-		height: 60px;
-	}
-}
-
-.card--text {
-	display: block;
-	margin-bottom: -4px;
-}
-
-.flexbox {
-	.card--product {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-
-	.card--icon,
-	.card--text {
-
-	}
-}
-
-.no-flexbox {
-	.card--product {
-		height: 100px;
-		position: relative;
-	}
-	.card--icon,
-	.card--text {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	.card--text {
-		left: 80px;
-	}
-}
-/* /Card component */
-
-/******************/
-/* Table component */
-/******************/
-table {
-	border-collapse: collapse;
-}
-th {
-	background: $color-sjc-darkred;
-	color: $color-white;
-}
-
-th, td {
-	border: none;
-	height: 20px;
-	padding: 15px;
-}
-
-th:first-child,
-td:first-child {
-	padding-left: 15px;
-}
-
-td.table--avatar {
-	width: 100px;
-	padding: 0;
-}
-
-tr:nth-child(even) td {
-	background: rgba($color-sjc-lightorange, 0.3);
-}
-
-tr td:hover {
-	background: $color-sjc-red;
-	color: $color-white;
-}
-/* /Table component */

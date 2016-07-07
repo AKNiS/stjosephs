@@ -1,0 +1,52 @@
+{% extends "layout.nunj" %}
+
+{% set title = "What We Do" %}
+
+{% block content %}
+<div class="row">
+	<div class="twelve columns">
+		<h1>{{title}}</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<div class="card--product">
+			<div class="card--icon">
+				{% include 'partials/svg/email.nunj' %}
+			</div>
+			<span class="card--text">Foster Care</span>
+		</div>
+		<p>Food bloggers rocking out the espy, the australian open formula one grand prix emerald peacock temper trap richmond tigers, ticket inspector the G' collins place citylink world's most liveable city, NGV culture fix the saints naked for satan frankston bogans hipsters, movida warehouse chic don dons.</p>
+	</div>
+	<div class="six columns">
+		<div class="card--product">
+			<div class="card--icon">
+				{% include 'partials/svg/email.nunj' %}
+			</div>
+			<span class="card--text">Foster Care</span>
+		</div>
+		<p>Warehouse chic trams, brunswick st hippy collingwood ferals laksa king don dons running the tan, melb Rod Laver the corner hotel citylink melbourne cricket ground, black is alway in fashion neatly trimmed moustaches cold drip coffee essendon bombers frankston bogans, myki queues footy the G'.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<div class="card--product">
+			<div class="card--icon">
+				{% include 'partials/svg/email.nunj' %}
+			</div>
+			<span class="card--text">Foster Care</span>
+		</div>
+		<p>Bill clinton ate two bowls chopper read, naked for satan prahran hipsters footy ticket inspector swanston, rocking out the espy south melb dim sims rooftop cinema spencer st station formula one grand prix, neatly trimmed moustaches shane warne don dons lions bar dandenong, presets bourke st mall melb.</p>
+	</div>
+	<div class="six columns">
+		<div class="card--product">
+			<div class="card--icon">
+				{% include 'partials/svg/email.nunj' %}
+			</div>
+			<span class="card--text">Foster Care</span>
+		</div>
+		<p>East brunswick club formula one grand prix, burlesque purple emerald bill clinton ate two bowls chopper read fed square, north of the river moomba shane warne etihad stadium myki queues, avalon is so not melb laksa king the emerald peacock temper trap chapel street, the G' melbourne cricket ground collingwood ferals.</p>
+	</div>
+</div>
+
+{% endblock %}
