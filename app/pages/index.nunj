@@ -21,7 +21,7 @@
 		<h2>What we do</h2>
 	</div>
 </div>
-<div class="row">
+<div class="row card">
 	<div class="four columns card--product">
 		<div class="card--icon">
 			{% include 'partials/svg/email.nunj' %}
@@ -60,8 +60,8 @@
 			<dd>8am - 5pm, Mon - Fri</dd>
 		</dl>
 	</div>
-	<div class="eight columns map">
-		<img src="http://placehold.it/600x300?text=Map" />
+	<div class="eight columns">
+		<div id="map" class="map"></div>
 	</div>
 </div>
 <div class="row">

@@ -5,7 +5,10 @@
 $color-sjc-red: #EA634F;
 $color-sjc-darkred: #E0492E;
 $color-sjc-orange: #F26722;
+$color-sjc-lightorange: #fec670;
 $color-sjc-tan: #FEC670;
+$color-white: #ffffff;
+$color-black: #000000;
 
 // Skeleton overwrites
 $light-grey: #cccccc;
@@ -14,7 +17,7 @@ $primary-color: $color-sjc-red;
 $secondary-color: $color-sjc-orange;
 $border-color: #bbb !default;
 $link-color: $color-sjc-darkred;
-$font-color: #000000;
+$font-color: $color-black;
 
 /*
  * Typography

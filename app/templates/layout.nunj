@@ -51,6 +51,7 @@
 
 		<!-- build:js scripts/vendor.js -->
 		<!-- bower:js -->
+		<script src="https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 
