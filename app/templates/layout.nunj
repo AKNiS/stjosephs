@@ -32,10 +32,10 @@
 		<section class="content">
 			<div class="container">
 				{% block content %}{% endblock %}
+				{% include 'partials/contact.nunj' %}
 			</div>
 		</section>
-		{% include 'partials/contact.nunj' %}
-		{# {% include 'partials/nav.nunj' %} #}
+		{% include 'partials/footer.nunj' %}
 
 
 

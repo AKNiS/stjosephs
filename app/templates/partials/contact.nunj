@@ -1,7 +1,35 @@
 
 {# <a href="#contactModal"><h3>Contact Us</h3></a> #}
 
-<div id="contactModal" class="modal">
+<div class="row">
+	<div class="twelve columns">
+		<h2>Contact details</h2>
+	</div>
+</div>
+<div class="row">
+	<div class="four columns">
+		<dl>
+			<dt>Telephone</dt>
+			<dd>(01) 234 5678</dd>
+			<dt>Address</dt>
+			<dd><address>
+				123 Main St.
+				Cowper, NSW 1234
+			</address></dd>
+			<dt>Opening Hours</dt>
+			<dd>8am - 5pm, Mon - Fri</dd>
+		</dl>
+	</div>
+	<div class="eight columns">
+		<div id="map" class="map"></div>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns contact--link">
+		<a href="#contactModal"><h3>Contact Us</h3></a>
+	</div>
+</div>
+<div id="fosterModal" class="modal">
 	<div class="modal--content">
 		<h3>Contact Form</h3>
 		<a href="#close" title="Close" class="modal--close">X</a>
