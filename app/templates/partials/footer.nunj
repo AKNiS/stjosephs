@@ -8,9 +8,12 @@
 	</div>
 </footer>
 <div id="fosterModal" class="modal">
-	<div class="modal--content">
-		<h3>Contact Form</h3>
-		<a href="#close" title="Close" class="modal--close">X</a>
+	<div class="modal--wrapper">
+		<div class="modal--title">
+			<h3>Foster Carer Application Form</h3>
+			<a href="#close" title="Close" class="modal--close">&times;</a>
+		</div>
+		<div class="modal--content">
 		<form action="process_form.php" class="" method="post" novalidate="">
 			<div id="field1-container" class="">
 				<label for="foster--field__firstName">
@@ -44,7 +47,7 @@
 			</div>
 
 
-			{# <div id="field3-container" class="">
+			<div id="field3-container" class="">
 				<label for="foster--field__dob">
 					Date of Birth
 				</label>
@@ -104,12 +107,13 @@
 					</span>
 					<br>
 				</div>
-			</div> #}
+			</div>
 
 
 			<div id="form-submit" class="field f_100 clearfix submit">
 				<input type="submit" value="Submit">
 			</div>
 		</form>
+		</div>
 	</div>
 </div>
