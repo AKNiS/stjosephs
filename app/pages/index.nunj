@@ -4,6 +4,11 @@
 <div class="row">
 	<div class="twelve columns">
 		<h1>Welcome to St. Joseph's Cowper</h1>
+		<h1 style="font-weight: bold;">Welcome to St. Joseph's Cowper</h1>
+		<hr>
+		<h1 style="font-family: 'Founders Grotesk Medium'; font-weight: 500;">Welcome to St. Joseph's Cowper</h1>
+		<h1 style="font-family: 'Founders Grotesk Semibold'; font-weight: 600;">Welcome to St. Joseph's Cowper</h1>
+		<h1 style="font-family: 'Founders Grotesk Bold'; font-weight: bold;">Welcome to St. Joseph's Cowper</h1>
 	</div>
 </div>
 <div class="row">

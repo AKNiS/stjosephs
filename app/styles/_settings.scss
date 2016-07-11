@@ -34,4 +34,40 @@ $font-color: $color-black;
 	font-style: normal;
 }
 
+@font-face {
+	font-family: 'Founders Grotesk Bold';
+	src: url('../fonts/FoundersGrotesk-Bold.eot');
+	src: url('../fonts/FoundersGrotesk-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FoundersGrotesk-Bold.woff2') format('woff2'),
+		url('../fonts/FoundersGrotesk-Bold.woff') format('woff'),
+		url('../fonts/FoundersGrotesk-Bold.ttf') format('truetype'),
+		url('../fonts/FoundersGrotesk-Bold.svg#FoundersGrotesk-Bold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Founders Grotesk Medium';
+	src: url('../fonts/FoundersGrotesk-Medium.eot');
+	src: url('../fonts/FoundersGrotesk-Medium.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FoundersGrotesk-Medium.woff2') format('woff2'),
+		url('../fonts/FoundersGrotesk-Medium.woff') format('woff'),
+		url('../fonts/FoundersGrotesk-Medium.ttf') format('truetype'),
+		url('../fonts/FoundersGrotesk-Medium.svg#FoundersGrotesk-Medium') format('svg');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Founders Grotesk Semibold';
+	src: url('../fonts/FoundersGrotesk-Semibold.eot');
+	src: url('../fonts/FoundersGrotesk-Semibold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/FoundersGrotesk-Semibold.woff2') format('woff2'),
+		url('../fonts/FoundersGrotesk-Semibold.woff') format('woff'),
+		url('../fonts/FoundersGrotesk-Semibold.ttf') format('truetype'),
+		url('../fonts/FoundersGrotesk-Semibold.svg#FoundersGrotesk-Semibold') format('svg');
+	font-weight: 600;
+	font-style: normal;
+}
+
 $font-family: 'Founders Grotesk', Arial, sans-serif;
