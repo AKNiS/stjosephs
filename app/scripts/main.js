@@ -1,4 +1,3 @@
-// console.log('\'Allo \'Allo!');
 google.maps.event.addDomListener(window, 'load', init);
 var map;
 

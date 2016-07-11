@@ -35,15 +35,14 @@
 }
 
 .modal--title {
-	position: fixed;
+	// position: fixed;
 	width: inherit;
-	height: 50px;
 	padding: 20px 0 4px;
 	background: $color-white;
 	border-bottom: 1px solid $color-sjc-red;
 	h3 {
 		margin: 0;
-		padding: 0 20px;
+		padding: 0 75px 0 20px;
 	}
 }
 
@@ -62,8 +61,7 @@
 
 .modal--content {
 	position: relative;
-	margin-top: 75px;
-	padding: 20px;
+	padding: 20px 20px 75px;
 	height: 100%;
 	overflow-y: auto;
 	box-sizing: border-box;
@@ -95,5 +93,9 @@
 
 	.modal--close {
 		border-top-left-radius: 10px;
+	}
+
+	.modal--content {
+		padding-bottom: 0;
 	}
 }

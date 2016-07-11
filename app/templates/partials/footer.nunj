@@ -110,7 +110,7 @@
 			</div>
 
 
-			<div id="form-submit" class="field f_100 clearfix submit">
+			<div id="form-submit" class="">
 				<input type="submit" value="Submit">
 			</div>
 		</form>
