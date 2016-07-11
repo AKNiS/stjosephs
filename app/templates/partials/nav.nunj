@@ -1,15 +1,33 @@
 <nav class="nav clearfix">
 	<div class="container">
-	<div class="row">
-	<div class="twelve columns">
+		<div class="row">
+			<div class="twelve columns">
+				<ul class="mobile-menu-link">
+					<li><a href="#mobileMenu">Menu</a></li>
+				</ul>
+				<ul class="menu">
+					<li><a href="/index.html">Home</a></li>
+					<li><a href="/history.html">History</a></li>
+					<li><a href="/board.html">Our Board</a></li>
+					<li><a href="/case-study.html">Case Study</a></li>
+					<li><a href="/what-we-do.html">What We Do</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</nav>
+<div id="mobileMenu" class="mobile-menu">
+	<a href="#close" class="mobile-menu-link--close">&times;</a>
 	<ul>
 		<li><a href="/index.html">Home</a></li>
 		<li><a href="/history.html">History</a></li>
 		<li><a href="/board.html">Our Board</a></li>
 		<li><a href="/case-study.html">Case Study</a></li>
 		<li><a href="/what-we-do.html">What We Do</a></li>
+		<li><a href="/index.html">Home</a></li>
+		<li><a href="/history.html">History</a></li>
+		<li><a href="/board.html">Our Board</a></li>
+		<li><a href="/case-study.html">Case Study</a></li>
+		<li><a href="/what-we-do.html">What We Do</a></li>
 	</ul>
-	</div>
-	</div>
-	</div>
-</nav>
+</div>
