@@ -3,58 +3,63 @@
 /******************/
 /* Card component */
 /******************/
-.card {
-	margin-bottom: 2rem;
+.card--service {
+	margin-bottom: 2.5rem;
 }
 
-.card--product {
-	height: 100px;
-	font-size: 2.5rem;
-	line-height: 1em;
-}
+// Reinstate if svgs no longer include their text
+// .card {
+// 	margin-bottom: 2rem;
+// }
 
-.card--icon {
-	display: block;
-	width: 60px;
-	height: 49px;
-	padding-right: 20px;
-	svg {
-		width: 60px;
-		height: 60px;
-	}
-}
+// .card--product {
+// 	height: 100px;
+// 	font-size: 2.5rem;
+// 	line-height: 1em;
+// }
 
-.card--text {
-	display: block;
-	margin-bottom: -4px;
-}
+// .card--icon {
+// 	display: block;
+// 	width: 60px;
+// 	height: 49px;
+// 	padding-right: 20px;
+// 	svg {
+// 		width: 60px;
+// 		height: 60px;
+// 	}
+// }
 
-.flexbox {
-	.card--product {
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
+// .card--text {
+// 	display: block;
+// 	margin-bottom: -4px;
+// }
 
-	.card--icon,
-	.card--text {
+// .flexbox {
+// 	.card--product {
+// 		display: flex;
+// 		flex-direction: row;
+// 		align-items: center;
+// 	}
 
-	}
-}
+// 	.card--icon,
+// 	.card--text {
 
-.no-flexbox {
-	.card--product {
-		height: 100px;
-		position: relative;
-	}
-	.card--icon,
-	.card--text {
-		position: absolute;
-		top: 50%;
-		transform: translateY(-50%);
-	}
-	.card--text {
-		left: 80px;
-	}
-}
+// 	}
+// }
+
+// .no-flexbox {
+// 	.card--product {
+// 		height: 100px;
+// 		position: relative;
+// 	}
+// 	.card--icon,
+// 	.card--text {
+// 		position: absolute;
+// 		top: 50%;
+// 		transform: translateY(-50%);
+// 	}
+// 	.card--text {
+// 		left: 80px;
+// 	}
+// }
 /* /Card component */

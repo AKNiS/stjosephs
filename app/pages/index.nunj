@@ -26,24 +26,15 @@
 		<h2>What we do</h2>
 	</div>
 </div>
-<div class="row card">
-	<div class="four columns card--product">
-		<div class="card--icon">
-			{% include 'partials/svg/email.nunj' %}
-		</div>
-		<span class="card--text">Foster Care</span>
+<div class="row">
+	<div class="four columns card--service">
+		{% include 'partials/svg/fostercare.nunj' %}
 	</div>
-	<div class="four columns card--product">
-		<div class="card--icon">
-			{% include 'partials/svg/email.nunj' %}
-		</div>
-		<span class="card--text">Resi Care</span>
+	<div class="four columns card--service">
+		{% include 'partials/svg/resicare.nunj' %}
 	</div>
-	<div class="four columns card--product">
-		<div class="card--icon">
-			{% include 'partials/svg/email.nunj' %}
-		</div>
-		<span class="card--text">Tutoring/ Mentoring</span>
+	<div class="four columns card--service">
+		{% include 'partials/svg/tutormentor.nunj' %}
 	</div>
 </div>
 
