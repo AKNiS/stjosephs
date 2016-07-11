@@ -18,10 +18,24 @@
 	display: block;
 	width: 100px;
 	height: 30px;
-	margin-left: auto;
-	margin-right: auto;
 	margin-top: 10px;
 	margin-bottom: 10px;
+	margin-left: 0;
+	margin-right: auto;
+}
+
+.header--actions-link {
+	display: block;
+	float: right;
+	padding: 9px 10px 0;
+	svg {
+		width: 30px;
+		height: 30px;
+	}
+}
+
+.header--actions-link__desktop {
+	display: none;
 }
 
 .content {
@@ -39,6 +53,26 @@
 		height: 60px;
 		margin-top: 15px;
 		margin-bottom: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.header--actions-link {
+		line-height: 90px;
+		padding: 0;
+		svg {
+			// padding-top: 25px;
+			width: 50px;
+			height: 50px;
+		}
+	}
+
+	.header--actions-link__desktop {
+		display: block;
+	}
+
+	.header--actions-link__mobile {
+		display: none;
 	}
 
 	.content {
