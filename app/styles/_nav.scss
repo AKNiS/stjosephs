@@ -78,7 +78,7 @@
 }
 
 
-@media (#{$bp-larger-than-phablet}) {
+@media (#{$bp-larger-than-tablet}) {
 	.mobile-menu-link {
 		display: none;
 	}

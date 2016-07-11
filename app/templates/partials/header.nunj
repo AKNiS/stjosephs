@@ -6,7 +6,7 @@
 					<a href="#" class="header--actions-link">
 						{% include 'partials/svg/email.nunj' %}
 					</a>
-					<a href="#" class="header--actions-link header--actions-link__desktop">
+					<a href="#" class="header--actions-link header--actions-link__desktop button">
 						Donate
 					</a>
 					<a href="#" class="header--actions-link header--actions-link__mobile">

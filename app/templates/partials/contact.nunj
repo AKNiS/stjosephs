@@ -18,9 +18,10 @@
 		</dl>
 	</div>
 	<div class="eight columns">
+		{# <a href="#map" class="button">Show Map</a>
 		<div id="map" class="map">
 			<a href="https://goo.gl/maps/AjZjCvmgcTo"><img src="images/map.jpg" /></a>
-		</div>
+		</div> #}
 	</div>
 </div>
 <div class="row">

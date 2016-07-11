@@ -68,7 +68,7 @@
 }
 
 
-@media (#{$bp-larger-than-phablet}) {
+@media (#{$bp-larger-than-tablet}) {
 	.modal:before {
 		content: '';
 		display: inline-block;

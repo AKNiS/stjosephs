@@ -24,11 +24,26 @@
 	margin-right: auto;
 }
 
-.header--actions-link {
-	display: block;
+.header--actions {
 	float: right;
-	padding: 9px 10px 0;
+	height: 40px;
+	line-height: 50px;
+	margin-top: 5px;
+}
+
+.header--actions-link {
+	// display: block;
+	float: right;
+	margin-left: 15px;
+
+	&.button {
+		font-size: 1.5rem;
+		// line-height: 4.2rem;
+		margin: 20px 0 0 0;
+	}
+
 	svg {
+		vertical-align: middle;
 		width: 30px;
 		height: 30px;
 	}
@@ -42,33 +57,45 @@
 	padding-top: 50px;
 }
 
-@media (#{$bp-larger-than-phablet}) {
+@media (#{$bp-larger-than-tablet}) {
 	.header {
 		height: 140px;
 		background: #ffffff;
 	}
 
-	.header--logo svg {
-		width: 200px;
-		height: 60px;
-		margin-top: 15px;
-		margin-bottom: 15px;
+	.header--logo {
 		margin-left: auto;
 		margin-right: auto;
+		margin-top: 15px;
+		margin-bottom: 15px;
+		width: 200px;
+		height: 60px;
+
+		svg {
+			width: 200px;
+			height: 60px;
+		}
+	}
+
+	.header--actions {
+		height: 85px;
+		line-height: 90px;
+		margin-top: 5px;
 	}
 
 	.header--actions-link {
-		line-height: 90px;
-		padding: 0;
+		// line-height: 90px;
+		// font-size: 2rem;
+		// padding: 0 1rem;
 		svg {
 			// padding-top: 25px;
-			width: 50px;
-			height: 50px;
+			width: 40px;
+			height: 40px;
 		}
 	}
 
 	.header--actions-link__desktop {
-		display: block;
+		display: inline;
 	}
 
 	.header--actions-link__mobile {
