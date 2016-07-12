@@ -1,19 +1,21 @@
 <header class="header">
-	<div class="container">
-		<div class="row">
-			<div class="twelve columns">
-				<div class="header--actions">
-					<a href="#" class="header--actions-link">
-						{% include 'partials/svg/email.nunj' %}
-					</a>
-					<a href="#" class="header--actions-link header--actions-link__desktop button">
-						Donate
-					</a>
-					<a href="#" class="header--actions-link header--actions-link__mobile">
-						{% include 'partials/svg/tel.nunj' %}
-					</a>
+	<div class="header--wrapper">
+		<div class="container">
+			<div class="row">
+				<div class="twelve columns">
+					<div class="header--actions">
+						<a href="#" class="header--actions-link">
+							{% include 'partials/svg/email.nunj' %}
+						</a>
+						<a href="#" class="header--actions-link header--actions-link__desktop button">
+							Donate
+						</a>
+						<a href="#" class="header--actions-link header--actions-link__mobile">
+							{% include 'partials/svg/tel.nunj' %}
+						</a>
+					</div>
+					<div class="header--logo">{% include 'partials/svg/sjc-logo.nunj' %}</div>
 				</div>
-				<div class="header--logo">{% include 'partials/svg/sjc-logo.nunj' %}</div>
 			</div>
 		</div>
 	</div>
