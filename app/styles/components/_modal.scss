@@ -37,7 +37,7 @@
 .modal--title {
 	// position: fixed;
 	width: inherit;
-	padding: 20px 0 4px;
+	padding: 5px 0 10px;
 	background: $color-white;
 	border-bottom: 1px solid $color-sjc-red;
 	h3 {
@@ -53,7 +53,7 @@
 	right: 0;
 	font-size: 3rem;
 	line-height: 30px;
-	padding: 14px 30px 0 30px;
+	padding: 10px 30px 0 30px;
 	text-align: center;
 	text-decoration: none;
 
@@ -62,7 +62,7 @@
 .modal--content {
 	position: relative;
 	padding: 20px 20px 75px;
-	height: 100%;
+	max-height: 100%;
 	overflow-y: auto;
 	box-sizing: border-box;
 }
@@ -79,10 +79,10 @@
 
 	.modal--wrapper {
 		width: 600px;
-		height: 60%;
+		// height: auto;
+		max-height: 60%;
 		display: inline-block;
 		vertical-align: middle;
-		padding-bottom: 75px;
 		border-radius: 10px;
 	}
 

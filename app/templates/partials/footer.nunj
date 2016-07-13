@@ -2,19 +2,19 @@
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
-				<a href="#fosterModal">Become a Foster Carer</a>
+				<a href="#foster-care-form">Become a Foster Carer</a>
 			</div>
 		</div>
 	</div>
 </footer>
-<div id="fosterModal" class="modal">
+<div id="foster-care-form" class="modal">
 	<div class="modal--wrapper">
 		<div class="modal--title">
 			<h3>Foster Carer Application Form</h3>
 			<a href="#close" title="Close" class="modal--close">&times;</a>
 		</div>
 		<div class="modal--content">
-		<form action="process_form.php" class="" method="post" novalidate="">
+		<form action="process_foster.php" class="" method="post" novalidate="">
 			<div id="field1-container" class="">
 				<label for="foster--field__firstName">
 					First Name
@@ -116,4 +116,30 @@
 		</form>
 		</div>
 	</div>
+</div>
+<div id="mailing-list" class="modal">
+	<div class="modal--wrapper">
+		<div class="modal--title">
+			<h3>Sign up for the SJC mailing list</h3>
+			<a href="#close" title="Close" class="modal--close">&times;</a>
+		</div>
+		<div class="modal--content">
+			<p>Join the mailing list to get updates, news and announcements from the St. Joseph's Cowper family, delivered straight to your inbox! We don't spam, promise.</p>
+			<form action="process_mailinglist.php" class="" method="post" novalidate="">
+				<div class="">
+					<label for="mlist--field__firstName">
+						Email
+					</label>
+					<input type="text" name="firstName" id="mlist--field__firstName" required="required">
+				</div>
+
+
+				<div id="form-submit" class="">
+					<input type="submit" value="Join the list">
+				</div>
+			</form>
+
+		</div>
+	</div>
+
 </div>
