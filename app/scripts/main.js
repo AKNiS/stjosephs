@@ -1,5 +1,62 @@
+
+/*
+* 
+* Cookie for prompting the user to join the mailing list
+* - On the first visit, prompt the user only once
+* - If on one page for 20 seconds
+* - OR if the user visits a second page
+* - Expires in 7 days
+* 
+* When the page loads, look for a cookie
+* if cookie AND triggered, do nothing
+* if cookie AND not triggered, prompt immediately
+* if no cookie, create cookie and start timer
+* if timer ends, set cookie to triggered
+* 
+*/
+window.onload = function(e) {
+    var timerSec = 20;
+    var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)sjcMailingList\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    if(!cookie) {
+        console.log("No cookie exists! Creating one and starting a timer");
+        writeCookie("sjcMailingList", false, 7);
+        setTimeout(function() {
+            console.log("Reached timer end! Prompt now.");
+            location.href="#mailing-list";
+            writeCookie("sjcMailingList", true, 7);
+        }, timerSec*1000);
+    } else if (cookie && cookie === "false") {
+        console.log("Found a cookie! Return visit but haven't prompted yet. Prompt now!");
+        location.href="#mailing-list";
+        writeCookie("sjcMailingList", true, 7);
+    } else if (cookie && cookie === "true") {
+        console.log("Found a cookie, and user has been triggered. Do nothing");
+    }
+}
+
+function writeCookie (key, value, days) {
+    var date = new Date();
+
+    // Default at 365 days.
+    days = days || 365;
+
+    // Get unix milliseconds at current time plus number of days
+    date.setTime(+ date + (days * 86400000)); //24 * 60 * 60 * 1000
+
+    window.document.cookie = key + "=" + value + "; expires=" + date.toGMTString() + "; path=/";
+
+    return value;
+};
+
+function deleteCookie (key) {
+    window.document.cookie = key + "=; expires=0; path=/";
+}
+
+
+/* Google Map init */
 google.maps.event.addDomListener(window, 'load', init);
 var map;
+
 
 function init() {
     var mapOptions = {
