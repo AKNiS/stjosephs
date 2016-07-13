@@ -101,10 +101,10 @@
 
 
 				<div class="option clearfix">
-					<input type="checkbox" name="mailingList" id="foster--field__mailingList" value="Yes">
 					<span class="option-title">
 						Yes
 					</span>
+					<input type="checkbox" name="mailingList" id="foster--field__mailingList" value="Yes">
 					<br>
 				</div>
 			</div>

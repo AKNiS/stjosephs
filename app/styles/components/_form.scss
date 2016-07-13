@@ -38,7 +38,18 @@ button, input, optgroup, select, textarea {
 	font-size: 1.8rem;
 }
 
+.option {
+	margin-bottom: 1.5rem;
+	input[type="checkbox"] {
+		width: auto;
+		float: left;
+		margin: 0.8rem 1rem;
+	}
+}
 
+.option-title {
+	float: left;
+}
 
 // Contact form-specific styles
 #contact--field__message {

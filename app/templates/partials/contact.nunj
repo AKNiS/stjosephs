@@ -65,6 +65,21 @@
 		</div>
 
 
+		<div class="">
+			<label for="contact--field__mailingList">
+				Would you like to join the SJC mailing list?
+			</label>
+
+			<div class="option clearfix">
+				<span class="option-title">
+					Yes
+				</span>
+				<input type="checkbox" name="mailingList" id="contact--field__mailingList" value="Yes">
+				<br>
+			</div>
+		</div>
+
+
 		<div id="" class="contact--field">
 			<input type="submit" value="Send">
 		</div>
