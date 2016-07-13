@@ -4,11 +4,6 @@
 	.container {
 		background: $color-sjc-red;
 	}
-	a {
-		color: $color-white;
-		text-decoration: none;
-		text-transform: uppercase;
-	}
 	ul {
 		list-style-type: none;
 		margin-bottom: 0;
@@ -16,14 +11,43 @@
 	li {
 		display: block;
 		float: left;
+		margin-bottom: 0;
+	}
+	a {
+		display: block;
 		padding: 0 10px;
-		margin-bottom: -4px;
-		line-height: 54px
+		height: 45px;
+		line-height: 45px;
+		color: $color-white;
+		text-decoration: none;
+		text-transform: uppercase;
+		transition: 200ms all ease-in;
+	}
+	svg {
+		transition: 200ms all ease-in;
+	}
+	a:hover {
+		color: $color-sjc-red;
+		background: $color-white;
+		svg {
+			fill: $color-sjc-red;
+		}
 	}
 }
-
+ 
 .menu {
 	display: none;
+}
+
+a.menu--link__icon {
+	padding-top: 12px;
+	height: 38px;
+	line-height: 38px;
+	svg {
+		width: 30px;
+		height: 30px;
+		fill: $color-white;
+	}
 }
 
 .mobile-menu-link {

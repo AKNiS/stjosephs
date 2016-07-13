@@ -1,0 +1,22 @@
+{% extends "layout.nunj" %}
+
+{% set title = "Careers" %}
+
+{% block content %}
+<div class="row">
+	<div class="twelve columns">
+		<h1>Careers at St. Joseph's Cowper</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<p>Food bloggers rocking out the espy, the australian open formula one grand prix emerald peacock temper trap richmond tigers, ticket inspector the G' collins place citylink world's most liveable city, NGV culture fix the saints naked for satan frankston bogans hipsters, movida warehouse chic don dons.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns" style="text-align:center;">
+		<a href="#" class="button button__large">View jobs on Seek</a>
+	</div>
+</div>
+
+{% endblock %}
