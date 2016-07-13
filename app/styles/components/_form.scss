@@ -14,7 +14,6 @@ input[type="submit"] {
 	color: $color-white;
 	font-size: 2.0rem;
 	line-height: 1rem;
-	margin-bottom: 0;
 	transition: 200ms all ease-in;
 	border: 2px solid transparent;
 }
@@ -47,6 +46,9 @@ button, input, optgroup, select, textarea {
 }
 
 // Newsletter form-specific styles
+#mailing-list input[type="submit"] {
+	margin-bottom: 0;
+}
  
 // Foster Care form-specific styles
 #foster-care-form .modal--content {

@@ -61,11 +61,12 @@ a.menu--link__icon {
 .mobile-menu-link--close {
 	display: block;
 	position: absolute;
-	top: -5rem;
-	right: 0;
+	top: -50px;
+	right: 10px;
 	font-size: 2.7rem;
-	padding: 0.2rem 2rem;
+	padding: 0 2rem;
 	line-height: 45px;
+	height: 50px;
 	&:hover {
 		color: $color-sjc-red;
 		background: $color-white;

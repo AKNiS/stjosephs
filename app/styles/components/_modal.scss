@@ -99,3 +99,11 @@
 		padding-bottom: 0;
 	}
 }
+
+// Newsletter-specific modal styles
+
+@media (#{$bp-larger-than-tablet}) {
+	#mailing-list .modal--wrapper {
+		height: auto;
+	}
+}
