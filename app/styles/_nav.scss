@@ -9,6 +9,7 @@
 		margin-bottom: 0;
 	}
 	li {
+		position: relative;
 		display: block;
 		float: left;
 		margin-bottom: 0;
@@ -113,5 +114,61 @@ a.menu--link__icon {
 	}
 	.menu {
 		display: block;
+	}
+
+	.nav a.submenu {
+		padding-right: 13px;
+		&:after{
+			content: " ";
+			display: inline-block;
+			height: 5px;
+			width: 5px;
+			border: 2px solid $color-white;
+			border-left-color: transparent;
+			border-top-color: transparent;
+			margin-left: 5px;
+    		margin-top: 5px;
+			transform: rotate(-45deg);
+			transition: 200ms all ease-in;
+		}
+		&:hover:after {
+			border-right-color: $color-sjc-red;
+			border-bottom-color: $color-sjc-red;
+		}
+	}
+
+	ul.menu ul {
+		display:none;
+		position:absolute;
+		top:100%;
+		left:0;
+		background:$color-sjc-red;
+		color: $color-white;
+		padding:0;
+		margin: 0;
+	}
+
+	ul.menu ul li {
+		float: none;
+		width: 200px
+	}
+
+	ul.menu ul ul {
+		top:0;
+		left:100%
+	}
+
+	ul.menu li:hover > ul {
+		display:block
+	}
+
+	ul.menu li:hover a.submenu {
+
+		&:after {
+			margin-left: 5px;
+			margin-bottom: 3px;
+			margin-top: 7px;
+			transform: rotate(45deg);
+		}
 	}
 }
