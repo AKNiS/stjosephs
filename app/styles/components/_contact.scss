@@ -13,18 +13,5 @@
 .map {
 	width: 100%;
 	margin-bottom: 2.5rem;
-	height: 0;
-	overflow: hidden;
-	transition: max-height 200ms ease-in;
-}
-
-.map:target {
 	height: 300px;
 }
-
-
-// @media (#{$bp-larger-than-tablet}) {
-// 	.map {
-// 		height: 300px;
-// 	}
-// }

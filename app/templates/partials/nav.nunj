@@ -6,13 +6,17 @@
 					<li><a href="#mobileMenu">Menu</a></li>
 				</ul>
 				<ul class="menu">
-					<li><a href="/index.html">Home</a></li>
+					<li><a href="/" class="menu--link__icon">
+						{% include 'partials/svg/email.nunj' %}
+					</a></li>
 					<li><a href="/history.html">History</a></li>
 					<li><a href="/board.html">Our Board</a></li>
-					<li><a href="/what-we-do.html#fosterCare">Foster Care</a></li>
-					<li><a href="/what-we-do.html#resiCare">Residential Care</a></li>
-					<li><a href="/what-we-do.html#tutorMentor">Tutoring &amp; Mentoring</a></li>
+					<li><a href="/careers.html">Careers</a></li>
+					<li><a href="/what-we-do.html#fosterCare">#FosterCare</a></li>
+					<li><a href="/what-we-do.html#resiCare">#ResiCare</a></li>
+					<li><a href="/what-we-do.html#tutorMentor">#Tutor&amp;Mentor</a></li>
 					<li><a href="/case-study.html">Case Study</a></li>
+					<li><a href="#">Annual Report</a></li>
 				</ul>
 			</div>
 		</div>
@@ -21,17 +25,14 @@
 <div id="mobileMenu" class="mobile-menu">
 	<a href="#close" class="mobile-menu-link--close">&times;</a>
 	<ul>
-		<li><a href="/index.html">Home</a></li>
+		<li><a href="/">Home</a></li>
 		<li><a href="/history.html">History</a></li>
 		<li><a href="/board.html">Our Board</a></li>
-		<li><a href="/what-we-do.html#fosterCare">Foster Care</a></li>
-		<li><a href="/what-we-do.html#resiCare">Residential Care</a></li>
-		<li><a href="/what-we-do.html#tutorMentor">Tutoring &amp; Mentoring</a></li>
+		<li><a href="/careers.html">Careers</a></li>
+		<li><a href="/what-we-do.html#fosterCare">#FosterCare</a></li>
+		<li><a href="/what-we-do.html#resiCare">#ResidentialCare</a></li>
+		<li><a href="/what-we-do.html#tutorMentor">#Tutor&amp;Mentor</a></li>
 		<li><a href="/case-study.html">Case Study</a></li>
-		<li><a href="/index.html">Home</a></li>
-		<li><a href="/history.html">History</a></li>
-		<li><a href="/board.html">Our Board</a></li>
-		<li><a href="/case-study.html">Case Study</a></li>
-		<li><a href="/what-we-do.html">What We Do</a></li>
+		<li><a href="#">Annual Report</a></li>
 	</ul>
 </div>

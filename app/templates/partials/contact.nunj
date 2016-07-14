@@ -18,10 +18,9 @@
 		</dl>
 	</div>
 	<div class="eight columns">
-		{# <a href="#map" class="button">Show Map</a>
 		<div id="map" class="map">
 			<a href="https://goo.gl/maps/AjZjCvmgcTo"><img src="images/map.jpg" /></a>
-		</div> #}
+		</div>
 	</div>
 </div>
 <div class="row">
@@ -63,6 +62,21 @@
 				How can we help you?
 			</label>
 			<textarea name="message" id="contact--field__message" required="required"></textarea>
+		</div>
+
+
+		<div class="">
+			<label for="contact--field__mailingList">
+				Would you like to join the SJC mailing list?
+			</label>
+
+			<div class="option clearfix">
+				<span class="option-title">
+					Yes
+				</span>
+				<input type="checkbox" name="mailingList" id="contact--field__mailingList" value="Yes">
+				<br>
+			</div>
 		</div>
 
 

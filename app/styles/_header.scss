@@ -32,7 +32,6 @@
 	float: right;
 	height: 40px;
 	line-height: 50px;
-	margin-top: 5px;
 }
 
 .header--actions-link {
@@ -42,8 +41,8 @@
 
 	&.button {
 		font-size: 1.5rem;
-		// line-height: 4.2rem;
-		margin: 20px 0 0 0;
+		line-height: 3.2rem;
+		margin-top: 25px;
 	}
 
 	svg {

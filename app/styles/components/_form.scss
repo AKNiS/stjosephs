@@ -1,6 +1,6 @@
 
 label {
-	font-size: 1.9rem;
+	font-size: 2.2rem;
 	font-weight: normal;
 	margin-bottom: 0;
 }
@@ -12,8 +12,8 @@ input, textarea {
 input[type="submit"] {
 	background: $color-sjc-red;
 	color: $color-white;
-	font-size: 1.4em;
-	padding-top: 3px;
+	font-size: 2.0rem;
+	line-height: 1rem;
 	transition: 200ms all ease-in;
 	border: 2px solid transparent;
 }
@@ -38,13 +38,30 @@ button, input, optgroup, select, textarea {
 	font-size: 1.8rem;
 }
 
+.option {
+	margin-bottom: 1.5rem;
+	input[type="checkbox"] {
+		width: auto;
+		float: left;
+		margin: 0.8rem 1rem;
+	}
+}
 
+.option-title {
+	float: left;
+}
 
 // Contact form-specific styles
 #contact--field__message {
-	height: 232px;
+	height: 167px;
 }
 
 // Newsletter form-specific styles
+#mailing-list input[type="submit"] {
+	margin-bottom: 0;
+}
  
 // Foster Care form-specific styles
+#foster-care-form .modal--content {
+	padding-bottom: 75px;
+}
