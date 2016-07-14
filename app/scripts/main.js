@@ -16,21 +16,21 @@
 */
 window.onload = function(e) {
     var timerSec = 20;
-    var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)sjcMailingList\s*\=\s*([^;]*).*$)|^.*$/, "$1");
+    var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)sjcMailingList\s*\=\s*([^;]*).*$)|^.*$/, '$1');
     if(!cookie) {
-        console.log("No cookie exists! Creating one and starting a timer");
-        writeCookie("sjcMailingList", false, 7);
+        console.log('No cookie exists! Creating one and starting a timer');
+        writeCookie('sjcMailingList', false, 7);
         setTimeout(function() {
-            console.log("Reached timer end! Prompt now.");
-            location.href="#mailing-list";
-            writeCookie("sjcMailingList", true, 7);
+            console.log('Reached timer end! Prompt now.');
+            location.href='#mailing-list';
+            writeCookie('sjcMailingList', true, 7);
         }, timerSec*1000);
-    } else if (cookie && cookie === "false") {
-        console.log("Found a cookie! Return visit but haven't prompted yet. Prompt now!");
-        location.href="#mailing-list";
-        writeCookie("sjcMailingList", true, 7);
-    } else if (cookie && cookie === "true") {
-        console.log("Found a cookie, and user has been triggered. Do nothing");
+    } else if (cookie && cookie === 'false') {
+        console.log('Found a cookie! Return visit but haven\'t prompted yet. Prompt now!');
+        location.href='#mailing-list';
+        writeCookie('sjcMailingList', true, 7);
+    } else if (cookie && cookie === 'true') {
+        console.log('Found a cookie, and user has been triggered. Do nothing');
     }
 }
 
@@ -43,13 +43,13 @@ function writeCookie (key, value, days) {
     // Get unix milliseconds at current time plus number of days
     date.setTime(+ date + (days * 86400000)); //24 * 60 * 60 * 1000
 
-    window.document.cookie = key + "=" + value + "; expires=" + date.toGMTString() + "; path=/";
+    window.document.cookie = key + '=' + value + '; expires=' + date.toGMTString() + '; path=/';
 
     return value;
 };
 
 function deleteCookie (key) {
-    window.document.cookie = key + "=; expires=0; path=/";
+    window.document.cookie = key + '=; expires=0; path=/';
 }
 
 
@@ -82,74 +82,74 @@ function init() {
         },
         mapTypeId: google.maps.MapTypeId.ROADMAP,
         styles: [{
-            "featureType": "administrative",
-            "elementType": "all",
-            "stylers": [{
-                "visibility": "on"
+            'featureType': 'administrative',
+            'elementType': 'all',
+            'stylers': [{
+                'visibility': 'on'
             }, {
-                "saturation": -100
+                'saturation': -100
             }, {
-                "lightness": 20
+                'lightness': 20
             }]
         }, {
-            "featureType": "road",
-            "elementType": "all",
-            "stylers": [{
-                "visibility": "on"
+            'featureType': 'road',
+            'elementType': 'all',
+            'stylers': [{
+                'visibility': 'on'
             }, {
-                "saturation": -100
+                'saturation': -100
             }, {
-                "lightness": 40
+                'lightness': 40
             }]
         }, {
-            "featureType": "water",
-            "elementType": "all",
-            "stylers": [{
-                "visibility": "on"
+            'featureType': 'water',
+            'elementType': 'all',
+            'stylers': [{
+                'visibility': 'on'
             }, {
-                "saturation": -10
+                'saturation': -10
             }, {
-                "lightness": 30
+                'lightness': 30
             }]
         }, {
-            "featureType": "landscape.man_made",
-            "elementType": "all",
-            "stylers": [{
-                "visibility": "simplified"
+            'featureType': 'landscape.man_made',
+            'elementType': 'all',
+            'stylers': [{
+                'visibility': 'simplified'
             }, {
-                "saturation": -60
+                'saturation': -60
             }, {
-                "lightness": 10
+                'lightness': 10
             }]
         }, {
-            "featureType": "landscape.natural",
-            "elementType": "all",
-            "stylers": [{
-                "visibility": "simplified"
+            'featureType': 'landscape.natural',
+            'elementType': 'all',
+            'stylers': [{
+                'visibility': 'simplified'
             }, {
-                "saturation": -60
+                'saturation': -60
             }, {
-                "lightness": 60
+                'lightness': 60
             }]
         }, {
-            "featureType": "poi",
-            "elementType": "all",
-            "stylers": [{
-                "visibility": "off"
+            'featureType': 'poi',
+            'elementType': 'all',
+            'stylers': [{
+                'visibility': 'off'
             }, {
-                "saturation": -100
+                'saturation': -100
             }, {
-                "lightness": 60
+                'lightness': 60
             }]
         }, {
-            "featureType": "transit",
-            "elementType": "all",
-            "stylers": [{
-                "visibility": "off"
+            'featureType': 'transit',
+            'elementType': 'all',
+            'stylers': [{
+                'visibility': 'off'
             }, {
-                "saturation": -100
+                'saturation': -100
             }, {
-                "lightness": 60
+                'lightness': 60
             }]
         }],
     }
