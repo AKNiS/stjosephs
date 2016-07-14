@@ -58,8 +58,8 @@ gulp.task('lint:test', () => {
     .pipe(gulp.dest('test/spec/**/*.js'));
 });
 
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
+gulp.task('html', ['nunjucks', 'styles', 'scripts'], () => {
+  return gulp.src('.tmp/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({safe: true, autoprefixer: false})))
@@ -72,7 +72,7 @@ gulp.task('nunjucks', () => {
     .pipe(nunjucks({
       path: ['app/templates']
     }))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest('.tmp'))
     .pipe(reload({stream: true}));
 });
 
