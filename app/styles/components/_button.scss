@@ -1,10 +1,24 @@
 // See Skeleton buttons for base styles in 
 // bower_components/Skeleton-Sass/scss/modules/buttons
 
+
+.button, button {
+	border-width: 3px;
+	border-color: transparent;
+	background: $color-sjc-red;
+	color: $color-white;
+	transition: all 200ms ease-in;
+}
+
+.button:hover, button:hover {
+	border-color: $color-sjc-red;
+	background: $color-white;
+	color: $color-sjc-red;
+}
 .button.button__large {
 	font-size: 3.2rem;
 	height: auto;
 	line-height: initial;
-	padding-top: 1.2rem;
+	padding: 0.6rem 2rem 1rem;
 	margin: 1rem auto 3rem;
 }

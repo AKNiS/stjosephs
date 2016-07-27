@@ -27,21 +27,6 @@ svg {
   fill: $color-sjc-red;
 }
 
-.button, button {
-	border-width: 3px;
-	border-color: transparent;
-	background: $color-sjc-red;
-	color: $color-white;
-	transition: all 200ms ease-in;
-}
-
-.button:hover, button:hover {
-	border-color: $color-sjc-red;
-	background: $color-white;
-	color: $color-sjc-red;
-
-}
-
 .container {
 	padding: 0 30px;
 	background: #ffffff;
