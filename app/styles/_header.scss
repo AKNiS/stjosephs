@@ -7,6 +7,7 @@
 	position: fixed;
 	z-index: 10;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+	transition: 300ms height ease-in;
 }
 
 .header--wrapper {
@@ -26,23 +27,25 @@
 	margin-bottom: 10px;
 	margin-left: 0;
 	margin-right: auto;
+	transition: 300ms height ease-in;
 }
 
 .header--actions {
 	float: right;
 	height: 40px;
 	line-height: 50px;
+	transition: 300ms margin-top ease-in;
 }
 
 .header--actions-link {
-	// display: block;
+	display: block;
 	float: right;
 	margin-left: 15px;
 
 	&.button {
 		font-size: 1.5rem;
 		line-height: 3.2rem;
-		margin-top: 25px;
+		margin-top: 3px;
 	}
 
 	svg {
@@ -62,28 +65,26 @@
 
 @media (#{$bp-larger-than-tablet}) {
 	.header {
-		height: 140px;
+		height: 170px;
 		background: #ffffff;
 	}
 
 	.header--logo {
-		margin-left: auto;
+		margin-left: 0;
 		margin-right: auto;
 		margin-top: 15px;
 		margin-bottom: 15px;
 		width: 200px;
-		height: 60px;
+		height: auto;
 
 		svg {
 			width: 200px;
-			height: 60px;
+			height: 90px;
 		}
 	}
 
 	.header--actions {
-		height: 85px;
-		line-height: 90px;
-		margin-top: 5px;
+		margin-top: 38px;
 	}
 
 	.header--actions-link {
@@ -107,5 +108,17 @@
 
 	.content {
 		padding-top: 140px;
+	}
+
+	.header.small {
+		height: 140px;
+		.header--logo svg {
+			height: 60px;
+		}
+		.header--actions {
+			margin-top: 25px;
+			.button {
+			}
+		}
 	}
 }

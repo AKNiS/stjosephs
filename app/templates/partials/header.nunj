@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="header">
 	<div class="header--wrapper">
 		<div class="container">
 			<div class="row">
@@ -14,7 +14,7 @@
 							{% include 'partials/svg/tel.nunj' %}
 						</a>
 					</div>
-					<div class="header--logo">{% include 'partials/svg/sjc-logo.nunj' %}</div>
+					<div class="header--logo"><a href="index.html">{% include 'partials/svg/sjc-logo.nunj' %}</a></div>
 				</div>
 			</div>
 		</div>

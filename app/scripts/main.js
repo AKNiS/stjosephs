@@ -15,6 +15,8 @@
 * 
 */
 window.onload = function(e) {
+
+    // Newsletter popup cookie handler
     var timerSec = 20;
     var cookie = document.cookie.replace(/(?:(?:^|.*;\s*)sjcMailingList\s*\=\s*([^;]*).*$)|^.*$/, '$1');
     if(!cookie) {
@@ -32,6 +34,20 @@ window.onload = function(e) {
     } else if (cookie && cookie === 'true') {
         console.log('Found a cookie, and user has been triggered. Do nothing');
     }
+
+    // Change header size on scroll
+    window.addEventListener('scroll', function(e) {
+        var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+            shrinkOn = 100,
+            header = document.getElementById('header');
+        if(distanceY > shrinkOn) {
+            // add class 'small'
+            header.className = 'header small';
+        } else {
+            // remove class 'small'
+            header.className = 'header';
+        }
+    });
 }
 
 function writeCookie (key, value, days) {
