@@ -6,6 +6,11 @@
 	bottom: 0;
 	z-index: 11;
 	background: $color-sjc-red;
+	transition: 300ms height ease-in;
+
+	&:hover {
+		height: 80px;
+	}
 }
 
 .footer .container {
@@ -13,8 +18,8 @@
 	background: $color-sjc-red;
 	text-align: center;
 	font-size: 2.2rem;
+	color: $color-white; 
 	a { 
-		display: block;
 		color: $color-white; 
 		text-decoration: none;
 	}
