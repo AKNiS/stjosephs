@@ -10,13 +10,13 @@
 	transition: 300ms height ease-in;
 }
 
+.header .container {
+	padding: 0 10px;
+}
+
 .header--wrapper {
 	width: 100%;
 	background: #ffffff;
-}
-
-.header .container {
-	padding: 0 10px;
 }
 
 .header--logo svg {
@@ -78,6 +78,10 @@
 	.header {
 		height: 170px;
 		background: #ffffff;
+	}
+
+	.header .container {
+		padding: 0;
 	}
 
 	.header--logo {
