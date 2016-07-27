@@ -1,8 +1,5 @@
 body {
-  background: linear-gradient(90deg, 
-  	#6d6e70 0%, 
-  	#7A7A7A 50%, 
-  	#6d6e70 100%);
+  background: $color-white;
   font-size: 1.5rem;
 }
 
@@ -47,9 +44,6 @@ svg {
 }
 
 .content .container {
-	border-style: dotted;
-	border-color: $light-grey;
-	border-width: 0px 2px;
 	padding-top: 60px;
 	padding-bottom: 40px;
 }
@@ -73,5 +67,20 @@ a.anchor:before {
 
 	.show-for-mobile {
 		display: none;
+	}
+}
+
+
+@media (#{$bp-larger-than-desktop}) {
+	body {
+		background: linear-gradient(90deg, 
+		#6d6e70 0%, 
+		#7A7A7A 50%, 
+		#6d6e70 100%);		
+	}
+	.content .container {
+		border-style: dotted;
+		border-color: $light-grey;
+		border-width: 0px 2px;
 	}
 }
