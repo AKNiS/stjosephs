@@ -9,35 +9,112 @@
 	</div>
 </div>
 <div class="row">
-	<div class="six columns">
+	<div class="twelve columns">
 		<a id="fosterCare" class="anchor"></a>
-		<div class="card--service">
-			{% include 'partials/svg/fostercare.nunj' %}
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/fostercare.nunj' %}
+			</span>
+			<span class="card--text">
+				Foster Care
+			</span>
 		</div>
-		<p>Food bloggers rocking out the espy, the australian open formula one grand prix emerald peacock temper trap richmond tigers, ticket inspector the G' collins place citylink world's most liveable city, NGV culture fix the saints naked for satan frankston bogans hipsters, movida warehouse chic don dons.</p>
-	</div>
-	<div class="six columns">
-		<a id="resiCare" class="anchor"></a>
-		<div class="card--service">
-			{% include 'partials/svg/resicare.nunj' %}
+		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
+		<h3>Who can be a foster carer</h3>
+		<p>Foster carers come in all shapes, sizes, cultural backgrounds and relationship types. If you’re passionate about kids and can provide a stable, loving environment for young people, you can be a foster carer! The assessment process to become a foster carer typically takes 3-6 months.</p>
+		<p>You choose the type of care you want to provide and how often.</p>
+		<h3>What type of foster care is right for you</h3>
+		<table>
+			<tr>
+				<th>Type</th>
+				<th>Notice</th>
+				<th>Duration</th>
+			</tr>
+			<tr>
+				<td>Emergency</td>
+				<td>Short notice</td>
+				<td>Up to two week duration</td>
+			</tr>
+			<tr>
+				<td>Short-term</td>
+				<td>Some notice</td>
+				<td>Up to two month duration</td>
+			</tr>
+			<tr>
+				<td>Long-term</td>
+				<td>Lots of notice</td>
+				<td>Up to 18 year duration</td>
+			</tr>
+			<tr>
+				<td>Respite</td>
+				<td>Usually planned</td>
+				<td>Generally weekend duration</td>
+			</tr>
+		</table>
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/collabtoheal.nunj' %}
+			</span>
+			<span class="card--text">
+				<h3>Collaborate to Heal</h3>
+			</span>
 		</div>
-		<p>Warehouse chic trams, brunswick st hippy collingwood ferals laksa king don dons running the tan, melb Rod Laver the corner hotel citylink melbourne cricket ground, black is alway in fashion neatly trimmed moustaches cold drip coffee essendon bombers frankston bogans, myki queues footy the G'.</p>
+		<p>Being a foster carer means being part of a team. Many people are involved in providing care for each foster child. Case workers from St Joseph’s Cowper, FACS and of course, the birth family of the young person all have a role to play alongside the foster carer. Your role as a foster carer is to be a significant figure in the young person’s life, but you’re not alone!</p>
+		<p><strong>We collaborate to heal.</strong></p>
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/trainsupport.nunj' %}
+			</span>
+			<span class="card--text">
+				<h3>Training &amp; Support</h3>
+			</span>
+		</div>
+		<p>"Shared Stories, Shared Lives" training is an essential part of the process of becoming a foster carer. This training includes topics such as trauma and dealing with challenging behaviours.</p>
+		<p>Foster carers get paid a tax-free allowance for each night a young person spends in their care.</p>
+		<p>SJC is the only foster care agency with an office in the Clarence Valley. We have a 24-hour On-Call support service and employ a Foster Care Coordinator to support and train our foster carers.</p>
+
 	</div>
 </div>
 <div class="row">
-	<div class="six columns">
-		<a id="tutorMentor" class="anchor"></a>
-		<div class="card--service">
-			{% include 'partials/svg/tutormentor.nunj' %}
+	<div class="twelve columns">
+		<a id="resiCare" class="anchor"></a>
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/resicare.nunj' %}
+			</span>
+			<span class="card--text">
+				Residential Care
+			</span>
 		</div>
-		<p>Bill clinton ate two bowls chopper read, naked for satan prahran hipsters footy ticket inspector swanston, rocking out the espy south melb dim sims rooftop cinema spencer st station formula one grand prix, neatly trimmed moustaches shane warne don dons lions bar dandenong, presets bourke st mall melb.</p>
+		<p>SJC provides therapeutic residential care for children and young people who are in statutory care as ordered by the Courts. As a Child Safe workplace we uphold the highest standards of trauma-informed care and provide 24hr assistance to our young people with a team of highly-trained and experienced youth workers. </p>
 	</div>
-	<div class="six columns">
-		<a id="commPrograms" class="anchor"></a>
-		<div class="card--service">
-			{% include 'partials/svg/commprograms.nunj' %}
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<a id="tutorMentor" class="anchor"></a>
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/tutormentor.nunj' %}
+			</span>
+			<span class="card--text">
+				Tutoring &amp; Mentoring
+			</span>
 		</div>
-		<p>East brunswick club formula one grand prix, burlesque purple emerald bill clinton ate two bowls chopper read fed square, north of the river moomba shane warne etihad stadium myki queues, avalon is so not melb laksa king the emerald peacock temper trap chapel street, the G' melbourne cricket ground collingwood ferals.</p>
+		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<a id="commPrograms" class="anchor"></a>
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/commprograms.nunj' %}
+			</span>
+			<span class="card--text">
+				Community Programs
+			</span>
+		</div>
+		<p>St Joseph’s Cowper provides a range of community programs to children and young people to assist their development and growth.</p>
 	</div>
 </div>
 
