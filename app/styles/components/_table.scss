@@ -29,9 +29,19 @@ td:last-child {
 	padding-right: 15px;
 }
 
+tr.table--member {
+	font-size: 2.5rem;
+	font-weight: bold;
+	em {
+		font-size: 1.5rem;
+		color: $dark-grey;
+	}
+}
+
 td.table--avatar {
 	padding: 0;
 	width: 75px;
+	vertical-align: top;
 
 	img {
 		display: block;
@@ -40,18 +50,25 @@ td.table--avatar {
 	}
 }
 
+td.table--biography {
+	background: $color-sjc-darkred;
+	color: $color-white;
+	font-weight: bold;
+	font-size: 2rem;
+}
+
 tr:nth-child(even) td {
 	background: rgba($color-sjc-lightorange, 0.3);
 }
 
-tr td:hover {
-	background: $color-sjc-red;
-	color: $color-white;
-}
+// tr td:hover {
+// 	background: $color-sjc-red;
+// 	color: $color-white;
+// }
 
 @media (#{$bp-larger-than-tablet}) {
 	th, td {
-		padding: 12px 15px;
+		padding: 5px 15px;
 	}
 	td.table--avatar {
 		width: 150px;

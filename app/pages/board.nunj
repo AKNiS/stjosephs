@@ -8,175 +8,140 @@
 	<table class="board" width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tbody>
 		<tr>
-			<th colspan="2">Board Member</th>
-			<th>Position</th>
+			<th colspan="3"></th>
 		</tr>
-		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>Aitken, Gai</td>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>Gai Aitken <em>B.Tech. L.Mus.</em></td>
 			<td>Director</td>
 		</tr>
 		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>Brotherson, Grahame</td>
+			<td class="table--biography" colspan="2">Biography</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
+		</tr>
+		<tr>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>Grahame Brotherson </td>
 			<td>Director</td>
 		</tr>
 		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>Dougherty, Patrick</td>
+			<td class="table--biography" colspan="2">Biography</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
+		</tr>
+		<tr>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>Patrick Dougherty</td>
 			<td>Director</td>
 		</tr>
 		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>Feeney, Joseph</td>
+			<td class="table--biography" colspan="2">Biography</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
+		</tr>
+		<tr>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>Joseph Feeney</td>
 			<td>Director</td>
 		</tr>
 		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>Kelly, Dennis</td>
+			<td class="table--biography" colspan="2">Biography</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
+		</tr>
+		<tr>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>Dennis Kelly</td>
 			<td>Director</td>
 		</tr>
 		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>McDougall, James</td>
+			<td class="table--biography" colspan="2">Biography</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
+		</tr>
+		<tr>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>James McDougall</td>
 			<td>Chairperson</td>
 		</tr>
 		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>Ryan, Sr Caroline RSM</td>
+			<td class="table--biography" colspan="2">Biography</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
+		</tr>
+		<tr>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>Sr Caroline Ryan, RSM</td>
 			<td>Director</td>
 		</tr>
 		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>Page, Judith</td>
+			<td class="table--biography" colspan="2">Biography</td>
+		</tr>
+		<tr>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
+		</tr>
+		<tr>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>Judith Page</td>
 			<td>Director</td>
 		</tr>
 		<tr>
-			<td class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td>Steiner, Amanda</td>
-			<td>Director</td>
-		</tr>
-		{# <tr>
-			<th colspan="2">Board Member</th>
-			<th>Position</th>
+			<td class="table--biography" colspan="2">Biography</td>
 		</tr>
 		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
 		</tr>
 		<tr>
-			<td>Aitken, Gai</td>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td>Amanda Steiner</td>
 			<td>Director</td>
 		</tr>
 		<tr>
-			<td></td>
-			<td></td>
+			<td class="table--biography" colspan="2">Biography</td>
 		</tr>
 		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
+			<td>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vitae vulputate augue, a fringilla justo. Nullam cursus enim nec nibh tincidunt, venenatis vehicula ante vulputate. Sed tristique tortor sit amet urna aliquam aliquet. Aliquam vehicula lorem sem, at tristique urna malesuada nec.</td>
+			<td>Sed pretium, ligula non pulvinar ornare, mi nibh vehicula massa, sit amet efficitur arcu justo in erat. Mauris ut metus arcu. Sed quis porttitor mauris, id malesuada nibh. Proin nisl lacus, iaculis nec porta ut, lobortis ac nisl.</td>
 		</tr>
-		<tr>
-			<td>Brotherson, Grahame</td>
-			<td>Director</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Dougherty, Patrick</td>
-			<td>Director</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Feeney, Joseph</td>
-			<td>Director</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Kelly, Dennis</td>
-			<td>Director</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>McDougall, James</td>
-			<td>Chairperson</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Ryan, Sr Caroline RSM</td>
-			<td>Director</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Page, Judith</td>
-			<td>Director</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td rowspan="3" class="table--avatar"><img src="http://placehold.it/150x150?text=Avatar" /></td>
-			<td></td>
-			<td></td>
-		</tr>
-		<tr>
-			<td>Steiner, Amanda</td>
-			<td>Director</td>
-		</tr>
-		<tr>
-			<td></td>
-			<td></td>
-		</tr> #}
 	</tbody>
 	</table>
 {% endblock %}
