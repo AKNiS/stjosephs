@@ -7,14 +7,13 @@
 	<div class="four columns">
 		<dl>
 			<dt>Telephone</dt>
-			<dd>(01) 234 5678</dd>
+			<dd>(02) 6642 3022</dd>
 			<dt>Address</dt>
 			<dd><address>
-				123 Main St.
-				Cowper, NSW 1234
+				PO Box 418<br aria-hidden="true" />
+				120 North St.<br aria-hidden="true" />
+				Grafton NSW 2460
 			</address></dd>
-			<dt>Opening Hours</dt>
-			<dd>8am - 5pm, Monday - Friday</dd>
 		</dl>
 	</div>
 	<div class="eight columns">
@@ -29,7 +28,7 @@
 	</div>
 </div>
 <div class="row">
-	<form action="process_form.php" method="post" class="contact-form">
+	<form action="process_form.php" method="post" class="contact-form clearfix">
 	<div class="six columns">
 		<div id="" class="contact--field">
 			<label for="contact--field__firstName">
@@ -55,8 +54,34 @@
 			</label>
 			<input type="text" name="telephone" id="contact--field__telephone" required="required">
 		</div>
+
+		<div id="field10-container" class="">
+			<label for="contact--field__dept">
+				Which dept. are you most interested in?
+			</label>
+			<select name="dept" id="contact--field__dept">
+				<option id="field10-1" value="Residential Care">
+					Residential Care
+				</option>
+				<option id="field10-2" value="Foster Care">
+					Foster Care
+				</option>
+				<option id="field10-3" value="Tutoring / Mentoring">
+					Tutoring / Mentoring
+				</option>
+				<option id="field10-4" value="Community Programs">
+					Community Programs
+				</option>
+				<option id="field10-5" value="Corporate Sponsorship">
+					Corporate Sponsorship 
+				</option>
+				<option id="field10-6" value="Bequests / Legacy creation">
+					Bequests / Legacy creation
+				</option>
+			</select>
+		</div>
 	</div>
-	<div class="six columns">
+	<div class="six columns column-two">
 		<div id="" class="contact--field">
 			<label for="contact--field__message">
 				How can we help you?
@@ -79,6 +104,13 @@
 			</div>
 		</div>
 
+
+		<div style="position: absolute; left: -5000px;" aria-hidden="true">
+			<!-- Mailchimp no-spam value -->
+			<input type="text" name="b_da9a0881ddc88eea35d96f896_1084d3a4fe" tabindex="-1" value="">
+			<!-- Form name -->
+			<input type="hidden" name="formName" value="contact-form">
+		</div>
 
 		<div id="" class="contact--field">
 			<input type="submit" value="Send">

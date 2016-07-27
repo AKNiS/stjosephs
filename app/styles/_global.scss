@@ -6,8 +6,20 @@ body {
   font-size: 1.5rem;
 }
 
+.clearfix:after { 
+   content: "."; 
+   visibility: hidden; 
+   display: block; 
+   height: 0; 
+   clear: both;
+}
+
 h1, h2, h3, h4, h5 {
   color: $color-sjc-red;
+}
+
+h2 {
+	margin-top: 2rem;
 }
 
 svg {

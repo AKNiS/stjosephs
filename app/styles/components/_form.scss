@@ -52,8 +52,39 @@ button, input, optgroup, select, textarea {
 }
 
 // Contact form-specific styles
+.contact-form {
+	padding-bottom: 50px;
+}
+
 #contact--field__message {
-	height: 167px;
+	height: 210px;
+}
+
+#contact--field__dept {
+	width: 100%;
+}
+
+@media (#{$bp-larger-than-tablet}) {
+	.contact-form .columns div:last-child {
+		& input,
+		& select {
+			margin-bottom: 0;	
+		}
+	}
+
+	.flexbox .contact-form {
+		display: flex;
+		.columns {
+			float: none;
+			flex: 1;
+		}
+	}
+}
+
+.contact-form .column-two {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 // Newsletter form-specific styles

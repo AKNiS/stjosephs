@@ -85,14 +85,26 @@
 
 			<div id="field10-container" class="">
 				<label for="foster--field__dept">
-					Which department are you most interested in?
+					Which dept. are you most interested in?
 				</label>
 				<select name="dept" id="foster--field__dept">
-					<option id="field10-1" value="Option 1">
-						Option 1
+					<option id="field10-1" value="Residential Care">
+						Residential Care
 					</option>
-					<option id="field10-2" value="Option 2">
-						Option 2
+					<option id="field10-2" value="Foster Care">
+						Foster Care
+					</option>
+					<option id="field10-3" value="Tutoring / Mentoring">
+						Tutoring / Mentoring
+					</option>
+					<option id="field10-4" value="Community Programs">
+						Community Programs
+					</option>
+					<option id="field10-5" value="Corporate Sponsorship">
+						Corporate Sponsorship 
+					</option>
+					<option id="field10-6" value="Bequests / Legacy creation">
+						Bequests / Legacy creation
 					</option>
 				</select>
 			</div>
