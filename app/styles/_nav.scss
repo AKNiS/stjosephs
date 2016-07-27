@@ -22,17 +22,6 @@
 		color: $color-white;
 		text-decoration: none;
 		text-transform: uppercase;
-		transition: 200ms all ease-in;
-	}
-	svg {
-		transition: 200ms all ease-in;
-	}
-	a:hover {
-		color: $color-sjc-red;
-		background: $color-white;
-		svg {
-			fill: $color-sjc-red;
-		}
 	}
 }
  
@@ -40,16 +29,54 @@
 	display: none;
 }
 
+a.menu--link {
+	transition: 200ms all ease-in;
+	&:hover {
+		color: $color-sjc-red;
+		background: $color-white;
+	}
+}
+
 a.menu--link__icon {
 	padding-top: 12px;
 	height: 38px;
 	line-height: 38px;
+	transform: translateZ(0);
 	svg {
 		width: 30px;
 		height: 30px;
 		fill: $color-white;
 	}
+	&:hover,
+	&:focus,
+	&:active {
+		opacity: 0;
+		transition-duration: 0.3s;
+		animation-name: icon-drop;
+		animation-duration: 0.5s;
+	    animation-delay: 0.3s;
+	    animation-fill-mode: forwards;
+	    animation-timing-function: ease-in-out;
+		animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+	}
 }
+
+// .hvr-icon-drop:before {
+// 	transform: translateZ(0);
+// }
+
+// .hvr-icon-drop:hover:before, 
+// .hvr-icon-drop:focus:before, 
+// .hvr-icon-drop:active:before {
+// 	opacity: 0;
+// 	transition-duration: 0.3s;
+// 	animation-name: icon-drop;
+// 	animation-duration: 0.5s;
+//     animation-delay: 0.3s;
+//     animation-fill-mode: forwards;
+//     animation-timing-function: ease-in-out;
+// 	animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+// }
 
 .mobile-menu-link {
 	li {
@@ -171,4 +198,39 @@ a.menu--link__icon {
 			transform: rotate(45deg);
 		}
 	}
+}
+
+/* Icon Drop Animation from https://ianlunn.github.io/Hover/ */
+@-webkit-keyframes icon-drop {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  51%,
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes icon-drop {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+  }
+
+  51%,
+  100% {
+    opacity: 1;
+  }
 }
