@@ -5,18 +5,75 @@
 {% block content %}
 <div class="row">
 	<div class="twelve columns">
-		<h1>History</h1>
+		<h1>Over 100 Years of Community Service</h1>
 	</div>
 </div>
 <div class="row">
 	<div class="six columns">
-		<p>Food bloggers rocking out the espy, the australian open formula one grand prix emerald peacock temper trap richmond tigers, ticket inspector the G' collins place citylink world's most liveable city, NGV culture fix the saints naked for satan frankston bogans hipsters, movida warehouse chic don dons.</p>
-		<p>Bill clinton ate two bowls chopper read, naked for satan prahran hipsters footy ticket inspector swanston, rocking out the espy south melb dim sims rooftop cinema spencer st station formula one grand prix, neatly trimmed moustaches shane warne don dons lions bar dandenong, presets bourke st mall melb.</p>
+		<p>St. Joseph’s Cowper was founded by the Sisters of Mercy in 1913 as an orphanage in Cowper, New South Wales providing care for children without parents or whose parents couldn’t provide care for them.</p>
 	</div>
 	<div class="six columns">
-		<p>Warehouse chic trams, brunswick st hippy collingwood ferals laksa king don dons running the tan, melb Rod Laver the corner hotel citylink melbourne cricket ground, black is alway in fashion neatly trimmed moustaches cold drip coffee essendon bombers frankston bogans, myki queues footy the G'.</p>
-		<p>East brunswick club formula one grand prix, burlesque purple emerald bill clinton ate two bowls chopper read fed square, north of the river moomba shane warne etihad stadium myki queues, avalon is so not melb laksa king the emerald peacock temper trap chapel street, the G' melbourne cricket ground collingwood ferals.</p>
+		<p>In 2016, St. Joseph’s Cowper in Grafton continues that tradition as an accredited out-of-home care agency by providing therapeutic residential and foster care for young people. Providing services from intensive residential care to general foster care enables St. Joseph’s Cowper to meet the individual needs of the young people in our care. </p>
 	</div>
 </div>
+<div class="row">
+	<div class="twelve columns">
+		<h3>Education still forms the core of our work with young people, as it did over 100 years ago.</h3>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<p>Tonia Fitzcosta is a registered Step by Step assessor, accredited by the Association of Children’s Welfare Agencies (ACWA). The foster carer assessment process uses ACWA’s Child-Carer Matching Tool to maximize the potential for a strong connection between foster carers and young people. We believe this service produces better outcomes and results for foster carers and young people.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/fostercare.nunj' %}
+			</span>
+			<span class="card--text">
+				Foster Care
+			</span>
+		</div>
+		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
+	</div>
+	<div class="six columns">
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/resicare.nunj' %}
+			</span>
+			<span class="card--text">
+				Residential Care
+			</span>
+		</div>
+		<p>SJC provides therapeutic residential care for children and young people who are in statutory care as ordered by the Courts. As a Child Safe workplace we uphold the highest standards of trauma-informed care and provide 24hr assistance to our young people with a team of highly-trained and experienced youth workers.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/tutormentor.nunj' %}
+			</span>
+			<span class="card--text">
+				Tutoring &amp; Mentoring
+			</span>
+		</div>
+		<p>St Joseph’s Cowper is a small and personalised agency that provides foster care for children with our network of dedicated and supported authorised carers. If you’re interested in knowing more about foster care please call or visit our website.</p>
+	</div>
+	<div class="six columns">
+		<div class=" card card--service">
+			<span class="card--icon">
+				{% include 'partials/svg/commprograms.nunj' %}
+			</span>
+			<span class="card--text">
+				Community Programs
+			</span>
+		</div>
+		<p>St Joseph’s Cowper provides a range of community programs to children and young people to assist their development and growth.</p>
+	</div>
+</div>
+
 
 {% endblock %}
