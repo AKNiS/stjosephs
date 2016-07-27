@@ -21,20 +21,31 @@
 
 .header--logo svg {
 	display: block;
-	width: 100px;
-	height: 30px;
+	width: 140px;
+	height: 50px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	margin-left: 0;
 	margin-right: auto;
-	transition: 300ms height ease-in;
+	transition: 300ms all ease-in;
 }
+
 
 .header--actions {
 	float: right;
 	height: 40px;
-	line-height: 50px;
-	transition: 300ms margin-top ease-in;
+	line-height: 70px;
+	transition: 300ms all ease-in;
+}
+.header.small {
+	.header--logo svg {
+		width: 100px;
+		height: 30px;
+	}
+
+	.header--actions {
+		line-height: 50px;
+	}
 }
 
 .header--actions-link {
@@ -60,7 +71,7 @@
 }
 
 .content {
-	padding-top: 50px;
+	padding-top: 70px;
 }
 
 @media (#{$bp-larger-than-tablet}) {
@@ -85,6 +96,7 @@
 
 	.header--actions {
 		margin-top: 38px;
+		line-height: 47px;
 	}
 
 	.header--actions-link {
@@ -113,6 +125,7 @@
 	.header.small {
 		height: 140px;
 		.header--logo svg {
+			width: 170px;
 			height: 60px;
 		}
 		.header--actions {

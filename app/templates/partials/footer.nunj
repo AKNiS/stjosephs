@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="twelve columns">
-				Become a Foster Carer
+				<span tab-index="1">Become a Foster Carer</span>
 				<div class="footer--hidden">
 					<a href="what-we-do.html">Find out more</a> | 
 					<a href="#foster-care-form">Apply now</a>
