@@ -36,7 +36,14 @@ if($formName == 'newsletter-form') {
 	$email = test_input($_POST['email']); 
 	$mailingList = true;
 	$notSpam = $_POST['b_da9a0881ddc88eea35d96f896_1084d3a4fe'];
+	
+	// Data for mailchimp
 	$merge_fields = array('SOURCE' => 'Newsletter Form');
+
+	// Data for email
+	$subject = "[Website] Newsletter Form Submission";
+	$email_fields = array('Source' => 'Newsletter Form',
+						'Email' => $email);
 } else if($formName == 'contact-form') {
 	echo "setting contact form data";
     $email = test_input($_POST['email']); 
@@ -53,12 +60,24 @@ if($formName == 'newsletter-form') {
 						'FNAME' => $firstName,
 						'LNAME' => $lastName,
 						'DEPT' => $dept);
+	// Data for email
+	$subject = "[Website] Contact Form Submission";
+	$email_fields = array('Source' => 'Contact Form',
+						'Name' => $firstName . " ". $lastName,
+						'Email' => $email,
+						'Telephone' => $telephone,
+						'Message' => $message,
+						'Requested Department' => $dept);
 } else if($formName == 'foster-care-form') {
 	print "setting foster care form data";
     $email = test_input($_POST['email']); 
 	$firstName = test_input($_POST['firstName']);
 	$lastName = test_input($_POST['lastName']);
 	$telephone = test_input($_POST['telephone']);
+	$dob = test_input($_POST['dob']);
+	$address = test_input($_POST['address']);
+	$town = test_input($_POST['town']);
+	$postCode = test_input($_POST['postCode']);
 	$message = test_input($_POST['message']);
 	$dept = test_input($_POST['dept']);
 	$mailingList = (isset($_POST['mailingList']) ? true : false);
@@ -69,21 +88,32 @@ if($formName == 'newsletter-form') {
 						'FNAME' => $firstName,
 						'LNAME' => $lastName,
 						'DEPT' => $dept);
+	// Data for email
+	$subject = "[Website] Foster Carer Application";
+	$email_fields = array('Source' => 'Foster Carer Application Form',
+						'Name' => $firstName . " ". $lastName,
+						'Email' => $email,
+						'Telephone' => $telephone,
+						'Date of Birth' => $dob,
+						'Address' => $address,
+						'Suburb/Town' => $town,
+						'Post Code' => $postCode,
+						'Requested Department' => $dept);
 }
 
 // 1. first submit newsletter info
-if($mailingList && $notSpam == '') {
-	echo "Sending to mailchimp";
-	mailchimpSubmit($email, $merge_fields);
-} else {
-	echo "Not sending to mailchimp";
-}
+// if($mailingList && $notSpam == '') {
+// 	echo "Sending to mailchimp";
+// 	mailchimpSubmit($email, $merge_fields);
+// } else {
+// 	echo "Not sending to mailchimp";
+// }
 
 // 2. then send the data via email
-// emailSubmit($firstName, $lastName, $email, $telephone, $dept, $message);
+// emailSubmit($email, $subject, $email_fields);
 
 // 3. then store the data in the database
-// dbSubmit($formName, $firstName, $lastName, $email, $telephone, $dept, $message, $mailingList);
+dbSubmit($formName, $firstName, $lastName, $email, $telephone, $dept, $message, $mailingList);
 
 // redirect to a thank you page
 
@@ -160,26 +190,22 @@ function mailchimpSubmit($email, $merge_fields) {
 
 }
 
-function emailSubmit($firstName, $lastName, $email, $telephone, $dept, $content) {
+function emailSubmit($email, $subject, $email_fields) {
 	// print "Sending info to email<br />";
     // PREPARE THE BODY OF THE MESSAGE
 
 	$message = '<html><body>';
 	$message .= '<table rules="all" style="border-collapse:collapse;color:#000000;" cellpadding="10">';
 	$message .= '<tr style="border-bottom: 3px solid #EA634F"><td align="middle" colspan="2"><img src="http://joshgordonmusic.com/images/logo.png" width="114" height="58" alt="St Joseph\'s Cowper" /></td></tr>';
-	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><strong>Name:</strong> </td><td border='0' style='border:none;'>" . $firstName . " " . $lastName . "</td></tr>";
-	$message .= "<tr style='background: #ffeed4;'><td border='0' style='border:none;'><strong>Email:</strong> </td><td border='0' style='border:none;'>" . $email . "</td></tr>";
-	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><strong>Telephone:</strong> </td><td border='0' style='border:none;'>" . $telephone . "</td></tr>";
-	$message .= "<tr style='background: #ffeed4;'><td border='0' style='border:none;'><strong>Requested Department:</strong> </td><td border='0' style='border:none;'>" . $dept . "</td></tr>";
-	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><b>Message:</b> </td><td border='0' style='border:none;'>" . $content . "</td></tr>";
+	foreach ($email_fields as $key => $value) {
+		$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><strong>" . $key . "</strong> </td><td border='0' style='border:none;'>" . $value . "</td></tr>";
+	}
 	$message .= "</table>";
 	$message .= "</body></html>";
     echo $message;
     //   CHANGE THE BELOW VARIABLES TO YOUR NEEDS
      
 	$to = EMAIL_RECEIVER;
-	
-	$subject = 'Website Form Submission';
 	
 	$headers = "From: " . $email . "\r\n";
 	$headers .= "Reply-To: ". $email . "\r\n";
