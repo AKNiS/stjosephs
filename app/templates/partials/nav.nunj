@@ -17,11 +17,12 @@
 							<li><a href="donate.html" class="menu--link">Donate</a></li>
 						</ul>
 					</li>
-					<li><a href="what-we-do.html" class="menu--link submenu">What We Do</a>
+					<li><span class="menu--link submenu">What We Do</a></span>
 						<ul>
-							<li><a href="what-we-do.html#fosterCare" class="menu--link">Foster Care</a></li>
-							<li><a href="what-we-do.html#resiCare" class="menu--link">Residential Care</a></li>
-							<li><a href="what-we-do.html#tutorMentor" class="menu--link">Tutoring &amp; Mentoring</a></li>
+							<li><a href="foster-care.html" class="menu--link">Foster Care</a></li>
+							<li><a href="residential-care.html" class="menu--link">Residential Care</a></li>
+							<li><a href="tutoring-mentoring.html" class="menu--link">Tutoring &amp; Mentoring</a></li>
+							<li><a href="community-programs.html" class="menu--link">Community Programs</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -32,13 +33,13 @@
 <div id="mobileMenu" class="mobile-menu">
 	<a href="#close" class="mobile-menu-link--close">&times;</a>
 	<ul>
-		<li><a href="">Home</a></li>
+		<li><a href="index.html">Home</a></li>
 		<li><a href="history.html">History</a></li>
 		<li><a href="board.html">Our Board</a></li>
 		<li><a href="careers.html">Careers</a></li>
-		<li><a href="what-we-do.html">What We Do</a></li>
-		<li><a href="what-we-do.html#fosterCare">Foster Care</a></li>
-		<li><a href="what-we-do.html#resiCare">Residential Care</a></li>
-		<li><a href="what-we-do.html#tutorMentor">Tutoring &amp; Mentoring</a></li>
+		<li><a href="foster-care.html" class="menu--link">Foster Care</a></li>
+		<li><a href="residential-care.html" class="menu--link">Residential Care</a></li>
+		<li><a href="tutoring-mentoring.html" class="menu--link">Tutoring &amp; Mentoring</a></li>
+		<li><a href="community-programs.html" class="menu--link">Community Programs</a></li>
 	</ul>
 </div>

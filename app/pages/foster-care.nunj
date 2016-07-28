@@ -1,22 +1,16 @@
 {% extends "layout.nunj" %}
 
-{% set title = "What We Do" %}
+{% set title = "Foster Care" %}
 
 {% block content %}
 <div class="row">
 	<div class="twelve columns">
-		<h1>{{title}}</h1>
-	</div>
-</div>
-<div class="row">
-	<div class="twelve columns">
-		<a id="fosterCare" class="anchor"></a>
 		<div class=" card card--service">
 			<span class="card--icon">
 				{% include 'partials/svg/fostercare.nunj' %}
 			</span>
 			<span class="card--text">
-				Foster Care
+				<h1>Foster Care</h1>
 			</span>
 		</div>
 		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
@@ -73,48 +67,6 @@
 		<p>Foster carers get paid a tax-free allowance for each night a young person spends in their care.</p>
 		<p>SJC is the only foster care agency with an office in the Clarence Valley. We have a 24-hour On-Call support service and employ a Foster Care Coordinator to support and train our foster carers.</p>
 
-	</div>
-</div>
-<div class="row">
-	<div class="twelve columns">
-		<a id="resiCare" class="anchor"></a>
-		<div class=" card card--service">
-			<span class="card--icon">
-				{% include 'partials/svg/resicare.nunj' %}
-			</span>
-			<span class="card--text">
-				Residential Care
-			</span>
-		</div>
-		<p>SJC provides therapeutic residential care for children and young people who are in statutory care as ordered by the Courts. As a Child Safe workplace we uphold the highest standards of trauma-informed care and provide 24hr assistance to our young people with a team of highly-trained and experienced youth workers. </p>
-	</div>
-</div>
-<div class="row">
-	<div class="twelve columns">
-		<a id="tutorMentor" class="anchor"></a>
-		<div class=" card card--service">
-			<span class="card--icon">
-				{% include 'partials/svg/tutormentor.nunj' %}
-			</span>
-			<span class="card--text">
-				Tutoring &amp; Mentoring
-			</span>
-		</div>
-		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
-	</div>
-</div>
-<div class="row">
-	<div class="twelve columns">
-		<a id="commPrograms" class="anchor"></a>
-		<div class=" card card--service">
-			<span class="card--icon">
-				{% include 'partials/svg/commprograms.nunj' %}
-			</span>
-			<span class="card--text">
-				Community Programs
-			</span>
-		</div>
-		<p>St Joseph’s Cowper provides a range of community programs to children and young people to assist their development and growth.</p>
 	</div>
 </div>
 
