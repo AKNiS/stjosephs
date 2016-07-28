@@ -7,7 +7,7 @@
 
 // newsletter 
 // is a data subset of contact
-// is a data subset of carer apply
+// is a data subset of foster-care
 
 // so it should be doable
 
@@ -25,58 +25,80 @@
 // fn submitNewsletter(array)
 // fn submitEmail(array)
 // fn submitDb(array)
-include_once('config.php');
-
-$formName = strip_tags($_POST['formName']);
-if($formName == 'contact-form') {
-
-	//  MAKE SURE THE "FROM" EMAIL ADDRESS DOESN'T HAVE ANY NASTY STUFF IN IT
-	$pattern = "/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,3})$/i"; 
-    if (preg_match($pattern, trim(strip_tags($_POST['email'])))) { 
-        $email = trim(strip_tags($_POST['email'])); 
-    } else { 
-        return "The email address you entered was invalid. Please try again!"; 
-    } 
-
-	$firstName = strip_tags($_POST['firstName']);
-	$lastName = strip_tags($_POST['lastName']);
-	$telephone = strip_tags($_POST['telephone']);
-	$message = strip_tags($_POST['message']);
-	$dept = strip_tags($_POST['dept']);
-	$mailingList = (isset($_POST['mailingList']) ? true : false);
-	$notSpam = $_POST['b_da9a0881ddc88eea35d96f896_1084d3a4fe']; // should be blank (bots would fill in with random text)
+if ($_SERVER["REQUEST_METHOD"] != "POST") {
+	die("Please submit the form");
 }
 
-print $formName."<br />";
-print $firstName."<br />";
-print $lastName."<br />";
-print $email."<br />";
-print $telephone."<br />";
-print $dept."<br />";
-print $message."<br />";
-if(isset($mailingList)) print $mailingList."<br />";
-print $notSpam."<br />";
+include_once('config.php');
+
+$formName = test_input($_POST['formName']);
+if($formName == 'newsletter-form') {
+	$email = test_input($_POST['email']); 
+	$mailingList = true;
+	$notSpam = $_POST['b_da9a0881ddc88eea35d96f896_1084d3a4fe'];
+	$merge_fields = array('SOURCE' => 'Newsletter Form');
+} else if($formName == 'contact-form') {
+	echo "setting contact form data";
+    $email = test_input($_POST['email']); 
+	$firstName = test_input($_POST['firstName']);
+	$lastName = test_input($_POST['lastName']);
+	$telephone = test_input($_POST['telephone']);
+	$message = test_input($_POST['message']);
+	$dept = test_input($_POST['dept']);
+	$mailingList = (isset($_POST['mailingList']) ? true : false);
+	$notSpam = $_POST['b_da9a0881ddc88eea35d96f896_1084d3a4fe']; // should be blank (bots would fill in with random text)
+
+	// Data for mailchimp
+	$merge_fields = array('SOURCE' => 'Contact Form',
+						'FNAME' => $firstName,
+						'LNAME' => $lastName,
+						'DEPT' => $dept);
+} else if($formName == 'foster-care-form') {
+	print "setting foster care form data";
+    $email = test_input($_POST['email']); 
+	$firstName = test_input($_POST['firstName']);
+	$lastName = test_input($_POST['lastName']);
+	$telephone = test_input($_POST['telephone']);
+	$message = test_input($_POST['message']);
+	$dept = test_input($_POST['dept']);
+	$mailingList = (isset($_POST['mailingList']) ? true : false);
+	$notSpam = $_POST['b_da9a0881ddc88eea35d96f896_1084d3a4fe']; // should be blank (bots would fill in with random text)
+
+	// Data for mailchimp
+	$merge_fields = array('SOURCE' => 'Foster Care Form',
+						'FNAME' => $firstName,
+						'LNAME' => $lastName,
+						'DEPT' => $dept);
+}
 
 // 1. first submit newsletter info
-if(isset($mailingList) && $notSpam == '') {
+if($mailingList && $notSpam == '') {
 	echo "Sending to mailchimp";
-	mailchimpSubmit($email, $firstName, $lastName);
+	mailchimpSubmit($email, $merge_fields);
 } else {
 	echo "Not sending to mailchimp";
 }
 
 // 2. then send the data via email
-emailSubmit($firstName, $lastName, $email, $telephone, $dept, $message);
+// emailSubmit($firstName, $lastName, $email, $telephone, $dept, $message);
 
 // 3. then store the data in the database
-dbSubmit($formName, $firstName, $lastName, $email, $telephone, $dept, $message, $mailingList);
+// dbSubmit($formName, $firstName, $lastName, $email, $telephone, $dept, $message, $mailingList);
 
 // redirect to a thank you page
 
 
 
 
-function mailchimpSubmit($email, $firstName='', $lastName='') {
+function test_input($data) {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = strip_tags($data);
+	$data = htmlspecialchars($data);
+	return $data;
+}
+
+function mailchimpSubmit($email, $merge_fields) {
 	// print "Sending info to mailchimp<br />";
 
 	// vars
@@ -107,11 +129,11 @@ function mailchimpSubmit($email, $firstName='', $lastName='') {
 	$post_items = array('email_address' => $email,
 						'status' => 'subscribed',
 						'status_if_new' => 'subscribed',
-						'update_existing' => true,
-						'merge_fields' => array(
-											'FNAME' => $firstName,
-											'LNAME' => $lastName)
+						'update_existing' => true
 						);
+	if(!empty($merge_fields)) {
+		$post_items['merge_fields'] = $merge_fields;
+	}
 	$payload = json_encode( $post_items );
 	// set options
 	curl_setopt($curl_connection, CURLOPT_POSTFIELDS, $payload );
@@ -149,7 +171,7 @@ function emailSubmit($firstName, $lastName, $email, $telephone, $dept, $content)
 	$message .= "<tr style='background: #ffeed4;'><td border='0' style='border:none;'><strong>Email:</strong> </td><td border='0' style='border:none;'>" . $email . "</td></tr>";
 	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><strong>Telephone:</strong> </td><td border='0' style='border:none;'>" . $telephone . "</td></tr>";
 	$message .= "<tr style='background: #ffeed4;'><td border='0' style='border:none;'><strong>Requested Department:</strong> </td><td border='0' style='border:none;'>" . $dept . "</td></tr>";
-	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><strong>Message:</strong> </td><td border='0' style='border:none;'>" . $content . "</td></tr>";
+	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><b>Message:</b> </td><td border='0' style='border:none;'>" . $content . "</td></tr>";
 	$message .= "</table>";
 	$message .= "</body></html>";
     echo $message;

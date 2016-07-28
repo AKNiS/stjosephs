@@ -18,7 +18,7 @@
 			<a href="#close" title="Close" class="modal--close">&times;</a>
 		</div>
 		<div class="modal--content">
-		<form action="process_foster.php" class="" method="post" novalidate="">
+		<form action="process_form.php" class="" method="post">
 			<div id="field1-container" class="">
 				<label for="foster--field__firstName">
 					First Name
@@ -125,6 +125,13 @@
 				</div>
 			</div>
 
+			<div style="position: absolute; left: -5000px;" aria-hidden="true">
+				<!-- Mailchimp no-spam value -->
+				<input type="text" name="b_da9a0881ddc88eea35d96f896_1084d3a4fe" tabindex="-1" value="">
+				<!-- Form name -->
+				<input type="hidden" name="formName" value="foster-care-form">
+			</div>
+
 
 			<div id="form-submit" class="">
 				<input type="submit" value="Submit">
@@ -133,7 +140,7 @@
 		</div>
 	</div>
 </div>
-<div id="mailing-list" class="modal">
+<div id="newsletter-form" class="modal">
 	<div class="modal--wrapper">
 		<div class="modal--title">
 			<h3>Sign up for the SJC mailing list</h3>
@@ -141,12 +148,19 @@
 		</div>
 		<div class="modal--content">
 			<p>Join the mailing list to get updates, news and announcements from the St. Joseph's Cowper family, delivered straight to your inbox! We don't spam, promise.</p>
-			<form action="process_mailinglist.php" class="" method="post" novalidate="">
+			<form action="process_form.php" class="" method="post">
 				<div class="">
-					<label for="mlist--field__firstName">
+					<label for="newsletter--field__email">
 						Email
 					</label>
-					<input type="text" name="firstName" id="mlist--field__firstName" required="required">
+					<input type="email" name="email" id="newsletter--field__email" required="required">
+				</div>
+
+				<div style="position: absolute; left: -5000px;" aria-hidden="true">
+					<!-- Mailchimp no-spam value -->
+					<input type="text" name="b_da9a0881ddc88eea35d96f896_1084d3a4fe" tabindex="-1" value="">
+					<!-- Form name -->
+					<input type="hidden" name="formName" value="newsletter-form">
 				</div>
 
 
