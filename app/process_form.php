@@ -1,7 +1,33 @@
 <?php
+
+// goal: use one processor to handle 3 forms
+// - newsletter form
+// - contact form
+// - carer apply form
+
+// newsletter 
+// is a data subset of contact
+// is a data subset of carer apply
+
+// so it should be doable
+
+
+// should be able to send action functions (email, db) an array of data and have it handle that
+
+// pseudocode:
+// ----
+// get form type
+// save POST vals as php vars
+// validate for form type
+// 	return if invalid
+// label & package data for sending around
+
+// fn submitNewsletter(array)
+// fn submitEmail(array)
+// fn submitDb(array)
 include_once('config.php');
 
-$formName = $_POST['formName'];
+$formName = strip_tags($_POST['formName']);
 if($formName == 'contact-form') {
 
 	//  MAKE SURE THE "FROM" EMAIL ADDRESS DOESN'T HAVE ANY NASTY STUFF IN IT
@@ -17,9 +43,7 @@ if($formName == 'contact-form') {
 	$telephone = strip_tags($_POST['telephone']);
 	$message = strip_tags($_POST['message']);
 	$dept = strip_tags($_POST['dept']);
-	if(isset($_POST['mailingList'])) {
-		$mailingList = $_POST['mailingList'];	
-	}
+	$mailingList = (isset($_POST['mailingList']) ? true : false);
 	$notSpam = $_POST['b_da9a0881ddc88eea35d96f896_1084d3a4fe']; // should be blank (bots would fill in with random text)
 }
 
@@ -35,18 +59,19 @@ print $notSpam."<br />";
 
 // 1. first submit newsletter info
 if(isset($mailingList) && $notSpam == '') {
+	echo "Sending to mailchimp";
 	mailchimpSubmit($email, $firstName, $lastName);
 } else {
 	echo "Not sending to mailchimp";
 }
 
 // 2. then send the data via email
-// sendContactEmail($firstName, $lastName, $email, $telephone, $dept, $message);
+emailSubmit($firstName, $lastName, $email, $telephone, $dept, $message);
 
 // 3. then store the data in the database
-dbConnect();
+dbSubmit($formName, $firstName, $lastName, $email, $telephone, $dept, $message, $mailingList);
 
-// if just a newsletter signup, end process and redirect now
+// redirect to a thank you page
 
 
 
@@ -113,7 +138,7 @@ function mailchimpSubmit($email, $firstName='', $lastName='') {
 
 }
 
-function sendContactEmail($firstName, $lastName, $email, $telephone, $dept, $content) {
+function emailSubmit($firstName, $lastName, $email, $telephone, $dept, $content) {
 	// print "Sending info to email<br />";
     // PREPARE THE BODY OF THE MESSAGE
 
@@ -146,29 +171,44 @@ function sendContactEmail($firstName, $lastName, $email, $telephone, $dept, $con
     }
 }
 
-function dbConnect() {
+function dbSubmit($formName, $firstName, $lastName, $email, $telephone, $dept, $content, $mailingList) {
 	$db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_DB);
 
 	// if($db->connect_errno > 0){
 	//     die('Unable to connect to database [' . $db->connect_error . ']');
 	// }
 	// echo 'Connection OK'; $db->close();
+	$formName_clean = $db->escape_string($formName); 
+	$firstName_clean = $db->escape_string($firstName);
+	$lastName_clean = $db->escape_string($lastName);
+	$email_clean = $db->escape_string($email);
+	$telephone_clean = $db->escape_string($telephone);
+	$dept_clean = $db->escape_string($dept);
+	$content_clean = $db->escape_string($content);
+	$mailingList_clean = $db->escape_string($mailingList);
 
 	$sql = <<<SQL
-	    SELECT *
-	    FROM `submissions`
+			INSERT INTO `submissions` (`formName`, `firstName`, `lastName`, `email`, `telephone`, `dept`, `message`, `mailingList`)
+			VALUES ('$formName', '$firstName_clean', '$lastName_clean', '$email_clean', '$telephone_clean', '$dept_clean', '$content_clean', '$mailingList_clean');
 SQL;
+
+// 	$sql = <<<SQL
+// 	    SELECT *
+// 	    FROM `submissions`
+// SQL;
 
 	if(!$result = $db->query($sql)){
 	    die('There was an error running the query [' . $db->error . ']');
+	} else {
+		echo 'Record added to database';
 	}
 	$db->close();
-	echo "<table>";
-	while($row = $result->fetch_assoc()){
-		echo "<tr>";
-	    echo "<td border='0' style='border:none;'>".$row['email']."</td>";
-	    echo "<td border='0' style='border:none;'>".$row['telephone']."</td>";
-	    echo "</tr>";
-	}
-	echo "</table>";
+	// echo "<table>";
+	// while($row = $result->fetch_assoc()){
+	// 	echo "<tr>";
+	//     echo "<td border='0' style='border:none;'>".$row['email']."</td>";
+	//     echo "<td border='0' style='border:none;'>".$row['telephone']."</td>";
+	//     echo "</tr>";
+	// }
+	// echo "</table>";
 }
