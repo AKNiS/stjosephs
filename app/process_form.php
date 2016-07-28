@@ -7,19 +7,19 @@
 
 // newsletter 
 // is a data subset of contact
-// is a data subset of foster-care
+// is a data subset of foster carer
 
 // so it should be doable
 
 
-// should be able to send action functions (email, db) an array of data and have it handle that
+// should be able to send action functions (email, db) an array of data
 
 // pseudocode:
 // ----
 // get form type
 // save POST vals as php vars
 // validate for form type
-// 	return if invalid
+// 	TODO return if invalid
 // label & package data for sending around
 
 // fn submitNewsletter(array)
@@ -33,6 +33,7 @@ include_once('config.php');
 
 $formName = test_input($_POST['formName']);
 if($formName == 'newsletter-form') {
+	// echo "setting newsletter form data";
 	$email = test_input($_POST['email']); 
 	$mailingList = true;
 	$notSpam = $_POST['b_da9a0881ddc88eea35d96f896_1084d3a4fe'];
@@ -44,8 +45,13 @@ if($formName == 'newsletter-form') {
 	$subject = "[Website] Newsletter Form Submission";
 	$email_fields = array('Source' => 'Newsletter Form',
 						'Email' => $email);
+
+	// Data for db
+	$db_fields = array('`formName`' => 'newsletter',
+						'`email`' => $email,
+						'`mailingList`' => true);
 } else if($formName == 'contact-form') {
-	echo "setting contact form data";
+	// echo "setting contact form data";
     $email = test_input($_POST['email']); 
 	$firstName = test_input($_POST['firstName']);
 	$lastName = test_input($_POST['lastName']);
@@ -68,8 +74,19 @@ if($formName == 'newsletter-form') {
 						'Telephone' => $telephone,
 						'Message' => $message,
 						'Requested Department' => $dept);
+
+	// Data for db
+	// `formName`, `firstName`, `lastName`, `email`, `telephone`, `dept`, `message`, `mailingList`
+	$db_fields = array('`formName`' => 'contact',
+						'`firstName`' => $firstName,
+						'`lastName`' => $lastName,
+						'`email`' => $email,
+						'`telephone`' => $telephone,
+						'`dept`' => $dept,
+						'`message`' => $message,
+						'`mailingList`' => $mailingList);
 } else if($formName == 'foster-care-form') {
-	print "setting foster care form data";
+	// print "setting foster care form data";
     $email = test_input($_POST['email']); 
 	$firstName = test_input($_POST['firstName']);
 	$lastName = test_input($_POST['lastName']);
@@ -99,21 +116,33 @@ if($formName == 'newsletter-form') {
 						'Suburb/Town' => $town,
 						'Post Code' => $postCode,
 						'Requested Department' => $dept);
+
+	// Data for db
+	// `formName`, `firstName`, `lastName`, `email`, `telephone`, `dept`, `message`, `mailingList`
+	$db_fields = array('`formName`' => 'foster',
+						'`firstName`' => $firstName,
+						'`lastName`' => $lastName,
+						'`email`' => $email,
+						'`telephone`' => $telephone,
+						'`dept`' => $dept,
+						'`dob`' => $dob,
+						'`address`' => $address,
+						'`town`' => $town,
+						'`postCode`' => $postCode,
+						'`mailingList`' => $mailingList);
 }
 
 // 1. first submit newsletter info
-// if($mailingList && $notSpam == '') {
-// 	echo "Sending to mailchimp";
-// 	mailchimpSubmit($email, $merge_fields);
-// } else {
-// 	echo "Not sending to mailchimp";
-// }
+if($mailingList && $notSpam == '') {
+	// echo "Sending to mailchimp";
+	mailchimpSubmit($email, $merge_fields);
+}
 
 // 2. then send the data via email
-// emailSubmit($email, $subject, $email_fields);
+emailSubmit($email, $subject, $email_fields);
 
 // 3. then store the data in the database
-dbSubmit($formName, $firstName, $lastName, $email, $telephone, $dept, $message, $mailingList);
+dbSubmit($db_fields);
 
 // redirect to a thank you page
 
@@ -219,44 +248,37 @@ function emailSubmit($email, $subject, $email_fields) {
     }
 }
 
-function dbSubmit($formName, $firstName, $lastName, $email, $telephone, $dept, $content, $mailingList) {
+function dbSubmit($db_fields) {
+	// print "Sending info to db";
 	$db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_DB);
 
 	// if($db->connect_errno > 0){
 	//     die('Unable to connect to database [' . $db->connect_error . ']');
 	// }
 	// echo 'Connection OK'; $db->close();
-	$formName_clean = $db->escape_string($formName); 
-	$firstName_clean = $db->escape_string($firstName);
-	$lastName_clean = $db->escape_string($lastName);
-	$email_clean = $db->escape_string($email);
-	$telephone_clean = $db->escape_string($telephone);
-	$dept_clean = $db->escape_string($dept);
-	$content_clean = $db->escape_string($content);
-	$mailingList_clean = $db->escape_string($mailingList);
+	$keys; $values;
+	foreach ($db_fields as $key => $value) {
+		// print $key.": ".$value."<br />";
+		$keys[] = $db->escape_string($key);
+		$values[] = $db->escape_string($value);
+	}
+	// echo implode(',',$keys);
+	// echo "'".implode('\',\'',$values)."'";
+	$columns = implode(',',$keys);
+	$data = "'".implode('\',\'',$values)."'";
+
+	//`formName`, `firstName`, `lastName`, `email`, `telephone`, `dept`, `message`, `mailingList`
 
 	$sql = <<<SQL
-			INSERT INTO `submissions` (`formName`, `firstName`, `lastName`, `email`, `telephone`, `dept`, `message`, `mailingList`)
-			VALUES ('$formName', '$firstName_clean', '$lastName_clean', '$email_clean', '$telephone_clean', '$dept_clean', '$content_clean', '$mailingList_clean');
+			INSERT INTO `submissions` ($columns)
+			VALUES ($data);
 SQL;
 
-// 	$sql = <<<SQL
-// 	    SELECT *
-// 	    FROM `submissions`
-// SQL;
 
 	if(!$result = $db->query($sql)){
 	    die('There was an error running the query [' . $db->error . ']');
 	} else {
-		echo 'Record added to database';
+		// echo 'Record added to database';
 	}
 	$db->close();
-	// echo "<table>";
-	// while($row = $result->fetch_assoc()){
-	// 	echo "<tr>";
-	//     echo "<td border='0' style='border:none;'>".$row['email']."</td>";
-	//     echo "<td border='0' style='border:none;'>".$row['telephone']."</td>";
-	//     echo "</tr>";
-	// }
-	// echo "</table>";
 }
