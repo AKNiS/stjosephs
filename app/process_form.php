@@ -145,7 +145,7 @@ emailSubmit($email, $subject, $email_fields);
 dbSubmit($db_fields);
 
 // redirect to a thank you page
-
+header('Location: thank-you.html');
 
 
 
@@ -231,7 +231,7 @@ function emailSubmit($email, $subject, $email_fields) {
 	}
 	$message .= "</table>";
 	$message .= "</body></html>";
-    echo $message;
+    // echo $message;
     //   CHANGE THE BELOW VARIABLES TO YOUR NEEDS
      
 	$to = EMAIL_RECEIVER;
@@ -242,9 +242,9 @@ function emailSubmit($email, $subject, $email_fields) {
 	$headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 
     if (mail($to, $subject, $message, $headers)) {
-      echo 'Your message has been sent.';
+      // echo 'Your message has been sent.';
     } else {
-      echo 'There was a problem sending the email.';
+      // echo 'There was a problem sending the email.';
     }
 }
 

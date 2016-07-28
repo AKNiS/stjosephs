@@ -1,0 +1,17 @@
+{% extends "layout.nunj" %}
+
+{% set title = "Thank You" %}
+
+{% block content %}
+<div class="row">
+	<div class="twelve columns">
+		<h1>Thank you for getting involved</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
+		<p>Thank you for engaging with St Joseph's Cowper. If you submitted a request or Foster Care Application, we will be in touch with you as soon as possible.</p>
+	</div>
+</div>
+
+{% endblock %}
