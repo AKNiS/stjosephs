@@ -1,0 +1,32 @@
+{% extends "layout.nunj" %}
+
+{% set title = "Donate" %}
+
+{% block content %}
+<div class="row">
+	<div class="twelve columns">
+		<h1>Donate to St. Joseph's Cowper</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="four columns">
+		<h2>Donations</h2>
+		<p>At St Joseph’s Cowper we pride ourselves on making decisions based on what is best for the young people in our care, not what’s best for our bottom line.</p>
+		<p>It’s support from people like you that can make a huge difference for the young people in our care. Donate now to give the innocent young people in our care the chance to achieve happiness and fulfilment. Donations above $2 are tax-deductible.</p>
+	</div>
+	<div class="four columns">
+		<h2>Bequests</h2>
+		<p>If you can’t afford to give anything right now, talk to us about leaving a bequest to SJC in your will, to ensure your legacy is one of protecting and supporting the most vulnerable in our community for years to come.</p>
+	</div>
+	<div class="four columns">
+		<h2>Other ways to be involved</h2>
+		<p>If you can’t afford to give anything right now, talk to us about leaving a bequest to SJC in your will, to ensure your legacy is one of protecting and supporting the most vulnerable in our community for years to come.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns" style="text-align:center;">
+		<a href="#" class="button button__large">View jobs on Seek</a>
+	</div>
+</div>
+
+{% endblock %}

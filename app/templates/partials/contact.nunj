@@ -28,6 +28,7 @@
 	</div>
 </div>
 <div class="row">
+	<a id="contact-form" class="anchor"></a>
 	<form action="process_form.php" method="post" class="contact-form clearfix">
 	<div class="six columns">
 		<div id="" class="contact--field">
