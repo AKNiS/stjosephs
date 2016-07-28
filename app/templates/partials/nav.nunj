@@ -11,7 +11,12 @@
 					</a></li>
 					<li><a href="history.html" class="menu--link">History</a></li>
 					<li><a href="board.html" class="menu--link">Our Board</a></li>
-					<li><a href="careers.html" class="menu--link">Careers</a></li>
+					<li><span class="menu--link submenu">Get Involved</span>
+						<ul>
+							<li><a href="careers.html" class="menu--link">Careers</a></li>
+							<li><a href="donate.html" class="menu--link">Donate</a></li>
+						</ul>
+					</li>
 					<li><a href="what-we-do.html" class="menu--link submenu">What We Do</a>
 						<ul>
 							<li><a href="what-we-do.html#fosterCare" class="menu--link">Foster Care</a></li>
