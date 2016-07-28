@@ -28,6 +28,14 @@ h2 {
 	margin-top: 2rem;
 }
 
+dt {
+	font-weight: 600;
+}
+
+dd, address	 {
+	font-style: normal;
+}
+
 svg {
   fill: $color-sjc-red;
 }
@@ -38,7 +46,7 @@ svg {
 }
 
 .content .container {
-	padding-top: 60px;
+	padding-top: 80px;
 	padding-bottom: 40px;
 }
 

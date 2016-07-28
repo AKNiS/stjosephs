@@ -15,10 +15,22 @@
 	background: $color-white;
 	color: $color-sjc-red;
 }
+
 .button.button__large {
-	font-size: 3.2rem;
+	font-size: 2rem;
 	height: auto;
 	line-height: initial;
-	padding: 0.6rem 2rem 1rem;
+	padding: 0.6rem 1.5rem 1rem;
 	margin: 1rem auto 3rem;
+	max-width: 100%;
+}
+
+@media (#{$bp-larger-than-tablet}) {
+	.button.button__large {
+		font-size: 3.2rem;
+		height: auto;
+		line-height: initial;
+		padding: 0.6rem 2rem 1rem;
+		margin: 1rem auto 3rem;
+	}
 }
