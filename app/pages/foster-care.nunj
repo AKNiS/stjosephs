@@ -14,9 +14,15 @@
 			</span>
 		</div>
 		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
 		<h3>Who can be a foster carer</h3>
 		<p>Foster carers come in all shapes, sizes, cultural backgrounds and relationship types. If you’re passionate about kids and can provide a stable, loving environment for young people, you can be a foster carer! The assessment process to become a foster carer typically takes 3-6 months.</p>
 		<p>You choose the type of care you want to provide and how often.</p>
+	</div>
+	<div class="six columns">
 		<h3>What type of foster care is right for you</h3>
 		<table>
 			<tr>
@@ -45,6 +51,10 @@
 				<td>Generally weekend duration</td>
 			</tr>
 		</table>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns">
 		<div class=" card card--service">
 			<span class="card--icon">
 				{% include 'partials/svg/collabtoheal.nunj' %}
@@ -67,6 +77,11 @@
 		<p>Foster carers get paid a tax-free allowance for each night a young person spends in their care.</p>
 		<p>SJC is the only foster care agency with an office in the Clarence Valley. We have a 24-hour On-Call support service and employ a Foster Care Coordinator to support and train our foster carers.</p>
 
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns" style="text-align:center;">
+		<a href="#foster-care-form" class="button button__large">Apply Now</a>
 	</div>
 </div>
 
