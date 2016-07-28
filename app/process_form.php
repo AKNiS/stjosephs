@@ -1,4 +1,6 @@
 <?php
+include_once('config.php');
+
 $formName = $_POST['formName'];
 if($formName == 'contact-form') {
 
@@ -21,7 +23,6 @@ if($formName == 'contact-form') {
 	$notSpam = $_POST['b_da9a0881ddc88eea35d96f896_1084d3a4fe']; // should be blank (bots would fill in with random text)
 }
 
-
 print $formName."<br />";
 print $firstName."<br />";
 print $lastName."<br />";
@@ -29,7 +30,7 @@ print $email."<br />";
 print $telephone."<br />";
 print $dept."<br />";
 print $message."<br />";
-print $mailingList."<br />";
+if(isset($mailingList)) print $mailingList."<br />";
 print $notSpam."<br />";
 
 // 1. first submit newsletter info
@@ -40,10 +41,10 @@ if(isset($mailingList) && $notSpam == '') {
 }
 
 // 2. then send the data via email
-sendContactEmail($firstName, $lastName, $email, $telephone, $dept, $message);
+// sendContactEmail($firstName, $lastName, $email, $telephone, $dept, $message);
 
 // 3. then store the data in the database
-
+dbConnect();
 
 // if just a newsletter signup, end process and redirect now
 
@@ -54,24 +55,30 @@ function mailchimpSubmit($email, $firstName='', $lastName='') {
 	// print "Sending info to mailchimp<br />";
 
 	// vars
-	$mc_api_root = 'https://us13.api.mailchimp.com/3.0';
-	$mc_api_key = 'd8aaeb0ca1c6d00006404d3506094937-us13';
-	$mc_list_endpoint = '/lists/1084d3a4fe/members/'; // for subscribing to SJC list
+	$mc_api_root = MC_API_ROOT;
+	$mc_api_key = MC_API_KEY;
+	$mc_list_endpoint = MC_LIST_ENDPOINT; // for subscribing to SJC list
 
-	// check if user exists
+	// check mailchimp to see if user exists
 	$curl_connection = curl_init($mc_api_root . $mc_list_endpoint . md5(strtolower($email)));
 	curl_setopt($curl_connection, CURLOPT_HTTPHEADER, 
 				array('Authorization: apikey '.$mc_api_key));
 	curl_setopt($curl_connection, CURLOPT_RETURNTRANSFER, true);
-
-	//show information regarding the request
 	// echo "initial user check result:";
 	$result = curl_exec($curl_connection);
 	curl_close($curl_connection);
 	$status = json_decode($result, true)['status'];
 	// echo $status;
 
-	//set data to be sent
+
+	// if the user already exists, update the old record
+	if($status == 'subscribed') {
+		$curl_connection = curl_init($mc_api_root . $mc_list_endpoint . md5(strtolower($email)));
+		curl_setopt($curl_connection, CURLOPT_CUSTOMREQUEST, 'PUT');
+	} else {
+		$curl_connection = curl_init($mc_api_root . $mc_list_endpoint);	
+	}
+	// set data to be sent
 	$post_items = array('email_address' => $email,
 						'status' => 'subscribed',
 						'status_if_new' => 'subscribed',
@@ -81,16 +88,7 @@ function mailchimpSubmit($email, $firstName='', $lastName='') {
 											'LNAME' => $lastName)
 						);
 	$payload = json_encode( $post_items );
-
-
-	if($status == 'subscribed') {
-		$curl_connection = curl_init($mc_api_root . $mc_list_endpoint . md5(strtolower($email)));
-		curl_setopt($curl_connection, CURLOPT_CUSTOMREQUEST, 'PUT');
-	} else {
-		$curl_connection = curl_init($mc_api_root . $mc_list_endpoint);	
-	}
-	//set options
-	// curl_setopt($curl_connection, CURLOPT_USERNAME, 'apikey:'.$mc_api_key);
+	// set options
 	curl_setopt($curl_connection, CURLOPT_POSTFIELDS, $payload );
 	curl_setopt($curl_connection, CURLOPT_HTTPHEADER, 
 				array('Content-Type:application/json',
@@ -98,40 +96,41 @@ function mailchimpSubmit($email, $firstName='', $lastName='') {
 	curl_setopt($curl_connection, CURLOPT_RETURNTRANSFER, true);
 	curl_setopt($curl_connection, CURLOPT_SSL_VERIFYPEER, false);
 
-	//perform our request
+	// perform our request
 	// echo "user post/patch result";
 	$result = curl_exec($curl_connection);
+	//close the connection
+	curl_close($curl_connection);
 
-	//show information regarding the request
+	// show information regarding the request
 	// echo "<pre>$result</pre>";
 	// echo json_decode($result, true)['status'];
 	// print "<pre>";
 	// print_r(curl_getinfo($curl_connection));
 	// print "</pre>";
 	// echo curl_errno($curl_connection) . '-' . 
-	// 	curl_error($curl_connection);
+	// curl_error($curl_connection);
 
-	//close the connection
-	curl_close($curl_connection);
 }
 
 function sendContactEmail($firstName, $lastName, $email, $telephone, $dept, $content) {
+	// print "Sending info to email<br />";
     // PREPARE THE BODY OF THE MESSAGE
 
 	$message = '<html><body>';
-	$message .= '<table rules="all" style="border-color: #666;" cellpadding="10">';
+	$message .= '<table rules="all" style="border-collapse:collapse;color:#000000;" cellpadding="10">';
 	$message .= '<tr style="border-bottom: 3px solid #EA634F"><td align="middle" colspan="2"><img src="http://joshgordonmusic.com/images/logo.png" width="114" height="58" alt="St Joseph\'s Cowper" /></td></tr>';
-	$message .= "<tr style='background: #ffffff;'><td><strong>Name:</strong> </td><td>" . $firstName . " " . $lastName . "</td></tr>";
-	$message .= "<tr style='background: #ffeed4;'><td><strong>Email:</strong> </td><td>" . $email . "</td></tr>";
-	$message .= "<tr style='background: #ffffff;'><td><strong>Telephone:</strong> </td><td>" . $telephone . "</td></tr>";
-	$message .= "<tr style='background: #ffeed4;'><td><strong>Requested Department:</strong> </td><td>" . $dept . "</td></tr>";
-	$message .= "<tr style='background: #ffffff;'><td><strong>Message:</strong> </td><td>" . $content . "</td></tr>";
+	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><strong>Name:</strong> </td><td border='0' style='border:none;'>" . $firstName . " " . $lastName . "</td></tr>";
+	$message .= "<tr style='background: #ffeed4;'><td border='0' style='border:none;'><strong>Email:</strong> </td><td border='0' style='border:none;'>" . $email . "</td></tr>";
+	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><strong>Telephone:</strong> </td><td border='0' style='border:none;'>" . $telephone . "</td></tr>";
+	$message .= "<tr style='background: #ffeed4;'><td border='0' style='border:none;'><strong>Requested Department:</strong> </td><td border='0' style='border:none;'>" . $dept . "</td></tr>";
+	$message .= "<tr style='background: #ffffff;'><td border='0' style='border:none;'><strong>Message:</strong> </td><td border='0' style='border:none;'>" . $content . "</td></tr>";
 	$message .= "</table>";
 	$message .= "</body></html>";
-    
+    echo $message;
     //   CHANGE THE BELOW VARIABLES TO YOUR NEEDS
      
-	$to = 'dan.laush@gmail.com';
+	$to = EMAIL_RECEIVER;
 	
 	$subject = 'Website Form Submission';
 	
@@ -148,5 +147,28 @@ function sendContactEmail($firstName, $lastName, $email, $telephone, $dept, $con
 }
 
 function dbConnect() {
+	$db = new mysqli(DB_HOST, DB_USER, DB_PASS, DB_DB);
 
+	// if($db->connect_errno > 0){
+	//     die('Unable to connect to database [' . $db->connect_error . ']');
+	// }
+	// echo 'Connection OK'; $db->close();
+
+	$sql = <<<SQL
+	    SELECT *
+	    FROM `submissions`
+SQL;
+
+	if(!$result = $db->query($sql)){
+	    die('There was an error running the query [' . $db->error . ']');
+	}
+	$db->close();
+	echo "<table>";
+	while($row = $result->fetch_assoc()){
+		echo "<tr>";
+	    echo "<td border='0' style='border:none;'>".$row['email']."</td>";
+	    echo "<td border='0' style='border:none;'>".$row['telephone']."</td>";
+	    echo "</tr>";
+	}
+	echo "</table>";
 }
