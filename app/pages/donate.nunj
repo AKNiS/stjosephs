@@ -21,7 +21,7 @@
 </div>
 <div class="row">
 	<div class="twelve columns" style="text-align:center;">
-		<a href="#" class="button button__large">Donate</a>
+		<a href="#donate" class="button button__large">Donate</a>
 	</div>
 </div>
 

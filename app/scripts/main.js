@@ -14,6 +14,8 @@
 * if timer ends, set cookie to triggered
 * 
 */
+
+var donateForm = new NLForm( document.getElementById( 'donate--form' ) );
 window.onload = function(e) {
 
     // Newsletter popup cookie handler
