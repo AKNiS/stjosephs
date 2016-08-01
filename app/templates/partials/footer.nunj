@@ -141,7 +141,7 @@
 	</div>
 </div>
 <div id="donate" class="donate">
-	<a href="#close" title="Close" class="donate--close">&times;</a>
+	<a href="#close" title="Close" id="donate--close" class="donate--close">&times;</a>
 	<div class="donate--wrapper">
 		<div class="donate--content">
 			<form action="process_donate.php" id="donate--form" class="donate--form" method="post">

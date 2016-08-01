@@ -127,6 +127,11 @@
 	border-bottom: 1px dashed #b14943;
 }
 
+.donate--field__toggle:focus {
+	outline: 0;
+	background: $color-sjc-darkred;
+}
+
 /* drop-down list / text element */
 .donate--field__popup {
 	ul {
@@ -165,11 +170,15 @@
 	color: #478982;
 }
 
-.no-touch .donate--field__dd ul li:hover {
-	background: rgba(0,0,0,0.05);
+.donate--field__dd ul li {
+	&:hover,
+	&:focus {
+		background: rgba(0,0,0,0.05);
+		outline: 0;
+	}
 }
 
-.no-touch .donate--field__dd ul li:hover:active {
+.donate--field__dd ul li:hover:active {
 	color: #478982;
 }
 

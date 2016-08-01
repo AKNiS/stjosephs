@@ -15,8 +15,9 @@
 		String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
 	}
 
-	function NLForm( el ) {	
+	function NLForm( el, hash ) {	
 		this.el = el;
+		this.hash = hash;
 		this.overlay = this.el.querySelector( '.donate--form__overlay' );
 		this.fields = [];
 		this.fldOpen = -1;
@@ -36,10 +37,40 @@
 			} );
 			this.overlay.addEventListener( 'click', function(ev) { self._closeFlds(); } );
 			this.overlay.addEventListener( 'touchstart', function(ev) { self._closeFlds(); } );
+			document.addEventListener( 'keydown', function(ev) { 
+				if ( ev.keyCode == 27 && self.fldOpen !== -1 ) { 
+					self._closeFlds(); } 
+				} 
+			);
+			// window.addEventListener("hashchange", function(ev) {
+			// 	toggleTabIndexes(ev, self);
+			// });
+			// window.addEventListener("onload", function(ev) {
+			// 	console.log("window load!");
+			// 	toggleTabIndexes(ev, self);
+			// });
 		},
 		_closeFlds : function() {
 			if( this.fldOpen !== -1 ) {
 				this.fields[ this.fldOpen ].close();
+			}
+		},
+		toggleTabIndexes : function() {
+			console.log(this.hash);
+			// enable tab indexing while form is open
+			if(location.hash === this.hash) {
+				console.log('donate is open');
+				this.fields.forEach( function( el, i ) {
+					// console.log(el);
+					el.toggle.setAttribute('tabindex','1');
+					if(i==0) {
+						el.toggle.focus();
+					}
+				} );
+			} else {
+				this.fields.forEach( function( el, i ) {
+					el.toggle.removeAttribute('tabindex');
+				} );
 			}
 		}
 	}
@@ -72,7 +103,7 @@
 			this.optionsList = document.createElement( 'ul' );
 			var ihtml = '';
 			Array.prototype.slice.call( this.elOriginal.querySelectorAll( 'option' ) ).forEach( function( el, i ) {
-				ihtml += self.elOriginal.selectedIndex === i ? '<li class="donate--field__dd-checked">' + el.innerHTML + '</li>' : '<li>' + el.innerHTML + '</li>';
+				ihtml += self.elOriginal.selectedIndex === i ? '<li class="donate--field__dd-checked" tabindex="-1">' + el.innerHTML + '</li>' : '<li tabindex="-1">' + el.innerHTML + '</li>';
 				// selected index value
 				if( self.elOriginal.selectedIndex === i ) {
 					self.selectedIdx = i;
@@ -112,19 +143,58 @@
 			var self = this;
 			this.toggle.addEventListener( 'click', function( ev ) { ev.preventDefault(); ev.stopPropagation(); self._open(); } );
 			this.toggle.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); ev.stopPropagation(); self._open(); } );
+			this.toggle.addEventListener( 'keydown', function( ev ) {
+				if ( ev.keyCode == 32 ) { // key: space
+					ev.preventDefault(); ev.stopPropagation(); self._open();
+				}
+				if( ev.keyCode == 9 && self.open ) { // key: tab
+					self.close();
+				}
+			} );
 
 			if( this.type === 'dropdown' ) {
 				var opts = Array.prototype.slice.call( this.optionsList.querySelectorAll( 'li' ) );
 				opts.forEach( function( el, i ) {
 					el.addEventListener( 'click', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
 					el.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
+					el.addEventListener( 'keydown', function( ev ) {
+						if ( ev.keyCode == 38 ) { // key: up arrow
+							ev.preventDefault(); ev.stopPropagation();
+							if(document.activeElement.previousElementSibling) {
+								document.activeElement.previousElementSibling.focus();
+							} else {
+								opts[opts.length-1].focus();
+							}
+						}
+						if ( ev.keyCode == 40 ) { // key: down arrow
+							ev.preventDefault(); ev.stopPropagation();
+							if(document.activeElement.nextElementSibling) {
+								document.activeElement.nextElementSibling.focus();
+							} else {
+								opts[0].focus();
+							}
+						}
+						if( ev.keyCode == 32 || ev.keyCode == 13) { // key: space or enter
+							ev.preventDefault(); ev.stopPropagation();
+							 self.close( el, opts.indexOf( el ) );
+						}
+						if( ev.keyCode == 9 && self.open ) { // key: tab
+							// ev.preventDefault(); ev.stopPropagation();
+							self.close();
+						}
+					} );
 				} );
+
 			}
 			else if( this.type === 'input' ) {
 				this.getinput.addEventListener( 'keydown', function( ev ) {
-					if ( ev.keyCode == 13 ) {
+					if ( ev.keyCode == 13 ) { // key: enter
 						self.close();
 					}
+					// if( ev.keyCode == 9 && self.open ) { // key: tab
+					// 	ev.preventDefault(); ev.stopPropagation();
+					// 	self.close();
+					// }
 				} );
 				this.inputsubmit.addEventListener( 'click', function( ev ) { ev.preventDefault(); self.close(); } );
 				this.inputsubmit.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); self.close(); } );
@@ -139,6 +209,11 @@
 			this.form.fldOpen = this.pos;
 			var self = this;
 			this.fld.className += ' donate--field__open';
+			if( this.type === 'dropdown' ) {
+				this.optionsList.children[ this.selectedIdx ].focus();
+			} else if( this.type === 'input' ) {
+				this.getinput.focus();
+			}
 		},
 		close : function( opt, idx ) {
 			if( !this.open ) {
@@ -166,6 +241,8 @@
 				this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : this.getinput.getAttribute( 'placeholder' );
 				this.elOriginal.value = this.getinput.value;
 			}
+
+			this.toggle.focus();
 		}
 	}
 

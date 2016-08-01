@@ -1,3 +1,4 @@
+var donateForm = new NLForm( document.getElementById( 'donate--form' ), '#donate' );
 
 /*
 * 
@@ -14,9 +15,17 @@
 * if timer ends, set cookie to triggered
 * 
 */
-
-var donateForm = new NLForm( document.getElementById( 'donate--form' ) );
 window.onload = function(e) {
+
+    donateForm.toggleTabIndexes();
+    window.addEventListener('hashchange', donateForm.toggleTabIndexes);
+
+    var donateClose = document.getElementById('donate--close');
+    toggleTabIndex(donateClose, '#donate');
+    window.addEventListener('hashchange', function(ev) {
+        toggleTabIndex(donateClose, '#donate');
+    });
+
 
     // Newsletter popup cookie handler
     var timerSec = 20;
@@ -218,4 +227,13 @@ function init() {
         link = '';
     }
 
+}
+
+function toggleTabIndex(el, hash) {
+    console.log(hash);
+    if(location.hash === hash) {
+        el.setAttribute('tabindex','1');
+    } else {
+        el.removeAttribute('tabindex');
+    }
 }
