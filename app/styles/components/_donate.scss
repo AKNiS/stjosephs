@@ -76,11 +76,13 @@
 }
 
 /* Form styles */
-.donate--form {
+.donate--content {
 	color: $color-white;
 	font-size: 5rem;
 	line-height: 5rem;
-	border: 1px solid black;
+	// border: 1px solid black;
+	// padding: 50px 15px 0;
+	padding: 0 15px;
 	ul {
 		list-style: none;
 		margin: 0;
@@ -102,6 +104,7 @@
 	}
 	input:focus {
 		outline: none;
+		border: none;
 	}
 }
 
@@ -120,16 +123,18 @@
 .donate--field__toggle,
 .donate--form input,
 .donate--form select  {
+	width: 100%;
 	line-height: inherit;
 	display: inline-block;
-	color: #b14943;
+	color: $color-white;
 	cursor: pointer;
-	border-bottom: 1px dashed #b14943;
-}
+	border-bottom: 2px dashed $color-sjc-darkred;
+	text-align: center;
 
-.donate--field__toggle:focus {
-	outline: 0;
-	background: $color-sjc-darkred;
+	&:focus {
+		outline: 0;
+		// border: none;
+	}
 }
 
 /* drop-down list / text element */
@@ -137,20 +142,37 @@
 	ul {
 		position: absolute;
 		visibility: hidden;
-		background: #76C3BD;
-		left: -0.5em;
-		top: 50%;
-		font-size: 80%;
+		background: $color-sjc-orange;
+		// left: -0.5em;
+		// top: 50%;
+		// font-size: 80%;
 		opacity: 0;
-		transform: translateY(10%) scale(0.9);
+		transform: translateY(-40%) scale(0.9);
 		transition: visibility 0s 0.3s, opacity 0.3s, transform 0.3s;
 	}
 
 	&.donate--field__open ul {
 		visibility: visible;
 		opacity: 1;
-		transform: translateY(0) scale(1);
+		transform: translateY(-50%) scale(1);
 		transition: visibility 0s 0s, opacity 0.3s, transform 0.3s;
+	}
+
+	&.donate--field__text {
+		ul {
+			transform: translateY(-90%) scale(0.9);
+		}
+
+		&.donate--field__open ul {
+			transform: translateY(-100%) scale(1);
+		}
+	}
+
+	em,
+	input:placeholder-shown {
+		font-size: 3.9rem;
+		font-style: italic;
+		color: rgba($color-white, 0.7);
 	}
 
 }
@@ -158,6 +180,7 @@
 .donate--field__popup ul li {
 	color: #fff;
 	position: relative;
+	margin-bottom: 0;
 }
 
 .donate--field__dd ul li {
@@ -167,30 +190,33 @@
 }
 
 .donate--field__dd ul li.donate--field__dd-checked {
-	color: #478982;
+	color: darken($color-sjc-orange, 30%);
 }
 
 .donate--field__dd ul li {
 	&:hover,
 	&:focus {
-		background: rgba(0,0,0,0.05);
+		background: rgba(0,0,0,0.10);
 		outline: 0;
 	}
 }
 
 .donate--field__dd ul li:hover:active {
-	color: #478982;
+	color: darken($color-sjc-orange, 30%);
 }
 
 .donate--field__text ul {
-	min-width: 8em;
+	// min-width: 8em;
+	width: 100%;
 }
 
 .donate--field__text ul li.donate--field__input input {
 	width: 100%;
-	padding: 0.2em 2em 0.2em 0.5em;
+	height: 6rem;
+	padding: 0 0.2rem;
 	border-bottom: none;
 	color: #fff;
+	text-align: center;
 }
 
 .donate--form__overlay {
@@ -215,19 +241,34 @@
 }
 
 
+/* Set widths of specific fields */
+#donate--field__name_placeholder,
+#donate--field__city_placeholder {
+	width: 95%;
+}
+#donate--field__address_placeholder {
+	width: 100%;
+}
 @media (#{$bp-larger-than-tablet}) {
-	.donate--form {
+	.donate--content {
 		line-height: initial;
+		padding: 0;
 	}
 
-	.donate--field__popup {
-		ul {
-			transform: translateY(-40%) scale(0.9);
-		}
-
-		&.donate--field__open ul {
-			transform: translateY(-50%) scale(1);
-		}
+	#donate--field__name_placeholder {
+		width: auto;
+		min-width: 70%;
+	}
+	#donate--field__address_placeholder {
+		width: auto;
+		min-width: 100%;
+	}
+	#donate--field__city_placeholder {
+		width: auto;
+		min-width: 45%;
+	}
+	#donate--field__contact-string_placeholder {
+		min-width: 95%;
 	}
 }
 
@@ -253,8 +294,8 @@
 // 	}
 // }
 
-// .donate--amount,
-.donate--details,
+.donate--amount,
+// .donate--details,
 .donate--submit {
 	display: none;
 }

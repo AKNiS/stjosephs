@@ -18,7 +18,7 @@
 	function NLForm( el, hash ) {	
 		this.el = el;
 		this.hash = hash;
-		this.overlay = this.el.querySelector( '.donate--form__overlay' );
+		this.overlays = Array.prototype.slice.call( this.el.querySelectorAll( '.donate--form__overlay' ));
 		this.fields = [];
 		this.fldOpen = -1;
 		this._init();
@@ -35,8 +35,10 @@
 				self.fldOpen++;
 				self.fields.push( new NLField( self, el, 'input', self.fldOpen ) );
 			} );
-			this.overlay.addEventListener( 'click', function(ev) { self._closeFlds(); } );
-			this.overlay.addEventListener( 'touchstart', function(ev) { self._closeFlds(); } );
+			this.overlays.forEach( function( el, i ) {
+				el.addEventListener( 'click', function(ev) { self._closeFlds(); } );
+				el.addEventListener( 'touchstart', function(ev) { self._closeFlds(); } );
+			} );
 			document.addEventListener( 'keydown', function(ev) { 
 				if ( ev.keyCode == 27 && self.fldOpen !== -1 ) { 
 					self._closeFlds(); } 
@@ -97,12 +99,13 @@
 			var self = this;
 			this.fld = document.createElement( 'div' );
 			this.fld.className = 'donate--field__popup donate--field__dd';
+			this.fld.id = this.elOriginal.id + "_placeholder";
 			this.toggle = document.createElement( 'a' );
-			this.toggle.innerHTML = this.elOriginal.options[ this.elOriginal.selectedIndex ].innerHTML;
+			this.toggle.innerHTML = "<em>" + this.elOriginal.options[ this.elOriginal.selectedIndex ].innerHTML + "</em>";
 			this.toggle.className = 'donate--field__toggle';
 			this.optionsList = document.createElement( 'ul' );
 			var ihtml = '';
-			Array.prototype.slice.call( this.elOriginal.querySelectorAll( 'option' ) ).forEach( function( el, i ) {
+			Array.prototype.slice.call( this.elOriginal.querySelectorAll( 'option' ), 1 ).forEach( function( el, i ) {
 				ihtml += self.elOriginal.selectedIndex === i ? '<li class="donate--field__dd-checked" tabindex="-1">' + el.innerHTML + '</li>' : '<li tabindex="-1">' + el.innerHTML + '</li>';
 				// selected index value
 				if( self.elOriginal.selectedIndex === i ) {
@@ -119,8 +122,9 @@
 			var self = this;
 			this.fld = document.createElement( 'div' );
 			this.fld.className = 'donate--field__popup donate--field__text';
+			this.fld.id = this.elOriginal.id + "_placeholder";
 			this.toggle = document.createElement( 'a' );
-			this.toggle.innerHTML = this.elOriginal.getAttribute( 'placeholder' );
+			this.toggle.innerHTML = "<em>" + this.elOriginal.getAttribute( 'placeholder' ) + "</em>";
 			this.toggle.className = 'donate--field__toggle';
 			this.optionsList = document.createElement( 'ul' );
 			this.getinput = document.createElement( 'input' );
@@ -128,11 +132,7 @@
 			this.getinput.setAttribute( 'placeholder', this.elOriginal.getAttribute( 'placeholder' ) );
 			this.getinputWrapper = document.createElement( 'li' );
 			this.getinputWrapper.className = 'donate--field__input';
-			this.inputsubmit = document.createElement( 'button' );
-			this.inputsubmit.className = 'donate--field__go';
-			this.inputsubmit.innerHTML = 'Go';
 			this.getinputWrapper.appendChild( this.getinput );
-			this.getinputWrapper.appendChild( this.inputsubmit );
 			this.optionsList.appendChild( this.getinputWrapper );
 			this.fld.appendChild( this.toggle );
 			this.fld.appendChild( this.optionsList );
@@ -196,8 +196,6 @@
 					// 	self.close();
 					// }
 				} );
-				this.inputsubmit.addEventListener( 'click', function( ev ) { ev.preventDefault(); self.close(); } );
-				this.inputsubmit.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); self.close(); } );
 			}
 
 		},
@@ -238,7 +236,7 @@
 			}
 			else if( this.type === 'input' ) {
 				this.getinput.blur();
-				this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : this.getinput.getAttribute( 'placeholder' );
+				this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : "<em>" + this.getinput.getAttribute( 'placeholder' ) + "</em>";
 				this.elOriginal.value = this.getinput.value;
 			}
 

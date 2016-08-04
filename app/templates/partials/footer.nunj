@@ -147,30 +147,63 @@
 			<form action="process_donate.php" id="donate--form" class="donate--form" method="post">
 				<fieldset class="donate--fieldset donate--amount">
 					<select id="donate--field__group" class="donate--field">
-						<option value="1" selected>$5</option>
-						<option value="2">$10</option>
-						<option value="3">$20</option>
-						<option value="4">$50</option>
+						<option value="1">I</option>
+						<option value="2" selected>We</option>
+						<option value="3">Our team</option>
+					</select> can spare<br class="show-for-large" />
+
+					<select id="donate--field__amount" class="donate--field">
+						<option selected disabled>amt</option>
+						<option value="3">$3</option>
+						<option value="5">$5</option>
+						<option value="10">$10</option>
+						<option value="25">$25</option>
+						<option value="50">$50</option>
+						<option value="100">$100</option>
+						<option value="250">$250</option>
 					</select>
 
-					<input type="text" value="" placeholder="any city"/>
-					<div class="donate--field__submit-wrap">
-						<button class="donate--field__submit" type="submit">Find</button>
-					</div>
+					per 
 
-					can spare <br />
-					<span id="donate--field__amount" class="donate--field">$250</span> per <span id="donate--field__frequency" class="donate--field">quarter</span> to<br />
+					<select id="donate--field__frequency" class="donate--field">
+						<option selected disabled>period</option>
+						<option>day</option>
+						<option>week</option>
+						<option>fortnight</option>
+						<option>month</option>
+						<option>quarter</option>
+						<option>year</option>
+					</select> 
+
+					to<br />
 					support St Joseph's.
 					<div class="donate--form__overlay"></div>
 				</fieldset>
 				<fieldset class="donate--fieldset donate--details">
-					<p>
-						<span id="donate--denom">We</span>, <span id="donate--field__name" class="donate--field">Tundra</span>, of<br />
-						<span id="donate--field__address" class="donate--field">123 Main St.</span><br />
-						<span id="donate--field__city" class="donate--field">Grafton</span>, <span id="donate--field__state" class="donate--field">NSW</span> <span id="donate--field__zip" class="donate--field">3000</span><br />
-						 would prefer to be<br />
-						 contacted by <span id="donate--field__contact-method" class="donate--field">email</span> at <br />
-						<span id="donate--field__contact-string" class="donate--field">dan.laush@gmail.com</span>.</p>
+					<span id="donate--denom">We</span>, <input type="text" value="" placeholder="name" id="donate--field__name" class="donate--field" />, of
+					<input type="text" value="" placeholder="address" id="donate--field__address" class="donate--field" />
+					<input type="text" value="" placeholder="city" id="donate--field__city" class="donate--field">, 
+					<select id="donate--field__state" class="donate--field">
+						<option selected disabled>state</option>
+						<option>ACT</option>				
+						<option>NSW</option>
+						<option>NT</option>
+						<option>QLD</option>
+						<option>SA</option>
+						<option>TAS</option>
+						<option>VIC</option>
+						<option>WA</option>
+					</select> <input type="text" value="" placeholder="postcode" id="donate--field__zip" class="donate--field" /><br class="show-for-large" />
+					would prefer to be<br class="show-for-large" />
+					contacted by 
+					<select id="donate--field__contact-method" class="donate--field">		
+						<option selected disabled>method</option>	
+						<option>email</option>
+						<option>phone</option>
+					</select> at <br class="show-for-large" />
+					<input type="text" value="" placeholder="contact" id="donate--field__contact-string" class="donate--field" />.
+
+					<div class="donate--form__overlay"></div>
 				</fieldset>
 				<fieldset class="donate--fieldset donate--submit">
 					<p><i>Thanks! Doesn't helping feel fantastic? We know! Now all we need is a few details and you can walk around with this awesome feeling all quarter.</i></p>

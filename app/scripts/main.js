@@ -17,9 +17,11 @@ var donateForm = new NLForm( document.getElementById( 'donate--form' ), '#donate
 */
 window.onload = function(e) {
 
+    // on page load and hash change, 
+    // when donate form is open,
+    // make donate form elements tabbable
     donateForm.toggleTabIndexes();
     window.addEventListener('hashchange', donateForm.toggleTabIndexes);
-
     var donateClose = document.getElementById('donate--close');
     toggleTabIndex(donateClose, '#donate');
     window.addEventListener('hashchange', function(ev) {
@@ -229,6 +231,9 @@ function init() {
 
 }
 
+
+// set an element's tab index to 1, making it tabbable and promoting
+// it above document flow
 function toggleTabIndex(el, hash) {
     console.log(hash);
     if(location.hash === hash) {

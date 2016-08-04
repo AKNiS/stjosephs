@@ -54,10 +54,16 @@ svg {
 	max-width: 100%;
 }
 
+// Visibility classes
+.show-for-large__block {
+	display: none;
+}
 @media (#{$bp-larger-than-tablet}) {
-
 	.show-for-mobile {
 		display: none;
+	}
+	.show-for-large__block {
+		display: block;
 	}
 }
 
