@@ -20,12 +20,71 @@ window.onload = function(e) {
     // on page load and hash change, 
     // when donate form is open,
     // make donate form elements tabbable
-    donateForm.toggleTabIndexes();
-    window.addEventListener('hashchange', donateForm.toggleTabIndexes);
-    var donateClose = document.getElementById('donate--close');
-    toggleTabIndex(donateClose, '#donate');
-    window.addEventListener('hashchange', function(ev) {
-        toggleTabIndex(donateClose, '#donate');
+    // donateForm.toggleTabIndexes();
+    // window.addEventListener('hashchange', donateForm.toggleTabIndexes);
+    // var donateClose = document.getElementById('donate--close');
+    // toggleTabIndex(donateClose, '#donate');
+    // window.addEventListener('hashchange', function(ev) {
+    //     toggleTabIndex(donateClose, '#donate');
+    // });
+
+    // set listeners for triggering connected elements
+    // e.g. only show donation period when frequency is set to "per"
+    // Group >> denom
+    var donateGroup = document.getElementById('donate--field__group');
+    var donateDenom = document.getElementById('donate--denom');
+    donateGroup.addEventListener('change', function(ev) {
+        donateDenom.innerHTML = donateGroup.value;
+    });
+    var donateFreq = document.getElementById('donate--field__frequency');
+    var donatePeriodPlaceholder = document.getElementById('donate--field__period_placeholder');
+    donateFreq.addEventListener('change', function(ev) {
+        if(donateFreq.value == "per") {
+            donatePeriodPlaceholder.style = "display:inline-block";
+        } else if (donateFreq.value == "once") {
+            donatePeriodPlaceholder.style = "display:none";
+        }
+    });
+
+    // controls for donate form pages
+    var donateAmount = document.querySelector('.donate--amount');
+    var donateDetails = document.querySelector('.donate--details');
+    var donateSubmit = document.querySelector('.donate--submit');
+    document.getElementById('donate--control__next')
+            .addEventListener('click', function(ev) {
+        ev.preventDefault(); ev.stopPropagation();
+        // fadeOut(donateAmount);
+        // setTimeout(function(){
+        //     fadeIn(donateDetails);
+        // }, 330);      
+        donateAmount.className = "donate--fieldset donate--amount";
+        donateDetails.className = "donate--fieldset donate--details active";
+    });
+    document.getElementById('donate--control__prev')
+            .addEventListener('click', function(ev) {
+        ev.preventDefault(); ev.stopPropagation();
+        // fadeOut(donateDetails);
+        // setTimeout(function(){
+        //     fadeIn(donateAmount);
+        // }, 330);        
+        donateAmount.className = "donate--fieldset donate--amount active";
+        donateDetails.className = "donate--fieldset donate--details";
+    });
+    document.getElementById('donate--control__next2')
+            .addEventListener('click', function(ev) {
+        ev.preventDefault(); ev.stopPropagation();
+        fadeOut(donateDetails);
+        setTimeout(function(){
+            fadeIn(donateSubmit);
+        }, 330);        
+    });
+    document.getElementById('donate--control__prev2')
+            .addEventListener('click', function(ev) {
+        ev.preventDefault(); ev.stopPropagation();
+        fadeOut(donateSubmit);
+        setTimeout(function(){
+            fadeIn(donateDetails);
+        }, 330);        
     });
 
 
@@ -83,10 +142,8 @@ function deleteCookie (key) {
 
 
 /* Google Map init */
-google.maps.event.addDomListener(window, 'load', init);
+// google.maps.event.addDomListener(window, 'load', init);
 var map;
-
-
 function init() {
     var mapOptions = {
         center: new google.maps.LatLng(-29.672822, 152.940895),
@@ -233,7 +290,7 @@ function init() {
 
 
 // set an element's tab index to 1, making it tabbable and promoting
-// it above document flow
+// it above document flow. used in donate form to make it accessible via keyboard
 function toggleTabIndex(el, hash) {
     console.log(hash);
     if(location.hash === hash) {
@@ -242,3 +299,22 @@ function toggleTabIndex(el, hash) {
         el.removeAttribute('tabindex');
     }
 }
+
+// change an element's opacity to 0 and after a timeout 
+// sets display to none. used in conjunction with css 
+// transition of opacity. used in donate form to transition
+// between pages of the form
+// function fadeOut(el) {
+//     el.style.opacity = 0;
+//     setTimeout(function() {
+//         el.style.visibility = 'hidden';
+//     }, 330);
+// }
+
+// change an element's opacity to 1 and display to block
+// used in conjunction with css transition of opacity. 
+// used in donate form to transition between pages of the form
+// function fadeIn(el) {
+//     el.style.visibility = 'visible';
+//     el.style.opacity = 1;
+// }

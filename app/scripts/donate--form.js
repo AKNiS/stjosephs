@@ -44,6 +44,8 @@
 					self._closeFlds(); } 
 				} 
 			);
+			// console.log("init run");
+			// console.log(this.fields);
 			// window.addEventListener("hashchange", function(ev) {
 			// 	toggleTabIndexes(ev, self);
 			// });
@@ -58,8 +60,10 @@
 			}
 		},
 		toggleTabIndexes : function() {
-			console.log(this.hash);
 			// enable tab indexing while form is open
+			console.log(this);
+			var self = this;
+			console.log(self);
 			if(location.hash === this.hash) {
 				console.log('donate is open');
 				this.fields.forEach( function( el, i ) {
@@ -70,6 +74,7 @@
 					}
 				} );
 			} else {
+				console.log("closed #donate");
 				this.fields.forEach( function( el, i ) {
 					el.toggle.removeAttribute('tabindex');
 				} );
@@ -105,11 +110,13 @@
 			this.toggle.className = 'donate--field__toggle';
 			this.optionsList = document.createElement( 'ul' );
 			var ihtml = '';
-			Array.prototype.slice.call( this.elOriginal.querySelectorAll( 'option' ), 1 ).forEach( function( el, i ) {
-				ihtml += self.elOriginal.selectedIndex === i ? '<li class="donate--field__dd-checked" tabindex="-1">' + el.innerHTML + '</li>' : '<li tabindex="-1">' + el.innerHTML + '</li>';
-				// selected index value
-				if( self.elOriginal.selectedIndex === i ) {
-					self.selectedIdx = i;
+			Array.prototype.slice.call( this.elOriginal.querySelectorAll( 'option' ) ).forEach( function( el, i ) {
+				if(!self.elOriginal.disabled) {
+					ihtml += self.elOriginal.selectedIndex === i ? '<li class="donate--field__dd-checked" tabindex="-1">' + el.innerHTML + '</li>' : '<li tabindex="-1">' + el.innerHTML + '</li>';
+					// selected index value
+					if( self.elOriginal.selectedIndex === i ) {
+						self.selectedIdx = i;
+					}
 				}
 			} );
 			this.optionsList.innerHTML = ihtml;
@@ -147,8 +154,9 @@
 				if ( ev.keyCode == 32 ) { // key: space
 					ev.preventDefault(); ev.stopPropagation(); self._open();
 				}
-				if( ev.keyCode == 9 && self.open ) { // key: tab
-					self.close();
+				if( ev.keyCode == 9 ) { // key: tab
+					console.log("close an open input");
+					ev.preventDefault(); ev.stopPropagation(); self.close();
 				}
 			} );
 
@@ -232,6 +240,11 @@
 					this.selectedIdx = idx;
 					// update original select element´s value
 					this.elOriginal.value = this.elOriginal.children[ this.selectedIdx ].value;
+
+					// trigger the native change event
+					var event = document.createEvent("HTMLEvents");
+				    event.initEvent("change", true, true);
+				    this.elOriginal.dispatchEvent(event);
 				}
 			}
 			else if( this.type === 'input' ) {
