@@ -4,7 +4,7 @@
 			<div class="twelve columns">
 				<span role="tooltip">Become a Foster Carer</span>
 				<div class="footer--hidden">
-					<a href="what-we-do.html">Find out more</a> | 
+					<a href="foster-care.html">Find out more</a> | 
 					<a href="#foster-care-form">Apply now</a>
 				</div>
 			</div>
@@ -81,34 +81,7 @@
 				</label>
 				<input type="number" name="postCode" id="foster--field__postCode" required="required">
 			</div>
-
-
-			<div id="field10-container" class="">
-				<label for="foster--field__dept">
-					Which dept. are you most interested in?
-				</label>
-				<select name="dept" id="foster--field__dept">
-					<option id="field10-1" value="Residential Care">
-						Residential Care
-					</option>
-					<option id="field10-2" value="Foster Care">
-						Foster Care
-					</option>
-					<option id="field10-3" value="Tutoring / Mentoring">
-						Tutoring / Mentoring
-					</option>
-					<option id="field10-4" value="Community Programs">
-						Community Programs
-					</option>
-					<option id="field10-5" value="Corporate Sponsorship">
-						Corporate Sponsorship 
-					</option>
-					<option id="field10-6" value="Bequests / Legacy creation">
-						Bequests / Legacy creation
-					</option>
-				</select>
-			</div>
-
+			
 
 			<div id="field11-container" class="">
 				<label for="foster--field__mailingList">

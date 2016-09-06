@@ -10,10 +10,10 @@
 </div>
 <div class="row">
 	<div class="six columns">
-		<p>St. Joseph’s Cowper was founded by the Sisters of Mercy in 1913 as an orphanage in Cowper, New South Wales providing care for children without parents or whose parents couldn’t provide care for them.</p>
+		<p>St Joseph’s Cowper was founded by the Sisters of Mercy in 1913 as an orphanage in Cowper, New South Wales providing care for children without parents or whose parents couldn’t provide care for them.</p>
 	</div>
 	<div class="six columns">
-		<p>In 2016, St. Joseph’s Cowper in Grafton continues that tradition as an accredited out-of-home care agency by providing therapeutic residential and foster care for young people. Providing services from intensive residential care to general foster care enables St. Joseph’s Cowper to meet the individual needs of the young people in our care. </p>
+		<p>In 2016, St Joseph’s Cowper in Grafton continues that tradition as an accredited out-of-home care agency by providing therapeutic residential and foster care for young people. Providing services from intensive residential care to general foster care enables St Joseph’s Cowper to meet the individual needs of the young people in our care. </p>
 	</div>
 </div>
 <div class="row">
@@ -22,55 +22,58 @@
 	</div>
 </div>
 <div class="row">
-	<div class="twelve columns">
-		<p>Tonia Fitzcosta is a registered Step by Step assessor, accredited by the Association of Children’s Welfare Agencies (ACWA). The foster carer assessment process uses ACWA’s Child-Carer Matching Tool to maximize the potential for a strong connection between foster carers and young people. We believe this service produces better outcomes and results for foster carers and young people.</p>
-	</div>
-</div>
-<div class="row">
 	<div class="six columns">
-		<div class=" card card--service">
-			<span class="card--icon">
-				{% include 'partials/svg/fostercare.nunj' %}
-			</span>
-			<span class="card--text">
-				Foster Care
-			</span>
-		</div>
-		<p>St Joseph’s Cowper is a small and personalised agency that provides foster care for children with our network of dedicated and supported authorised carers. If you’re interested in knowing more about foster care please call or visit our website.</p>
+		<a href="foster-care.html" class="card--link">
+			<div class="card card--service">
+				<span class="card--icon">
+					{% include 'partials/svg/fostercare.nunj' %}
+				</span>
+				<span class="card--text">
+					Foster Care
+				</span>
+			</div>
+		</a>
+		<p>St Joseph’s Cowper is a small and personalised agency that provides foster care for children with our network of dedicated and supported authorised carers. If you’re interested in knowing more about foster care please call or <a href="#contact-form">contact us</a>.</p>
 	</div>
 	<div class="six columns">
-		<div class=" card card--service">
-			<span class="card--icon">
-				{% include 'partials/svg/resicare.nunj' %}
-			</span>
-			<span class="card--text">
-				Residential Care
-			</span>
-		</div>
+		<a href="residential-care.html" class="card--link">
+			<div class=" card card--service">
+				<span class="card--icon">
+					{% include 'partials/svg/resicare.nunj' %}
+				</span>
+				<span class="card--text">
+					Residential Care
+				</span>
+			</div>
+		</a>
 		<p>SJC provides therapeutic residential care for children and young people who are in statutory care as ordered by the Courts. As a Child Safe workplace we uphold the highest standards of trauma-informed care and provide 24hr assistance to our young people with a team of highly-trained and experienced youth workers.</p>
 	</div>
 </div>
 <div class="row">
 	<div class="six columns">
-		<div class=" card card--service">
-			<span class="card--icon">
-				{% include 'partials/svg/tutormentor.nunj' %}
-			</span>
-			<span class="card--text">
-				Tutoring &amp; Mentoring
-			</span>
-		</div>
+		<a href="tutoring-mentoring.html" class="card--link">
+			<div class=" card card--service">
+				<span class="card--icon">
+					{% include 'partials/svg/tutormentor.nunj' %}
+				</span>
+				<span class="card--text">
+					Tutoring &amp; Mentoring
+				</span>
+			</div>
+		</a>
 		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
 	</div>
 	<div class="six columns">
-		<div class=" card card--service">
-			<span class="card--icon">
-				{% include 'partials/svg/commprograms.nunj' %}
-			</span>
-			<span class="card--text">
-				Community Programs
-			</span>
-		</div>
+		<a href="community-programs.html" class="card--link">
+			<div class=" card card--service">
+				<span class="card--icon">
+					{% include 'partials/svg/commprograms.nunj' %}
+				</span>
+				<span class="card--text">
+					Community Programs
+				</span>
+			</div>
+		</a>
 		<p>St Joseph’s Cowper provides a range of community programs to children and young people to assist their development and growth.</p>
 	</div>
 </div>

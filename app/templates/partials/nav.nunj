@@ -11,18 +11,18 @@
 					</a></li>
 					<li><a href="history.html" class="menu--link">History</a></li>
 					<li><a href="board.html" class="menu--link">Our Board</a></li>
+					<li><span class="menu--link submenu">Get Involved</span>
+						<ul>
+							<li><a href="careers.html" class="menu--link">Careers</a></li>
+							<li><a href="donate.html" class="menu--link">Donate</a></li>
+						</ul>
+					</li>
 					<li><span class="menu--link submenu">What We Do</a></span>
 						<ul>
 							<li><a href="foster-care.html" class="menu--link">Foster Care</a></li>
 							<li><a href="residential-care.html" class="menu--link">Residential Care</a></li>
 							<li><a href="tutoring-mentoring.html" class="menu--link">Tutoring &amp; Mentoring</a></li>
 							<li><a href="community-programs.html" class="menu--link">Community Programs</a></li>
-						</ul>
-					</li>
-					<li><span class="menu--link submenu">Get Involved</span>
-						<ul>
-							<li><a href="careers.html" class="menu--link">Careers</a></li>
-							<li><a href="donate.html" class="menu--link">Donate</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -36,7 +36,8 @@
 		<li><a href="index.html">Home</a></li>
 		<li><a href="history.html">History</a></li>
 		<li><a href="board.html">Our Board</a></li>
-		<li><a href="careers.html">Careers</a></li>
+		<li><a href="careers.html" class="menu--link">Careers</a></li>
+		<li><a href="donate.html" class="menu--link">Donate</a></li>
 		<li><a href="foster-care.html" class="menu--link">Foster Care</a></li>
 		<li><a href="residential-care.html" class="menu--link">Residential Care</a></li>
 		<li><a href="tutoring-mentoring.html" class="menu--link">Tutoring &amp; Mentoring</a></li>

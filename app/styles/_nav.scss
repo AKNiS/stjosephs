@@ -33,6 +33,7 @@
 a.menu--link,
 span.menu--link {
 	transition: 200ms all ease-in;
+	cursor: pointer;
 	&:hover {
 		color: $color-sjc-red;
 		background: $color-white;
@@ -44,7 +45,9 @@ a.menu--link__icon {
 	height: 38px;
 	line-height: 38px;
 	transform: translateZ(0);
+	transition: 200ms all ease-in;
 	svg {
+		transition: 200ms all ease-in;
 		width: 30px;
 		height: 30px;
 		fill: $color-white;
@@ -52,13 +55,16 @@ a.menu--link__icon {
 	&:hover,
 	&:focus,
 	&:active {
-		transition-duration: 0.3s;
-		animation-name: icon-drop;
-		animation-duration: 0.5s;
-	    animation-delay: 0.1s;
-	    animation-fill-mode: forwards;
-	    animation-timing-function: ease-in-out;
-		animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
+		background: $color-white;
+		svg {
+			fill: $color-sjc-red;
+		}
+		// animation-name: icon-drop;
+		// animation-duration: 0.5s;
+	 //    animation-delay: 0.1s;
+	 //    animation-fill-mode: forwards;
+	 //    animation-timing-function: ease-in-out;
+		// animation-timing-function: cubic-bezier(0.52, 1.64, 0.37, 0.66);
 	}
 }
 

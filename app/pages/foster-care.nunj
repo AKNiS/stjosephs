@@ -13,7 +13,7 @@
 				<h1>Foster Care</h1>
 			</span>
 		</div>
-		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
+		<blockquote class="h4">St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</blockquote>
 	</div>
 </div>
 <div class="row">
@@ -54,7 +54,7 @@
 	</div>
 </div>
 <div class="row">
-	<div class="twelve columns">
+	<div class="six columns">
 		<div class=" card card--service">
 			<span class="card--icon">
 				{% include 'partials/svg/collabtoheal.nunj' %}
@@ -64,7 +64,9 @@
 			</span>
 		</div>
 		<p>Being a foster carer means being part of a team. Many people are involved in providing care for each foster child. Case workers from St Joseph’s Cowper, FACS and of course, the birth family of the young person all have a role to play alongside the foster carer. Your role as a foster carer is to be a significant figure in the young person’s life, but you’re not alone!</p>
-		<p><strong>We collaborate to heal.</strong></p>
+		<blockquote class="h4">We collaborate to heal.</blockquote>
+	</div>
+	<div class="six columns">
 		<div class=" card card--service">
 			<span class="card--icon">
 				{% include 'partials/svg/trainsupport.nunj' %}

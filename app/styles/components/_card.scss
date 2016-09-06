@@ -40,6 +40,10 @@
 	}
 }
 
+.card--link {
+	color: $dark-grey;
+}
+
 
 @media (#{$bp-larger-than-desktop}) {
 	.card--icon {
