@@ -1,6 +1,8 @@
 .nav {
 	height: 50px;
 	background: $color-sjc-red;
+	pointer-events: auto;
+	
 	.container {
 		background: $color-sjc-red;
 		padding: 0 10px;

@@ -170,14 +170,14 @@
 						<option>TAS</option>
 						<option>VIC</option>
 						<option>WA</option>
-					</select> <input type="text" value="" placeholder="postcode" id="donate--field__zip" class="donate--field" /><br class="show-for-large" />
-					would prefer to be<br class="show-for-large" />
+					</select> <input type="text" value="" placeholder="postcode" id="donate--field__zip" class="donate--field" /><br class="show-for-large__inline" />
+					would prefer to be<br class="show-for-large__inline" />
 					contacted by 
 					<select id="donate--field__contact-method" class="donate--field">		
 						<option selected disabled>method</option>	
 						<option>email</option>
 						<option>phone</option>
-					</select> at <br class="show-for-large" />
+					</select> at <br class="show-for-large__inline" />
 					<input type="text" value="" placeholder="contact" id="donate--field__contact-string" class="donate--field" />.
 
 					<a href="#" class="donate--control donate--control__prev" id="donate--control__prev">Previous</a>
@@ -188,7 +188,7 @@
 					<p><i>Thanks! Doesn't helping feel fantastic? We know! Now all we need is a few details and you can walk around with this awesome feeling all quarter.</i></p>
 
 					<a href="#" class="donate--control donate--control__prev" id="donate--control__prev2">Previous</a>
-				</fieldset>
+				</fieldset> 
 				{# <div class="">
 					<label for="newsletter--field__email">
 						Email

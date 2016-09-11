@@ -72,12 +72,16 @@ blockquote {
 }
 
 // Visibility classes
-.show-for-large__block {
+.show-for-large__block,
+.show-for-large__inline {
 	display: none;
 }
 @media (#{$bp-larger-than-tablet}) {
 	.show-for-mobile {
 		display: none;
+	}
+	.show-for-large__inline {
+		display: inline;
 	}
 	.show-for-large__block {
 		display: block;

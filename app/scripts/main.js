@@ -46,45 +46,58 @@ window.onload = function(e) {
         }
     });
 
-    // controls for donate form pages
+    // controls for donate form sections
+    var donateForm = document.querySelector('.donate--form');
     var donateAmount = document.querySelector('.donate--amount');
     var donateDetails = document.querySelector('.donate--details');
     var donateSubmit = document.querySelector('.donate--submit');
     document.getElementById('donate--control__next')
             .addEventListener('click', function(ev) {
         ev.preventDefault(); ev.stopPropagation();
-        // fadeOut(donateAmount);
-        // setTimeout(function(){
-        //     fadeIn(donateDetails);
-        // }, 330);      
         donateAmount.className = "donate--fieldset donate--amount";
         donateDetails.className = "donate--fieldset donate--details active";
+        var mm = window.matchMedia( "(min-width: 550px)" );
+        if(!mm.matches) {
+            setTimeout(function() {
+                donateForm.scrollTop = donateDetails.offsetTop - 40;
+            }, 500);
+        }
     });
     document.getElementById('donate--control__prev')
             .addEventListener('click', function(ev) {
         ev.preventDefault(); ev.stopPropagation();
-        // fadeOut(donateDetails);
-        // setTimeout(function(){
-        //     fadeIn(donateAmount);
-        // }, 330);        
         donateAmount.className = "donate--fieldset donate--amount active";
         donateDetails.className = "donate--fieldset donate--details";
+        var mm = window.matchMedia( "(min-width: 550px)" );
+        if(!mm.matches) {
+            setTimeout(function() {
+                donateForm.scrollTop = donateAmount.offsetTop - 40;
+            }, 500);
+        }
     });
     document.getElementById('donate--control__next2')
             .addEventListener('click', function(ev) {
         ev.preventDefault(); ev.stopPropagation();
-        fadeOut(donateDetails);
-        setTimeout(function(){
-            fadeIn(donateSubmit);
-        }, 330);        
+        donateDetails.className = "donate--fieldset donate--details";
+        donateSubmit.className = "donate--fieldset donate--submit active";
+        var mm = window.matchMedia( "(min-width: 550px)" );
+        if(!mm.matches) {
+            setTimeout(function() {
+                donateForm.scrollTop = donateSubmit.offsetTop - 40;
+            }, 500);
+        }
     });
     document.getElementById('donate--control__prev2')
             .addEventListener('click', function(ev) {
         ev.preventDefault(); ev.stopPropagation();
-        fadeOut(donateSubmit);
-        setTimeout(function(){
-            fadeIn(donateDetails);
-        }, 330);        
+        donateDetails.className = "donate--fieldset donate--details active";
+        donateSubmit.className = "donate--fieldset donate--submit";
+        var mm = window.matchMedia( "(min-width: 550px)" );
+        if(!mm.matches) {
+            setTimeout(function() {
+                donateForm.scrollTop = donateDetails.offsetTop - 40;
+            }, 500);
+        }
     });
 
 
