@@ -55,35 +55,21 @@
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
-			<td>Gai Patricia Aitken <em>Bachelor of Nursing</em></td>
+			<td class="table--avatar" rowspan="3"><img src="images/board-sr-caroline-ryan.jpg" width="250" height="300" /></td>
+			<td>Sr Caroline Ryan <em>BA, Dip Ed (PG), BSW, MTh</em></td>
 			<td class="table--title">Non-executive Director</td>
 		</tr>
 		<tr>
 			<td class="table--biography" colspan="2">Biography</td>
 		</tr>
 		<tr>
-			<td colspan="2">After raising her family Gai worked as a teacher’s aide for 6 years. She then undertook studies to complete her Bachelor of Nursing in 2014 and is now employed as a nurse. Gai was the first lay-carer employed by the Sister’s of Mercy when St Joseph’s Cowper relocated to Grafton.</td>
+			<td colspan="2">Since her profession as a Sister of Mercy in 1969, Caroline has served in secondary education and administration, university chaplaincy and adult education (spiritual formation). She has also had several leadership roles within the Sisters of Mercy and most recently established the Professional Standards Office of the Institute of Sisters of Mercy of Australia and Papua New Guinea where she worked for three years.</td>
 		</tr>
 		<tr>
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
-			<td>Grahame Brotherson <em>Plumber &amp; Gas fitter</em></td>
-			<td class="table--title">Non-executive Director</td>
-		</tr>
-		<tr>
-			<td class="table--biography" colspan="2">Biography</td>
-		</tr>
-		<tr>
-			<td colspan="2">Grahame has in excess of 40 years' experience in the plumbing/gas fitting industry and has been self-employed since 1988 operating his own business - Grafton Gas &amp;Plumbing, employing five tradesmen &amp; a secretary. He was also a member of the New South Wales Fire Brigade in Grafton for 23 years. Grahame is a life member of the Grafton Ghosts Rugby league Football Club Inc. and was President for a number of years. He joined the Board of St Joseph's Cowper Inc. in 2005</td>
-		</tr>
-		<tr>
-			<th colspan="3"></th>
-		</tr>
-		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td class="table--avatar" rowspan="3"><img src="images/board-patrick-dougherty.jpg" width="250" height="300" /></td>
 			<td>Patrick Dougherty <em>Diploma of Business (Valuation) - Bachelor of Business (Land Economy) - Registered Valuer</em></td>
 			<td class="table--title">
 				Non-executive Director,<br />
@@ -100,7 +86,21 @@
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td class="table--avatar" rowspan="3"><img src="images/board-judith-page.jpg" width="250" height="300" /></td>
+			<td>Judith Page <em>Teacher’s Certificate (Armidale), B Ed (Armidale and Lismore)</em></td>
+			<td class="table--title">Non-executive Director – Deputy Chair</td>
+		</tr>
+		<tr>
+			<td class="table--biography" colspan="2">Biography</td>
+		</tr>
+		<tr>
+			<td colspan="2">Judy has 40 years’ experience teaching in Sate and Catholic schools in New South Wales and New Guinea.</td>
+		</tr>
+		<tr>
+			<th colspan="3"></th>
+		</tr>
+		<tr class="table--member">
+			<td class="table--avatar" rowspan="3"><img src="images/board-joe-feeney.jpg" width="250" height="300" /></td>
 			<td>Joe Feeney <em>Registered Real Estate Valuer and Member of the Institute of Valuers</em></td>
 			<td class="table--title">Non-executive Director</td>
 		</tr>
@@ -114,7 +114,7 @@
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td class="table--avatar" rowspan="3"><img src="images/board-dennis-kelly.jpg" width="250" height="300" /></td>
 			<td>Dennis Kelly <em>Fellow Institute of Public Accountants; Member Governance Institute of Australia</em></td>
 			<td class="table--title">
 				Non-executive Director,<br />
@@ -133,7 +133,7 @@
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
+			<td class="table--avatar" rowspan="3"><img src="images/board-jim-mcdougall.jpg" width="250" height="300" /></td>
 			<td>Jim McDougall <em>B.Ed., Grad. Dip. Arts</em></td>
 			<td class="table--title">Non-executive Director - Chair</td>
 		</tr>
@@ -147,43 +147,40 @@
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
-			<td>Sr Caroline Ryan <em>BA, Dip Ed (PG), BSW, MTh</em></td>
+			<td colspan="2">Gai Patricia Aitken <em>Bachelor of Nursing</em></td>
 			<td class="table--title">Non-executive Director</td>
 		</tr>
 		<tr>
-			<td class="table--biography" colspan="2">Biography</td>
+			<td class="table--biography" colspan="3">Biography</td>
 		</tr>
 		<tr>
-			<td colspan="2">Since her profession as a Sister of Mercy in 1969, Caroline has served in secondary education and administration, university chaplaincy and adult education (spiritual formation). She has also had several leadership roles within the Sisters of Mercy and most recently established the Professional Standards Office of the Institute of Sisters of Mercy of Australia and Papua New Guinea where she worked for three years.</td>
+			<td colspan="3">After raising her family Gai worked as a teacher’s aide for 6 years. She then undertook studies to complete her Bachelor of Nursing in 2014 and is now employed as a nurse. Gai was the first lay-carer employed by the Sister’s of Mercy when St Joseph’s Cowper relocated to Grafton.</td>
 		</tr>
 		<tr>
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
-			<td>Judith Page <em>Teacher’s Certificate (Armidale), B Ed (Armidale and Lismore)</em></td>
-			<td class="table--title">Non-executive Director – Deputy Chair</td>
+			<td colspan="2">Grahame Brotherson <em>Plumber &amp; Gas fitter</em></td>
+			<td class="table--title">Non-executive Director</td>
 		</tr>
 		<tr>
-			<td class="table--biography" colspan="2">Biography</td>
+			<td class="table--biography" colspan="3">Biography</td>
 		</tr>
 		<tr>
-			<td colspan="2">Judy has 40 years’ experience teaching in Sate and Catholic schools in New South Wales and New Guinea.</td>
+			<td colspan="3">Grahame has in excess of 40 years' experience in the plumbing/gas fitting industry and has been self-employed since 1988 operating his own business - Grafton Gas &amp;Plumbing, employing five tradesmen &amp; a secretary. He was also a member of the New South Wales Fire Brigade in Grafton for 23 years. Grahame is a life member of the Grafton Ghosts Rugby league Football Club Inc. and was President for a number of years. He joined the Board of St Joseph's Cowper Inc. in 2005</td>
 		</tr>
 		<tr>
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
-			<td class="table--avatar" rowspan="3"><img src="http://placehold.it/200x200?text=Headshot" /></td>
-			<td>Amanda Steiner</td>
+			<td colspan="2">Amanda Steiner</td>
 			<td class="table--title">Non-executive Director</td>
 		</tr>
 		<tr>
-			<td class="table--biography" colspan="2">Biography</td>
+			<td class="table--biography" colspan="3">Biography</td>
 		</tr>
 		<tr>
-			<td colspan="2">Amanda has over 25 years' experience in the legal field specialising in Family Law and Child Welfare matters. She is an Accredited Specialist in Family Law and is often appointed as an Independent Children’s Lawyer in Children’s matters in the Federal Circuit Court of Australia and has been operating her legal practice in partnership for approximately 20 years.  Amanda joined the Board of St Joseph's Cowper Inc. in 2003.</td>
+			<td colspan="3">Amanda has over 25 years' experience in the legal field specialising in Family Law and Child Welfare matters. She is an Accredited Specialist in Family Law and is often appointed as an Independent Children’s Lawyer in Children’s matters in the Federal Circuit Court of Australia and has been operating her legal practice in partnership for approximately 20 years.  Amanda joined the Board of St Joseph's Cowper Inc. in 2003.</td>
 		</tr>
 	</tbody>
 	</table>
