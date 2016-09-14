@@ -74,7 +74,7 @@
 					}
 				} );
 			} else {
-				console.log("closed #donate");
+				console.log('closed #donate');
 				this.fields.forEach( function( el, i ) {
 					el.toggle.removeAttribute('tabindex');
 				} );
@@ -104,9 +104,9 @@
 			var self = this;
 			this.fld = document.createElement( 'div' );
 			this.fld.className = 'donate--field__popup donate--field__dd';
-			this.fld.id = this.elOriginal.id + "_placeholder";
+			this.fld.id = this.elOriginal.id + '_placeholder';
 			this.toggle = document.createElement( 'a' );
-			this.toggle.innerHTML = "<em>" + this.elOriginal.options[ this.elOriginal.selectedIndex ].innerHTML + "</em>";
+			this.toggle.innerHTML = '<em>' + this.elOriginal.options[ this.elOriginal.selectedIndex ].innerHTML + '</em>';
 			this.toggle.className = 'donate--field__toggle';
 			this.optionsList = document.createElement( 'ul' );
 			var ihtml = '';
@@ -129,9 +129,9 @@
 			var self = this;
 			this.fld = document.createElement( 'div' );
 			this.fld.className = 'donate--field__popup donate--field__text';
-			this.fld.id = this.elOriginal.id + "_placeholder";
+			this.fld.id = this.elOriginal.id + '_placeholder';
 			this.toggle = document.createElement( 'a' );
-			this.toggle.innerHTML = "<em>" + this.elOriginal.getAttribute( 'placeholder' ) + "</em>";
+			this.toggle.innerHTML = '<em>' + this.elOriginal.getAttribute( 'placeholder' ) + '</em>';
 			this.toggle.className = 'donate--field__toggle';
 			this.optionsList = document.createElement( 'ul' );
 			this.getinput = document.createElement( 'input' );
@@ -155,7 +155,7 @@
 					ev.preventDefault(); ev.stopPropagation(); self._open();
 				}
 				if( ev.keyCode == 9 ) { // key: tab
-					console.log("close an open input");
+					console.log('close an open input');
 					ev.preventDefault(); ev.stopPropagation(); self.close();
 				}
 			} );
@@ -242,14 +242,14 @@
 					this.elOriginal.value = this.elOriginal.children[ this.selectedIdx ].value;
 
 					// trigger the native change event
-					var event = document.createEvent("HTMLEvents");
-				    event.initEvent("change", true, true);
+					var event = document.createEvent('HTMLEvents');
+				    event.initEvent('change', true, true);
 				    this.elOriginal.dispatchEvent(event);
 				}
 			}
 			else if( this.type === 'input' ) {
 				this.getinput.blur();
-				this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : "<em>" + this.getinput.getAttribute( 'placeholder' ) + "</em>";
+				this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : '<em>' + this.getinput.getAttribute( 'placeholder' ) + '</em>';
 				this.elOriginal.value = this.getinput.value;
 			}
 
