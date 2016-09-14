@@ -62,14 +62,23 @@ td.table--title {
 	font-size: 1.7rem;
 }
 
+tr.table--mobile-img {
+	display: none;
+
+	@media ("max-width: 400px") {
+		display: table-row;
+	}
+}
+
 tr:nth-child(even) td {
 	background: rgba($color-sjc-lightorange, 0.3);
 }
 
-// tr td:hover {
-// 	background: $color-sjc-red;
-// 	color: $color-white;
-// }
+@media ("max-width: 400px") {
+	td.table--avatar {
+		display: none;
+	}
+}
 
 @media (#{$bp-larger-than-tablet}) {
 	th, td {

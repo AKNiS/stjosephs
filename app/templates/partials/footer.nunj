@@ -113,7 +113,7 @@
 		</div>
 	</div>
 </div>
-<div id="donate" class="donate">
+{# <div id="donate" class="donate">
 	<a href="#close" title="Close" id="donate--close" class="donate--close">&times;</a>
 	<div class="donate--wrapper">
 		<div class="donate--content">
@@ -189,37 +189,11 @@
 
 					<a href="#" class="donate--control donate--control__prev" id="donate--control__prev2">Previous</a>
 				</fieldset> 
-				{# <div class="">
-					<label for="newsletter--field__email">
-						Email
-					</label>
-					<input type="email" name="email" id="newsletter--field__email" required="required">
-				</div>
-
-				<div style="position: absolute; left: -5000px;" aria-hidden="true">
-					<!-- Mailchimp no-spam value -->
-					<input type="text" name="b_da9a0881ddc88eea35d96f896_1084d3a4fe" tabindex="-1" value="">
-					<!-- Form name -->
-					<input type="hidden" name="formName" value="newsletter-form">
-				</div>
-
-
-				<div id="form-submit" class="">
-					<input type="submit" value="Join the list">
-				</div> #}
-
-				{# (I, we, our team, corporate, other) can easily spare ($3, 5, 10, 25, 50, 100, 250, other/corporate) a (day, week, fortnight, month,quarterly, annually) to support St Joseph’s.
-Thanks! (Name - First name, last name for individual with + (plus) for “We” and “team” but for corporate have “Name, corporation or event”) of (number), (street/lane, etc), (post code) - postcode validates city, state, etc. Would you prefer us to (email) and/or (phone) you?
-Doesn’t helping feel fantastic? We know! So all we need now is the boring stuff and you can walk around with this awesome feeling all (day/week/fortnight - whatever they put in before)
-(card number) 
-expiration (month/year) 
-CSV ( )
-(DONATE BUTTON) #}
 			</form>
 
 		</div>
 	</div>
-</div>
+</div> #}
 <div id="newsletter-form" class="modal">
 	<div class="modal--wrapper">
 		<div class="modal--title">
