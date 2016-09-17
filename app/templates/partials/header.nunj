@@ -7,7 +7,7 @@
 						<a href="#contact-form" class="header--actions-link header--actions-link__icon">
 							{% include 'partials/svg/email.nunj' %}
 						</a>
-						<a href="donate.html" class="header--actions-link header--actions-link__desktop button">
+						<a href="#donate-givenow" class="header--actions-link header--actions-link__desktop button">
 							Donate
 						</a>
 						<a href="tel:(02) 6642 3022" class="header--actions-link header--actions-link__icon header--actions-link__mobile">

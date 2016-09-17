@@ -1,0 +1,468 @@
+{% extends "layout.nunj" %}
+
+{% set title = "Donate" %}
+
+{% block content %}
+<div class="row">
+	<div class="twelve columns">
+		<h1>Donate to St Joseph's Cowper</h1>
+	</div>
+</div>
+<div class="row">
+	<div class="six columns">
+		<h2>Donations</h2>
+		<p>At St Joseph’s Cowper we pride ourselves on making decisions based on what is best for the young people in our care, not what’s best for our bottom line.</p>
+		<p>It’s support from people like you that can make a huge difference for the young people in our care. Donate now to give the innocent young people in our care the chance to achieve happiness and fulfilment. Donations above $2 are tax-deductible.</p>
+	</div>
+	<div class="six columns">
+		<h2>Bequests</h2>
+		<p>If you can’t afford to give anything right now, talk to us about leaving a bequest to SJC in your will, to ensure your legacy is one of protecting and supporting the most vulnerable in our community for years to come.</p>
+	</div>
+</div>
+<div class="row">
+	<div class="twelve columns" style="text-align:center;">
+		<p>Thank you for considering making a donation to support St Joseph’s Cowper. Your donation will help us continue to support young people in our care. </p>
+
+		<p>We rely on contributions from supporters to continue our work. To make a donation, follow the link below to make a donation via Givenow.</p>
+		<p>
+			<a href="#donate" class="button button__large">Donate now</a>
+		</p>
+	</div>
+</div>
+
+
+<div id="donate" class="donate">
+	<a href="#close" title="Close" id="donate--close" class="donate--close">&times;</a>
+	<div class="donate--wrapper">
+		<div class="donate--content">
+			<form action="process_donate.php" id="donate--form" class="donate--form" method="post">
+				<fieldset class="donate--fieldset donate--amount active">
+					<select id="donate--field__group" class="donate--field">
+						<option>I</option>
+						<option selected>We</option>
+						<option>Our team</option>
+					</select> can spare
+
+					<select id="donate--field__amount" class="donate--field">
+						<option selected disabled>amount</option>
+						<option value="3">$3</option>
+						<option value="5">$5</option>
+						<option value="10">$10</option>
+						<option value="25">$25</option>
+						<option value="50">$50</option>
+						<option value="100">$100</option>
+						<option value="250">$250</option>
+					</select>
+
+					<select id="donate--field__frequency" class="donate--field">
+						<option selected>per</option>
+						<option>once</option>
+					</select>
+
+					<select id="donate--field__period" class="donate--field">
+						<option selected disabled>period</option>
+						<option>day</option>
+						<option>week</option>
+						<option>fortnight</option>
+						<option>month</option>
+						<option>quarter</option>
+						<option>year</option>
+					</select> 
+
+					to
+					support St Joseph's.
+					<a href="#" class="donate--control donate--control__next" id="donate--control__next">Next</a>
+					<div class="donate--form__overlay"></div>
+				</fieldset>
+				<fieldset class="donate--fieldset donate--details">
+					<span id="donate--denom">We</span>, <input type="text" value="" placeholder="name" id="donate--field__name" class="donate--field" />, of
+					<input type="text" value="" placeholder="address" id="donate--field__address" class="donate--field" />
+					<input type="text" value="" placeholder="city" id="donate--field__city" class="donate--field">, 
+					<select id="donate--field__state" class="donate--field">
+						<option selected disabled>state</option>
+						<option>ACT</option>				
+						<option>NSW</option>
+						<option>NT</option>
+						<option>QLD</option>
+						<option>SA</option>
+						<option>TAS</option>
+						<option>VIC</option>
+						<option>WA</option>
+					</select> <input type="text" value="" placeholder="postcode" id="donate--field__zip" class="donate--field" /><br class="show-for-large__inline" />
+					would prefer to be<br class="show-for-large__inline" />
+					contacted by 
+					<select id="donate--field__contact-method" class="donate--field">		
+						<option selected disabled>method</option>	
+						<option>email</option>
+						<option>phone</option>
+					</select> at <br class="show-for-large__inline" />
+					<input type="text" value="" placeholder="contact" id="donate--field__contact-string" class="donate--field" />.
+
+					<a href="#" class="donate--control donate--control__prev" id="donate--control__prev">Previous</a>
+					<a href="#" class="donate--control donate--control__next" id="donate--control__next2">Next</a>
+					<div class="donate--form__overlay"></div>
+				</fieldset>
+				<fieldset class="donate--fieldset donate--submit">
+					<p><i>Thanks! Doesn't helping feel fantastic? We know! Now all we need is a few details and you can walk around with this awesome feeling all quarter.</i></p>
+
+					<a href="#" class="donate--control donate--control__prev" id="donate--control__prev2">Previous</a>
+				</fieldset> 
+			</form>
+
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+	/**
+	 * nlform.js v1.0.0
+	 * http://www.codrops.com
+	 *
+	 * Licensed under the MIT license.
+	 * http://www.opensource.org/licenses/mit-license.php
+	 * 
+	 * Copyright 2013, Codrops
+	 * http://www.codrops.com
+	 */
+	;( function( window ) {
+		var document = window.document;
+
+		if (!String.prototype.trim) {
+			String.prototype.trim=function(){return this.replace(/^\s+|\s+$/g, '');};
+		}
+
+		function NLForm( el, hash ) {	
+			this.el = el;
+			this.hash = hash;
+			this.overlays = Array.prototype.slice.call( this.el.querySelectorAll( '.donate--form__overlay' ));
+			this.fields = [];
+			this.fldOpen = -1;
+			this._init();
+		}
+
+		NLForm.prototype = {
+			_init : function() {
+				var self = this;
+				Array.prototype.slice.call( this.el.querySelectorAll( 'select' ) ).forEach( function( el, i ) {
+					self.fldOpen++;
+					self.fields.push( new NLField( self, el, 'dropdown', self.fldOpen ) );
+				} );
+				Array.prototype.slice.call( this.el.querySelectorAll( 'input' ) ).forEach( function( el, i ) {
+					self.fldOpen++;
+					self.fields.push( new NLField( self, el, 'input', self.fldOpen ) );
+				} );
+				this.overlays.forEach( function( el, i ) {
+					el.addEventListener( 'click', function(ev) { self._closeFlds(); } );
+					el.addEventListener( 'touchstart', function(ev) { self._closeFlds(); } );
+				} );
+				document.addEventListener( 'keydown', function(ev) { 
+					if ( ev.keyCode == 27 && self.fldOpen !== -1 ) { 
+						self._closeFlds(); } 
+					} 
+				);
+				// console.log("init run");
+				// console.log(this.fields);
+				// window.addEventListener("hashchange", function(ev) {
+				// 	toggleTabIndexes(ev, self);
+				// });
+				// window.addEventListener("onload", function(ev) {
+				// 	console.log("window load!");
+				// 	toggleTabIndexes(ev, self);
+				// });
+			},
+			_closeFlds : function() {
+				if( this.fldOpen !== -1 ) {
+					this.fields[ this.fldOpen ].close();
+				}
+			},
+			toggleTabIndexes : function() {
+				// enable tab indexing while form is open
+				console.log(this);
+				var self = this;
+				console.log(self);
+				if(location.hash === this.hash) {
+					console.log('donate is open');
+					this.fields.forEach( function( el, i ) {
+						// console.log(el);
+						el.toggle.setAttribute('tabindex','1');
+						if(i==0) {
+							el.toggle.focus();
+						}
+					} );
+				} else {
+					console.log('closed #donate');
+					this.fields.forEach( function( el, i ) {
+						el.toggle.removeAttribute('tabindex');
+					} );
+				}
+			}
+		}
+
+		function NLField( form, el, type, idx ) {
+			this.form = form;
+			this.elOriginal = el;
+			this.pos = idx;
+			this.type = type;
+			this._create();
+			this._initEvents();
+		}
+
+		NLField.prototype = {
+			_create : function() {
+				if( this.type === 'dropdown' ) {
+					this._createDropDown();	
+				}
+				else if( this.type === 'input' ) {
+					this._createInput();	
+				}
+			},
+			_createDropDown : function() {
+				var self = this;
+				this.fld = document.createElement( 'div' );
+				this.fld.className = 'donate--field__popup donate--field__dd';
+				this.fld.id = this.elOriginal.id + '_placeholder';
+				this.toggle = document.createElement( 'a' );
+				this.toggle.innerHTML = '<em>' + this.elOriginal.options[ this.elOriginal.selectedIndex ].innerHTML + '</em>';
+				this.toggle.className = 'donate--field__toggle';
+				this.optionsList = document.createElement( 'ul' );
+				var ihtml = '';
+				Array.prototype.slice.call( this.elOriginal.querySelectorAll( 'option' ) ).forEach( function( el, i ) {
+					if(!self.elOriginal.disabled) {
+						ihtml += self.elOriginal.selectedIndex === i ? '<li class="donate--field__dd-checked" tabindex="-1">' + el.innerHTML + '</li>' : '<li tabindex="-1">' + el.innerHTML + '</li>';
+						// selected index value
+						if( self.elOriginal.selectedIndex === i ) {
+							self.selectedIdx = i;
+						}
+					}
+				} );
+				this.optionsList.innerHTML = ihtml;
+				this.fld.appendChild( this.toggle );
+				this.fld.appendChild( this.optionsList );
+				this.elOriginal.parentNode.insertBefore( this.fld, this.elOriginal );
+				this.elOriginal.style.display = 'none';
+			},
+			_createInput : function() {
+				var self = this;
+				this.fld = document.createElement( 'div' );
+				this.fld.className = 'donate--field__popup donate--field__text';
+				this.fld.id = this.elOriginal.id + '_placeholder';
+				this.toggle = document.createElement( 'a' );
+				this.toggle.innerHTML = '<em>' + this.elOriginal.getAttribute( 'placeholder' ) + '</em>';
+				this.toggle.className = 'donate--field__toggle';
+				this.optionsList = document.createElement( 'ul' );
+				this.getinput = document.createElement( 'input' );
+				this.getinput.setAttribute( 'type', 'text' );
+				this.getinput.setAttribute( 'placeholder', this.elOriginal.getAttribute( 'placeholder' ) );
+				this.getinputWrapper = document.createElement( 'li' );
+				this.getinputWrapper.className = 'donate--field__input';
+				this.getinputWrapper.appendChild( this.getinput );
+				this.optionsList.appendChild( this.getinputWrapper );
+				this.fld.appendChild( this.toggle );
+				this.fld.appendChild( this.optionsList );
+				this.elOriginal.parentNode.insertBefore( this.fld, this.elOriginal );
+				this.elOriginal.style.display = 'none';
+			},
+			_initEvents : function() {
+				var self = this;
+				this.toggle.addEventListener( 'click', function( ev ) { ev.preventDefault(); ev.stopPropagation(); self._open(); } );
+				this.toggle.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); ev.stopPropagation(); self._open(); } );
+				this.toggle.addEventListener( 'keydown', function( ev ) {
+					if ( ev.keyCode == 32 ) { // key: space
+						ev.preventDefault(); ev.stopPropagation(); self._open();
+					}
+					if( ev.keyCode == 9 ) { // key: tab
+						console.log('close an open input');
+						ev.preventDefault(); ev.stopPropagation(); self.close();
+					}
+				} );
+
+				if( this.type === 'dropdown' ) {
+					var opts = Array.prototype.slice.call( this.optionsList.querySelectorAll( 'li' ) );
+					opts.forEach( function( el, i ) {
+						el.addEventListener( 'click', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
+						el.addEventListener( 'touchstart', function( ev ) { ev.preventDefault(); self.close( el, opts.indexOf( el ) ); } );
+						el.addEventListener( 'keydown', function( ev ) {
+							if ( ev.keyCode == 38 ) { // key: up arrow
+								ev.preventDefault(); ev.stopPropagation();
+								if(document.activeElement.previousElementSibling) {
+									document.activeElement.previousElementSibling.focus();
+								} else {
+									opts[opts.length-1].focus();
+								}
+							}
+							if ( ev.keyCode == 40 ) { // key: down arrow
+								ev.preventDefault(); ev.stopPropagation();
+								if(document.activeElement.nextElementSibling) {
+									document.activeElement.nextElementSibling.focus();
+								} else {
+									opts[0].focus();
+								}
+							}
+							if( ev.keyCode == 32 || ev.keyCode == 13) { // key: space or enter
+								ev.preventDefault(); ev.stopPropagation();
+								 self.close( el, opts.indexOf( el ) );
+							}
+							if( ev.keyCode == 9 && self.open ) { // key: tab
+								// ev.preventDefault(); ev.stopPropagation();
+								self.close();
+							}
+						} );
+					} );
+
+				}
+				else if( this.type === 'input' ) {
+					this.getinput.addEventListener( 'keydown', function( ev ) {
+						if ( ev.keyCode == 13 ) { // key: enter
+							self.close();
+						}
+						// if( ev.keyCode == 9 && self.open ) { // key: tab
+						// 	ev.preventDefault(); ev.stopPropagation();
+						// 	self.close();
+						// }
+					} );
+				}
+
+			},
+			_open : function() {
+				if( this.open ) {
+					return false;
+				}
+				this.open = true;
+				this.form.fldOpen = this.pos;
+				var self = this;
+				this.fld.className += ' donate--field__open';
+				if( this.type === 'dropdown' ) {
+					this.optionsList.children[ this.selectedIdx ].focus();
+				} else if( this.type === 'input' ) {
+					this.getinput.focus();
+				}
+			},
+			close : function( opt, idx ) {
+				if( !this.open ) {
+					return false;
+				}
+				this.open = false;
+				this.form.fldOpen = -1;
+				this.fld.className = this.fld.className.replace(/\b donate--field__open\b/,'');
+
+				if( this.type === 'dropdown' ) {
+					if( opt ) {
+						// remove class nl-dd-checked from previous option
+						var selectedopt = this.optionsList.children[ this.selectedIdx ];
+						selectedopt.className = '';
+						opt.className = 'donate--field__dd-checked';
+						this.toggle.innerHTML = opt.innerHTML;
+						// update selected index value
+						this.selectedIdx = idx;
+						// update original select element´s value
+						this.elOriginal.value = this.elOriginal.children[ this.selectedIdx ].value;
+
+						// trigger the native change event
+						var event = document.createEvent('HTMLEvents');
+					    event.initEvent('change', true, true);
+					    this.elOriginal.dispatchEvent(event);
+					}
+				}
+				else if( this.type === 'input' ) {
+					this.getinput.blur();
+					this.toggle.innerHTML = this.getinput.value.trim() !== '' ? this.getinput.value : '<em>' + this.getinput.getAttribute( 'placeholder' ) + '</em>';
+					this.elOriginal.value = this.getinput.value;
+				}
+
+				this.toggle.focus();
+			}
+		}
+
+		// add to global namespace
+		window.NLForm = NLForm;
+
+	} )( window );
+
+
+	var donateForm = new NLForm( document.getElementById( 'donate--form' ), '#donate' );
+	console.log(donateForm);
+	// on page load and hash change, 
+	// when donate form is open,
+	// make donate form elements tabbable
+	// donateForm.toggleTabIndexes();
+	// window.addEventListener('hashchange', donateForm.toggleTabIndexes);
+	// var donateClose = document.getElementById('donate--close');
+	// toggleTabIndex(donateClose, '#donate');
+	// window.addEventListener('hashchange', function(ev) {
+	//     toggleTabIndex(donateClose, '#donate');
+	// });
+
+	// set listeners for triggering connected elements
+	// e.g. only show donation period when frequency is set to "per"
+	// Group >> denom
+	var donateGroup = document.getElementById('donate--field__group');
+	var donateDenom = document.getElementById('donate--denom');
+	donateGroup.addEventListener('change', function(ev) {
+	    donateDenom.innerHTML = donateGroup.value;
+	});
+	var donateFreq = document.getElementById('donate--field__frequency');
+	var donatePeriodPlaceholder = document.getElementById('donate--field__period_placeholder');
+	donateFreq.addEventListener('change', function(ev) {
+	    if(donateFreq.value == 'per') {
+	        donatePeriodPlaceholder.style = 'display:inline-block';
+	    } else if (donateFreq.value == 'once') {
+	        donatePeriodPlaceholder.style = 'display:none';
+	    }
+	});
+
+	// controls for donate form sections
+	var donateForm = document.querySelector('.donate--form');
+	var donateAmount = document.querySelector('.donate--amount');
+	var donateDetails = document.querySelector('.donate--details');
+	var donateSubmit = document.querySelector('.donate--submit');
+	document.getElementById('donate--control__next')
+	        .addEventListener('click', function(ev) {
+	    ev.preventDefault(); ev.stopPropagation();
+	    donateAmount.className = 'donate--fieldset donate--amount';
+	    donateDetails.className = 'donate--fieldset donate--details active';
+	    var mm = window.matchMedia( '(min-width: 550px)' );
+	    if(!mm.matches) {
+	        setTimeout(function() {
+	            donateForm.scrollTop = donateDetails.offsetTop - 40;
+	        }, 500);
+	    }
+	});
+	document.getElementById('donate--control__prev')
+	        .addEventListener('click', function(ev) {
+	    ev.preventDefault(); ev.stopPropagation();
+	    donateAmount.className = 'donate--fieldset donate--amount active';
+	    donateDetails.className = 'donate--fieldset donate--details';
+	    var mm = window.matchMedia( '(min-width: 550px)' );
+	    if(!mm.matches) {
+	        setTimeout(function() {
+	            donateForm.scrollTop = donateAmount.offsetTop - 40;
+	        }, 500);
+	    }
+	});
+	document.getElementById('donate--control__next2')
+	        .addEventListener('click', function(ev) {
+	    ev.preventDefault(); ev.stopPropagation();
+	    donateDetails.className = 'donate--fieldset donate--details';
+	    donateSubmit.className = 'donate--fieldset donate--submit active';
+	    var mm = window.matchMedia( '(min-width: 550px)' );
+	    if(!mm.matches) {
+	        setTimeout(function() {
+	            donateForm.scrollTop = donateSubmit.offsetTop - 40;
+	        }, 500);
+	    }
+	});
+	document.getElementById('donate--control__prev2')
+	        .addEventListener('click', function(ev) {
+	    ev.preventDefault(); ev.stopPropagation();
+	    donateDetails.className = 'donate--fieldset donate--details active';
+	    donateSubmit.className = 'donate--fieldset donate--submit';
+	    var mm = window.matchMedia( '(min-width: 550px)' );
+	    if(!mm.matches) {
+	        setTimeout(function() {
+	            donateForm.scrollTop = donateDetails.offsetTop - 40;
+	        }, 500);
+	    }
+	});
+</script>
+
+{% endblock %}

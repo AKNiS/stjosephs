@@ -21,7 +21,12 @@
 </div>
 <div class="row">
 	<div class="twelve columns" style="text-align:center;">
-		<a href="#donate" class="button button__large">Donate</a>
+		<p>Thank you for considering making a donation to support St Joseph’s Cowper. Your donation will help us continue to support young people in our care. </p>
+
+		<p>We rely on contributions from supporters to continue our work. To make a donation, follow the link below to make a donation via Givenow.</p>
+		<p>
+			<a href="https://www.givenow.com.au/stjosephscowper" class="button button__large">Donate now</a>
+		</p>
 	</div>
 </div>
 

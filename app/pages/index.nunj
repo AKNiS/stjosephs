@@ -19,40 +19,57 @@
 		<h2>What we do</h2>
 	</div>
 </div>
+
 <div class="row">
-	<div class="six columns card card--service">
-		<span class="card--icon">
-			{% include 'partials/svg/fostercare.nunj' %}
-		</span>
-		<span class="card--text">
-			Foster Care
-		</span>
+	<div class="six columns">
+		<a href="foster-care.html" class="card--link">
+			<div class="card card--service">
+				<span class="card--icon">
+					{% include 'partials/svg/fostercare.nunj' %}
+				</span>
+				<span class="card--text">
+					Foster Care
+				</span>
+			</div>
+		</a>
 	</div>
-	<div class="six columns card card--service">
-		<span class="card--icon">
-			{% include 'partials/svg/resicare.nunj' %}
-		</span>
-		<span class="card--text">
-			Residential Care
-		</span>
+	<div class="six columns">
+		<a href="residential-care.html" class="card--link">
+			<div class=" card card--service">
+				<span class="card--icon">
+					{% include 'partials/svg/resicare.nunj' %}
+				</span>
+				<span class="card--text">
+					Residential Care
+				</span>
+			</div>
+		</a>
 	</div>
 </div>
 <div class="row">
-	<div class="six columns card card--service">
-		<span class="card--icon">
-			{% include 'partials/svg/tutormentor.nunj' %}
-		</span>
-		<span class="card--text">
-			Tutoring &amp; Mentoring
-		</span>
+	<div class="six columns">
+		<a href="tutoring-mentoring.html" class="card--link">
+			<div class=" card card--service">
+				<span class="card--icon">
+					{% include 'partials/svg/tutormentor.nunj' %}
+				</span>
+				<span class="card--text">
+					Tutoring &amp; Mentoring
+				</span>
+			</div>
+		</a>
 	</div>
-	<div class="six columns card card--service">
-		<span class="card--icon">
-			{% include 'partials/svg/commprograms.nunj' %}
-		</span>
-		<span class="card--text">
-			Community Programs
-		</span>
+	<div class="six columns">
+		<a href="community-programs.html" class="card--link">
+			<div class=" card card--service">
+				<span class="card--icon">
+					{% include 'partials/svg/commprograms.nunj' %}
+				</span>
+				<span class="card--text">
+					Community Programs
+				</span>
+			</div>
+		</a>
 	</div>
 </div>
 
