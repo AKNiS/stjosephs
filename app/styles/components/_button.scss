@@ -10,7 +10,9 @@
 	transition: all 200ms ease-in;
 }
 
-.button:hover, button:hover {
+.button:hover, button:hover,
+.button:focus, button:focus,
+.button:active, button:active {
 	border-color: $color-sjc-red;
 	background: $color-white;
 	color: $color-sjc-red;

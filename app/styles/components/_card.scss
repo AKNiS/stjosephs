@@ -1,5 +1,3 @@
-
-
 /******************/
 /* Card component */
 /******************/
@@ -38,6 +36,10 @@
 	h1,h3 {
 		margin-bottom: 0;
 	}
+}
+
+.card--text__no-underline {
+	text-decoration: none;
 }
 
 .card--link {

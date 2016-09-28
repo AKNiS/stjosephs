@@ -8,22 +8,28 @@
 		<h1>Over 100 Years of Community Service</h1>
 	</div>
 </div>
+
+
+
 <div class="row">
 	<div class="six columns">
-		<p>St Joseph’s Cowper was founded by the Sisters of Mercy in 1913 as an orphanage in Cowper, New South Wales providing care for children without parents or whose parents couldn’t provide care for them.</p>
+		<p>In 1898 a two-story building was erected on farmland at Cowper that had been gradually acquired by the Sisters of Mercy to support their mission. This building was opened as a boarding school with two rooms furnished as a high school. The children in secondary school and young ladies who boarded were taught music, singing, the art of speech, needlework and painting as well as school subjects. In 1913, Bishop Carroll asked the Sisters to convert the boarding school into an orphanage. On 18 January 1914 it was blessed and opened, with four children in residence, and St Joseph’s Cowper’s journey in out of home care began.</p>
 	</div>
 	<div class="six columns">
-		<p>In 2016, St Joseph’s Cowper in Grafton continues that tradition as an accredited out-of-home care agency by providing therapeutic residential and foster care for young people. Providing services from intensive residential care to general foster care enables St Joseph’s Cowper to meet the individual needs of the young people in our care. </p>
+		<p>Many changes took place over the following decades, with the orphanage taking in large numbers of children through the Great Depression (80 children were in residence in 1932). The Sisters toiled hard on their 33 acre farm to provide food for the children in their care and to sell surplus product to the surrounding community where possible to raise funds. The Sisters endured many floods and hardships to provide for the children and young people in their care, with assistance from the local community.</p>
 	</div>
 </div>
 <div class="row">
 	<div class="twelve columns">
 		<h3>Education still forms the core of our work with young people, as it did over 100 years ago.</h3>
+		<p>In 1970, Bishop John Satterthwaite decided that a new home should be built for the children in North St, Grafton. This would provide a flood-free site for the children and Sisters as well as improved access to health and secondary education for the children and young people. On January 29, 1972, the move from Cowper to Grafton was completed, with the Sisters, children and young people moving into the four cottages and administration block that still stand on the site.</p>
+		<p>Since that time, many more changes have occurred at St Joseph’s Cowper, with the move from voluntary care to statutory care, the professionalisation of the carer workforce and eventually the retirement of the Sisters from day-to-day administration.</p>
+		<p>Today St Joseph’s Cowper provides residential and foster care for young people who have experienced trauma. As an accredited provider of care, St Joseph’s Cowper continues the mission of the Sisters of Mercy, helping the most vulnerable and disadvantaged in the community. Recreating family for those in need across the Clarence Valley.</p>
 	</div>
 </div>
 <div class="row">
 	<div class="six columns">
-		<a href="foster-care.html" class="card--link">
+		<a href="foster-care.html" class="card--link card--text__no-underline">
 			<div class="card card--service">
 				<span class="card--icon">
 					{% include 'partials/svg/fostercare.nunj' %}
@@ -36,7 +42,7 @@
 		<p>St Joseph’s Cowper is a small and personalised agency that provides foster care for children with our network of dedicated and supported authorised carers. If you’re interested in knowing more about foster care please call or <a href="#contact-form">contact us</a>.</p>
 	</div>
 	<div class="six columns">
-		<a href="residential-care.html" class="card--link">
+		<a href="residential-care.html" class="card--link card--text__no-underline">
 			<div class=" card card--service">
 				<span class="card--icon">
 					{% include 'partials/svg/resicare.nunj' %}
@@ -51,7 +57,7 @@
 </div>
 <div class="row">
 	<div class="six columns">
-		<a href="tutoring-mentoring.html" class="card--link">
+		<a href="tutoring-mentoring.html" class="card--link card--text__no-underline">
 			<div class=" card card--service">
 				<span class="card--icon">
 					{% include 'partials/svg/tutormentor.nunj' %}
@@ -64,7 +70,7 @@
 		<p>St Joseph’s Cowper provides tutoring and mentoring services to children and young people to support and develop their love of education, to help them develop strong and stable relationships with others and to improve their self-esteem.</p>
 	</div>
 	<div class="six columns">
-		<a href="community-programs.html" class="card--link">
+		<a href="community-programs.html" class="card--link card--text__no-underline">
 			<div class=" card card--service">
 				<span class="card--icon">
 					{% include 'partials/svg/commprograms.nunj' %}
