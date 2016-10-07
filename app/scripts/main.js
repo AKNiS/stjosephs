@@ -29,12 +29,12 @@ window.onload = function(e) {
         writeCookie('sjcMailingList', false, 7);
         setTimeout(function() {
             console.log('Reached timer end! Prompt now.');
-            location.href='#mailing-list';
+            location.href='#newsletter-form';
             writeCookie('sjcMailingList', true, 7);
         }, timerSec*1000);
     } else if (cookie && cookie === 'false') {
         console.log('Found a cookie! Return visit but haven\'t prompted yet. Prompt now!');
-        location.href='#mailing-list';
+        location.href='#newsletter-form';
         writeCookie('sjcMailingList', true, 7);
     } else if (cookie && cookie === 'true') {
         console.log('Found a cookie, and user has been triggered. Do nothing');

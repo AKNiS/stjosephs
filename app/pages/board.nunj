@@ -51,7 +51,7 @@
 	</table> #}
 	<table class="board" width="100%" border="0" cellspacing="0" cellpadding="0">
 	<tbody>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
@@ -65,7 +65,7 @@
 		<tr>
 			<td colspan="2">Since her profession as a Sister of Mercy in 1969, Caroline has served in secondary education and administration, university chaplaincy and adult education (spiritual formation). She has also had several leadership roles within the Sisters of Mercy and most recently established the Professional Standards Office of the Institute of Sisters of Mercy of Australia and Papua New Guinea where she worked for three years.</td>
 		</tr>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
@@ -82,7 +82,7 @@
 		<tr>
 			<td colspan="2">Patrick has 23 years' experience in the real estate industry including 17 years as a principal of L J Hooker Grafton specialising in the management and valuation of commercial, industrial and residential property.</td>
 		</tr>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
@@ -96,7 +96,7 @@
 		<tr>
 			<td colspan="2">Judy has 40 years’ experience teaching in Sate and Catholic schools in New South Wales and New Guinea.</td>
 		</tr>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
@@ -110,7 +110,7 @@
 		<tr>
 			<td colspan="2">Joe has 40 years’ experience working as a valuer in the Real Estate industry</td>
 		</tr>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
@@ -129,7 +129,7 @@
 		<tr>
 			<td colspan="2">Dennis has 53 years’ experience in the fields of finance, merchant banking and company secretarial practice. He joined the Board of St Joseph’s Cowper Inc. in 2001.</td>
 		</tr>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
@@ -143,7 +143,7 @@
 		<tr>
 			<td colspan="2">Jim has dedicated his life to education, with a career spanning almost 40 years in Secondary education, including as Principal of McAuley Catholic College in Grafton. Jim joined the Board of St Joseph’s Cowper Inc. in 1999 and was elected Chairperson in 2002. He was appointed Chairperson of St Joseph’s Cowper Ltd in July 2014. After retiring from his leadership role in education, Jim worked in the Lismore Catholic Diocese as Promotional Officer (Diocesan investment Fund) and Professional Assistant (Diocesan Schools Grants Assistance Scheme). He retired from that position in 2010.</td>
 		</tr>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
@@ -156,7 +156,7 @@
 		<tr>
 			<td colspan="3">After raising her family Gai worked as a teacher’s aide for 6 years. She then undertook studies to complete her Bachelor of Nursing in 2014 and is now employed as a nurse. Gai was the first lay-carer employed by the Sister’s of Mercy when St Joseph’s Cowper relocated to Grafton.</td>
 		</tr>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">
@@ -169,7 +169,7 @@
 		<tr>
 			<td colspan="3">Grahame has in excess of 40 years' experience in the plumbing/gas fitting industry and has been self-employed since 1988 operating his own business - Grafton Gas &amp;Plumbing, employing five tradesmen &amp; a secretary. He was also a member of the New South Wales Fire Brigade in Grafton for 23 years. Grahame is a life member of the Grafton Ghosts Rugby league Football Club Inc. and was President for a number of years. He joined the Board of St Joseph's Cowper Inc. in 2005</td>
 		</tr>
-		<tr>
+		<tr class="table--row-border">
 			<th colspan="3"></th>
 		</tr>
 		<tr class="table--member">

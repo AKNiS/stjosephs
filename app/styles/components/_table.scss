@@ -10,7 +10,8 @@ table {
 th, td {
 	border: none;
 	// height: 20px;
-	padding: 5px;
+	padding: 5px 15px;
+	display: block;
 }
 
 th {
@@ -29,6 +30,15 @@ td:last-child {
 	padding-right: 15px;
 }
 
+tr.table--row-border {
+	display: block;
+	margin-top: 15px;
+
+	@media (#{$bp-larger-than-tablet}) {
+		display: table-row;
+	}
+}
+
 tr.table--member {
 	font-size: 2.5rem;
 	font-weight: bold;
@@ -41,11 +51,12 @@ tr.table--member {
 
 td.table--avatar {
 	padding: 0;
-	width: 75px;
+	// width: 75px;
 	vertical-align: top;
-
+	text-align: center;
+ 
 	img {
-		display: block;
+		// display: block;
 		// width: 75px;
 		// height: 75px;
 	}
@@ -83,6 +94,7 @@ tr:nth-child(even) td {
 @media (#{$bp-larger-than-tablet}) {
 	th, td {
 		padding: 5px 15px;
+		display: table-cell;
 	}
 	td.table--avatar {
 		width: 150px;

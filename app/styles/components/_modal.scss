@@ -103,7 +103,7 @@
 // Newsletter-specific modal styles
 
 @media (#{$bp-larger-than-tablet}) {
-	#mailing-list .modal--wrapper,
+	#newsletter-form .modal--wrapper,
 	#donate-givenow .modal--wrapper {
 		height: auto;
 	}

@@ -45,13 +45,13 @@
 		</div>
 		<div id="" class="contact--field">
 			<label for="contact--field__email">
-				Email Address
+				Email Address <small>(optional)</small>
 			</label>
 			<input type="email" name="email" id="contact--field__email" required="required">
 		</div>
 		<div id="" class="contact--field">
 			<label for="contact--field__telephone">
-				Telephone
+				Telephone <small>(optional)</small>
 			</label>
 			<input type="text" name="telephone" id="contact--field__telephone" required="required">
 		</div>
